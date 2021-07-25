@@ -240,6 +240,7 @@ collections:
       - h5py
       - imageio
       - imageio-ffmpeg>=0.4.1
+      - importlib_resources
       - joblib
       - jupyter
       - libblas=*=*mkl*
