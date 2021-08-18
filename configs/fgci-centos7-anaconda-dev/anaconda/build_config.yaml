@@ -75,7 +75,7 @@ environments:
     version: '2021-04-tf2'
     miniconda: True
     python_version: 3
-    installer_version: 'py39_4.10.3'
+    installer_version: 'py38_4.9.2'
     condarc:
       channels:
         - pytorch
@@ -256,7 +256,7 @@ collections:
       - pytest-astropy
       - python-libarchive-c
       - python-snappy
-      - python=3.9.*
+      - python=3.8.*
       - pytorch=1.9.0=*cuda*
       - ripgrep
       - scikit-image
