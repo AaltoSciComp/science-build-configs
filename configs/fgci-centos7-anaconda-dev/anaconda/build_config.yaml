@@ -1,6 +1,7 @@
 installer_checksums:
   Miniconda3-py37_4.9.2-Linux-x86_64.sh: '79510c6e7bd9e012856e25dcb21b3e093aa4ac8113d9aa7e82a86987eabe1c31'
   Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
+  Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
 environments:
   - name: miniconda
     version: '4.9.2'
@@ -53,6 +54,7 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.9.2'
+    freeze: True
     condarc:
       channels:
         - pytorch
@@ -65,6 +67,27 @@ environments:
         - mosek
     collections:
       - tensorflow-v2
+      - triton-generic
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+  - name: anaconda
+    version: '2021-04-tf2'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py39_4.10.3'
+    condarc:
+      channels:
+        - pytorch
+        - rapidsai
+        - defaults
+        - conda-forge
+        - nvidia
+        - gurobi
+        - IBMDecisionOptimization
+        - mosek
+    collections:
+      - tensorflow-v2-pip
       - triton-generic
     extra_module_variables:
       setenv:
@@ -109,6 +132,32 @@ collections:
       - tensorflow-base
       - tensorflow-estimator
       - tensorflow-gpu
+  tensorflow-v2-pip:
+    conda_packages:
+      - absl-py
+      - astunparse
+      - cudatoolkit
+      - cudnn
+      - cupti
+      - gast
+      - google-pasta
+      - grpcio
+      - h5py
+      - keras-preprocessing
+      - libgcc-ng
+      - libstdcxx-ng
+      - numpy
+      - opt_einsum
+      - protobuf
+      - python-flatbuffers
+      - scipy
+      - six
+      - sqlite
+      - termcolor
+      - wrapt
+      - zlib
+    pip_packages:
+      - tensorflow
   triton-generic:
     pip_packages:
       - bash-kernel
@@ -139,7 +188,7 @@ collections:
       - configargparse
       - contextlib2
       - cplex
-      - cudatoolkit=10.*
+      - cudatoolkit=11.*
       - cudf
       - cuml
       - cugraph
@@ -207,8 +256,8 @@ collections:
       - pytest-astropy
       - python-libarchive-c
       - python-snappy
-      - python=3.8.*
-      - pytorch=1.8.1=*cuda*
+      - python=3.9.*
+      - pytorch=1.9.0=*cuda*
       - ripgrep
       - scikit-image
       - seaborn
