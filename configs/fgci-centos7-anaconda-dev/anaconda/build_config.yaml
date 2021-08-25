@@ -107,7 +107,7 @@ environments:
     version: '2021-02'
     miniconda: True
     python_version: 3
-    installer_version: 'py38_4.9.2'
+    installer_version: 'py39_4.10.3'
     condarc:
       channels:
         - defaults
@@ -290,6 +290,7 @@ collections:
   neuroimaging:
     conda_packages:
       - python>=3.8
+      - darkdetect
       - datalad
       - dipy
       - doit
@@ -297,8 +298,12 @@ collections:
       - imageio
       - imageio-ffmpeg>=0.4.1
       - importlib_resources
+      - ipympl
+      - ipyvtklink
+      - ipywidgets
       - joblib
       - jupyter
+      - jupyter_client!=6.1.5
       - libblas=*=*mkl*
       - matplotlib
       - mayavi
@@ -314,11 +319,12 @@ collections:
       - pip
       - psutil
       - pyface
-      - pyqt
+      - pyqt!=5.15.3
       - PySurfer
       - python-picard
-      - pyvista>=0.24
-      - pyvistaqt>=0.2.0
+      - pyvista>=0.30
+      - pyvistaqt>=0.4
+      - qdarkstyle
       - scikit-learn
       - scipy
       - spyder
