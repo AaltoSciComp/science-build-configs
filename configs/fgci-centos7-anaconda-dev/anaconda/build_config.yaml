@@ -92,7 +92,7 @@ environments:
       setenv:
         GUROBI_HOME: '$prefix'
   - name: tensorflow
-    version: '2.6.0'
+    version: '2.4.1'
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.9.2'
@@ -100,12 +100,11 @@ environments:
       channels:
         - conda-forge
         - defaults
-        - nvidia
         - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
-      - tensorflow-v2-pip
+      - tensorflow-v2
       - triton-generic
     extra_module_variables:
       setenv:
@@ -147,7 +146,7 @@ collections:
       - cudatoolkit
       - tensorboard
       - tensorboard-plugin-wit
-      - tensorflow=2.4.*=gpu_*
+      - tensorflow=2.4.1=gpu_*
       - tensorflow-base
       - tensorflow-estimator
       - tensorflow-gpu
