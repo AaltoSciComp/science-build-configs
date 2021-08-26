@@ -109,6 +109,26 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
+  - name: rapidsai
+    version: '21.08'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py38_4.9.2'
+    condarc:
+      channels:
+        - rapidsai
+        - nvidia
+        - conda-forge
+        - defaults
+        - gurobi
+        - IBMDecisionOptimization
+        - mosek
+    collections:
+      - rapidsai
+      - triton-generic
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
   - name: neuroimaging
     version: '2021-01'
     miniconda: True
@@ -186,14 +206,14 @@ collections:
       - torchvision
   rapidsai:
     conda_packages:
-      - cudatoolkit=11.0
+      - cudatoolkit=11.2
       - cudf
       - cuml
       - cugraph
       - cusignal
       - cuspatial
       - cuxfilter
-      - rapids-blazing=21.06
+      - rapids-blazing=21.08
   triton-generic:
     pip_packages:
       - bash-kernel
