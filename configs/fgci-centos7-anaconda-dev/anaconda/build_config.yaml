@@ -87,6 +87,7 @@ environments:
         - mosek
     collections:
       - pytorch
+      - mne
       - triton-generic
     extra_module_variables:
       setenv:
@@ -105,6 +106,7 @@ environments:
         - mosek
     collections:
       - tensorflow-v2
+      - mne
       - triton-generic
     extra_module_variables:
       setenv:
@@ -214,6 +216,9 @@ collections:
       - cuspatial
       - cuxfilter
       - rapids-blazing=21.08
+  mne:
+    conda_packages:
+      - mne
   triton-generic:
     pip_packages:
       - bash-kernel
