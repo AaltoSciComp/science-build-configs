@@ -91,6 +91,25 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
+  - name: tensorflow
+    version: '2.6.0'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py38_4.9.2'
+    condarc:
+      channels:
+        - conda-forge
+        - defaults
+        - nvidia
+        - gurobi
+        - IBMDecisionOptimization
+        - mosek
+    collections:
+      - tensorflow-v2-pip
+      - triton-generic
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
   - name: neuroimaging
     version: '2021-01'
     miniconda: True
@@ -133,11 +152,13 @@ collections:
       - tensorflow-estimator
       - tensorflow-gpu
   tensorflow-v2-pip:
+    # Check this page for compatible versions of tensorflow, cudatoolkit and cudnn.
+    # https://www.tensorflow.org/install/source#gpu
     conda_packages:
       - absl-py
       - astunparse
-      - cudatoolkit
-      - cudnn
+      - cudatoolkit=11.2.*
+      - cudnn=8.1.*
       - cupti
       - gast
       - google-pasta
@@ -157,7 +178,7 @@ collections:
       - wrapt
       - zlib
     pip_packages:
-      - tensorflow
+      - tensorflow=2.6.0
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
@@ -174,7 +195,6 @@ collections:
       - cuspatial
       - cuxfilter
       - rapids-blazing=21.06
-      - python=3.8
   triton-generic:
     pip_packages:
       - bash-kernel
