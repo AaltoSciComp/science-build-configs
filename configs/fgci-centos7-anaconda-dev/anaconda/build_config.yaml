@@ -245,6 +245,7 @@ collections:
       - contextlib2
       - cplex
       - cython
+      - dask
       - datalad
       - dill
       - docopt
@@ -270,7 +271,6 @@ collections:
       - libxscrnsaver-cos6-x86_64
       - line_profiler
       - metakernel
-      - mne
       - more-itertools
       - mosek
       - mpi4py
