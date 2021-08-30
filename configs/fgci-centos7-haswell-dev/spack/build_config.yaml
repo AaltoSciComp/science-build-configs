@@ -110,13 +110,13 @@ packages:
       - '^cuda@10.1.243'
     extra_flags:
       - '-j 4'
-  - name: 'quantum-espresso'
-    version: '6.6'
-    variants:
-      - '+epw'
-      - 'hdf5=parallel'
-      - '+mpi'
-      - '+scalapack'
+#  - name: 'quantum-espresso'
+#    version: '6.6'
+#    variants:
+#      - '+epw'
+#      - 'hdf5=parallel'
+#      - '+mpi'
+#      - '+scalapack'
   - name: 'hdf5'
     version: 1.10.7
     variants:
