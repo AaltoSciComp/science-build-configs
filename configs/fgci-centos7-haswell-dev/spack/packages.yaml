@@ -53,6 +53,7 @@ packages:
         prefix: /usr
     buildable: False
   pango:
+    version: [1.41.0]
     variants: +X
   pcre:
     variants: +jit +utf
