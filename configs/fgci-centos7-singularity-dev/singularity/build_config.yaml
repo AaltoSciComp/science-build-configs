@@ -153,3 +153,13 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-fsl'
+    docker_user: 'nipreps'
+    docker_image: 'fsl'
+    module_namespace: 'common'
+    tags:
+      - '6.0.4'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
