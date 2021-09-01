@@ -4,7 +4,7 @@ packages:
   cairo:
     variants: +X +gobject +pdf
   charmpp:
-    variants: backend=ucx
+    variants: backend=mpi
   curl:
     variants: +libssh2 ~nghttp
   fftw:
@@ -53,6 +53,7 @@ packages:
         prefix: /usr
     buildable: False
   pango:
+    version: [1.41.0]
     variants: +X
   pcre:
     variants: +jit +utf
