@@ -373,6 +373,7 @@ collections:
       - scipy
       - spyder
       - spyder-kernels>=1.10.0
+      - spyder-line-profiler
       - statsmodels
       - tqdm
       - traits
