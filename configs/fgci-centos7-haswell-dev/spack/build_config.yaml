@@ -191,6 +191,8 @@ packages:
       - '+xattr'
   - name: 'ants'
     version: '2.3.5'
+    variants:
+      - '~tests'
   - name: 'namd'
     version: '2.14'
   - name: 'ior'
