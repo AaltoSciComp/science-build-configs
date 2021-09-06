@@ -69,6 +69,8 @@ packages:
   r:
     version: [4.0.3]
     variants: +X +external-lapack
+  rclone:
+    version: [1.56.0]
   slurm:
     externals:
       - spec: slurm@18-08-8-1
