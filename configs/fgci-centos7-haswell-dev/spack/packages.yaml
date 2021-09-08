@@ -73,7 +73,7 @@ packages:
     version: [1.56.0]
   slurm:
     externals:
-      - spec: slurm@18-08-8-1
+      - spec: slurm@21-08-0-1
         prefix: /usr
     buildable: False
   sqlite:
