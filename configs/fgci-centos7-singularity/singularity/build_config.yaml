@@ -80,3 +80,13 @@ definitions:
     flag_collections:
       - 'common'
       - 'nvidia'
+  - name: 'singularity-fmriprep'
+    docker_user: 'nipreps'
+    docker_image: 'fmriprep'
+    module_namespace: 'common'
+    tags:
+      - '20.2.3'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
