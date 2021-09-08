@@ -76,7 +76,7 @@ packages:
     variants: +X +external-lapack
   slurm:
     externals:
-      - spec: slurm@21-08-0-1 +pmix +hwloc
+      - spec: slurm@21-08-0-1 +pmix +hwloc ^pmix@2.2.2
         prefix: /usr
     buildable: False
   sqlite:
