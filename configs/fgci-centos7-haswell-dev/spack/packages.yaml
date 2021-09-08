@@ -59,6 +59,11 @@ packages:
     variants: +jit +utf
   pkgconf:
     version: [1.7.3]
+  pmix:
+    externals:
+      - spec: pmix@2.2.2
+        prefix: /opt/ohpc/admin/pmix
+    buildable: False
   python:
     version: [3.8.7]
     variants: +pic +shared +optimizations +uuid +pythoncmd
@@ -71,7 +76,7 @@ packages:
     variants: +X +external-lapack
   slurm:
     externals:
-      - spec: slurm@21-08-0-1
+      - spec: slurm@21-08-0-1 +pmix +hwloc
         prefix: /usr
     buildable: False
   sqlite:
