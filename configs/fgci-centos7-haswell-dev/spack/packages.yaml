@@ -84,7 +84,7 @@ packages:
     variants: +column_metadata +fts +functions +rtree
   ucx:
     version: [1.9.0]
-    variants: +thread_multiple
+    variants: +thread_multiple +pic +rc +dc +cm +dm +ud +optimizations
   all:
     compiler: [gcc@8.4.0, gcc, intel, pgi, clang, xl, nag]
     providers:

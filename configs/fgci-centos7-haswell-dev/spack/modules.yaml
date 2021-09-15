@@ -120,6 +120,7 @@ modules:
         environment:
           set:
             UCX_WARN_UNUSED_ENV_VARS: 'n'
+            SLURM_PMIX_DIRECT_CONN_UCX: 'false'
       mujoco:
         suffixes:
           '^mesa' : 'mesa'
