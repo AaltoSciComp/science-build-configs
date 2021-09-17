@@ -83,8 +83,10 @@ packages:
     version: [3.34.0]
     variants: +column_metadata +fts +functions +rtree
   ucx:
-    version: [1.9.0]
-    variants: +thread_multiple +pic +rc +dc +cm +dm +ud +optimizations
+    externals:
+      - spec: ucx@1.8.0 +thread_multiple +pic +rc +dc +cm +cma +dm +knem +optimizations
+        prefix: /usr
+    buildable: False
   all:
     compiler: [gcc@8.4.0, gcc, intel, pgi, clang, xl, nag]
     providers:
