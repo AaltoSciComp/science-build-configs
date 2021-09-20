@@ -163,3 +163,13 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-mriqc'
+    docker_user: 'poldracklab'
+    docker_image: 'mriqc'
+    module_namespace: 'common'
+    tags:
+      - '0.16.1'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
