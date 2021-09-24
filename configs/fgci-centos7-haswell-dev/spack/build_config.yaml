@@ -209,3 +209,5 @@ packages:
 #    version: '1.4.1717'
   - name: 'cuda-memtest'
     version: 'master'
+  - name: 'gsl'
+    version: '2.7'
