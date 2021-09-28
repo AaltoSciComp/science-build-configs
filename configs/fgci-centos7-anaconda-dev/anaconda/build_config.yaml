@@ -205,7 +205,7 @@ collections:
       - cudatoolkit=11.*
       - pytorch=1.9.0=*cuda*
       - torchaudio
-      - torchvision
+      - torchvision=0.10.*=*cu11*
   rapidsai:
     conda_packages:
       - cudatoolkit=11.2
