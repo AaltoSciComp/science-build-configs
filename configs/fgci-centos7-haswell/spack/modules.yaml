@@ -30,6 +30,7 @@ modules:
         - mpi
       whitelist:
         - 'gcc'
+        - 'intel-oneapi-compilers'
         - 'paraview'
         - 'openmpi'
         - 'clhep'
@@ -119,3 +120,14 @@ modules:
         environment:
           set:
             UCX_WARN_UNUSED_ENV_VARS: 'n'
+            SLURM_PMIX_DIRECT_CONN_UCX: 'false'
+      mujoco:
+        suffixes:
+          '^mesa' : 'mesa'
+          '^opengl': 'systemgl'
+        environment:
+          set:
+            MUJOCO_PY_MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
+            MUJOCO_PY_MUJOCO_PATH: '${PREFIX}'
+            MJLIB_PATH: '${PREFIX}/bin/libmujoco200.so'
+            MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
