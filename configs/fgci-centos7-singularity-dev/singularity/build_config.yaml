@@ -179,7 +179,7 @@ definitions:
     registry: 'nvcr.io'
     module_namespace: 'common'
     tags:
-      - '20.03.1'
+      - '20.03-py3'
     command_collections:
       - 'common'
       - 'compilers'
