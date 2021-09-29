@@ -173,3 +173,16 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'nvidia-kaldi'
+    docker_user: 'nvidia'
+    docker_image: 'kaldi'
+    registry: 'nvcr.io'
+    module_namespace: 'common'
+    tags:
+      - '20.03.1'
+    command_collections:
+      - 'common'
+      - 'compilers'
+    flag_collections:
+      - 'common'
+      - 'nvidia'
