@@ -87,7 +87,6 @@ environments:
         - mosek
     collections:
       - pytorch
-      - mne
       - triton-generic
     extra_module_variables:
       setenv:
@@ -205,7 +204,7 @@ collections:
       - cudatoolkit=11.*
       - pytorch=1.9.0=*cuda*
       - torchaudio
-      - torchvision=0.10.*=*cu11*
+      - torchvision
   rapidsai:
     conda_packages:
       - cudatoolkit=11.2
