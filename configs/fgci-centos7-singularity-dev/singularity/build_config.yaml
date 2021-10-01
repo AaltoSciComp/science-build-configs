@@ -186,3 +186,13 @@ definitions:
     flag_collections:
       - 'common'
       - 'nvidia'
+  - name: 'singularity-openfoam'
+    docker_user: 'openfoam'
+    docker_image: 'openfoam9-paraview56'
+    module_namespace: 'common'
+    tags:
+      - 'latest'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
