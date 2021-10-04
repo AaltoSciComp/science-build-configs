@@ -190,7 +190,8 @@ definitions:
     docker_user: 'openfoam'
     docker_image: 'openfoam9-paraview56'
     module_namespace: 'common'
-    fakeroot: false
+    fakeroot: False
+    sudo: True
     tags:
       - '9'
     command_collections:
