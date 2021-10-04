@@ -191,7 +191,7 @@ definitions:
     docker_image: 'openfoam9-paraview56'
     module_namespace: 'common'
     tags:
-      - 'latest'
+      - '9'
     command_collections:
       - 'common'
     flag_collections:
