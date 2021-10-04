@@ -211,3 +211,7 @@ packages:
     version: 'master'
   - name: 'gsl'
     version: '2.7'
+  - name: 'openfoam-org'
+    version: '9'
+    variants:
+      - '+source'
