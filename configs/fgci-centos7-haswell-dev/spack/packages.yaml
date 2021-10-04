@@ -10,7 +10,7 @@ packages:
   fftw:
     variants: +openmp
   flex:
-    version: [2.6.4]
+    version: [2.6.1]
     variants: +piclibs
   go:
     version: [1.15.6]
