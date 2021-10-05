@@ -201,8 +201,6 @@ packages:
     version: '3.1.1'
     extra_flags:
       - '-j 1'
-    dependencies:
-      - '^flex@2.6.3'
   - name: 'rclone'
     version: '1.56.0'
   - name: 'py-virtualenv'
@@ -219,3 +217,5 @@ packages:
     version: '9'
     variants:
       - '+source'
+    dependencies:
+      - '^flex@2.6.4'
