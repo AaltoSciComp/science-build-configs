@@ -217,5 +217,3 @@ packages:
     version: '9'
     variants:
       - '+source'
-    dependencies:
-      - '^flex@2.6.4'
