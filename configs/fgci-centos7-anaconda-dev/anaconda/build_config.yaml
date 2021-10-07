@@ -72,7 +72,7 @@ environments:
       setenv:
         GUROBI_HOME: '$prefix'
   - name: pytorch
-    version: '1.9.0'
+    version: '1.9.1'
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.9.2'
@@ -86,8 +86,12 @@ environments:
         - IBMDecisionOptimization
         - mosek
     collections:
-      - pytorch
       - triton-generic
+    conda_packages:
+      - cudatoolkit=11.*
+      - pytorch=1.9.1=*cuda*
+      - torchaudio
+      - torchvision=*=*cu111*
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
@@ -199,12 +203,6 @@ collections:
       - zlib
     pip_packages:
       - tensorflow=2.6.0
-  pytorch:
-    conda_packages:
-      - cudatoolkit=11.*
-      - pytorch=1.9.0=*cuda*
-      - torchaudio
-      - torchvision
   rapidsai:
     conda_packages:
       - cudatoolkit=11.2
