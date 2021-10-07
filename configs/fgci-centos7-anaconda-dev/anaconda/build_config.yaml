@@ -321,7 +321,6 @@ collections:
       - pytest-astropy
       - python-libarchive-c
       - python-snappy
-      - python=3.8.*
       - ripgrep
       - scikit-image
       - seaborn
