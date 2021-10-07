@@ -79,38 +79,38 @@ environments:
     condarc:
       channels:
         - pytorch
-        - conda-forge
-        - defaults
         - nvidia
+        - conda-forge
         - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - triton-generic
-    conda_packages:
-      - cudatoolkit=11.*
-      - pytorch=1.9.1=*cuda*
-      - torchaudio
-      - torchvision=*=*cu111*
+      - pytorch
+      - gurobi
+      - cplex
+      - mosek
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
   - name: tensorflow
-    version: '2.4.1'
+    version: '2.6.0'
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.9.2'
     condarc:
       channels:
         - conda-forge
-        - defaults
         - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
-      - tensorflow-v2
-      - mne
+      - tensorflow-v2-pip
       - triton-generic
+      - mne
+      - gurobi
+      - cplex
+      - mosek
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
@@ -124,13 +124,15 @@ environments:
         - rapidsai
         - nvidia
         - conda-forge
-        - defaults
         - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - rapidsai
       - triton-generic
+      - gurobi
+      - cplex
+      - mosek
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
@@ -158,6 +160,15 @@ environments:
     collections:
       - neuroimaging
 collections:
+  cplex:
+    conda_packages:
+      - cplex
+  gurobi:
+    conda_packages:
+      - gurobi
+  mosek:
+    conda_packages:
+      - mosek
   tensorflow-v1:
     conda_packages:
       - tensorboard
@@ -213,6 +224,12 @@ collections:
       - cuspatial
       - cuxfilter
       - rapids-blazing=21.08
+  pytorch:
+    conda_packages:
+      - cudatoolkit=11.*
+      - pytorch=1.9.1=*cuda*
+      - torchaudio
+      - torchvision=*=*cu111*
   mne:
     conda_packages:
       - mne
@@ -245,7 +262,6 @@ collections:
       - conda-tree
       - configargparse
       - contextlib2
-      - cplex
       - cython
       - dask
       - datalad
@@ -256,7 +272,6 @@ collections:
       - glob2
       - gpy
       - greenlet
-      - gurobi
       - html5lib
       - importnb
       - iniconfig
@@ -274,7 +289,6 @@ collections:
       - line_profiler
       - metakernel
       - more-itertools
-      - mosek
       - mpi4py
       - nbdime
       - nbstripout
