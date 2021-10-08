@@ -75,7 +75,7 @@ environments:
     version: '1.9.1'
     miniconda: True
     python_version: 3
-    installer_version: 'py38_4.9.2'
+    installer_version: 'py39_4.10.3'
     condarc:
       channels:
         - pytorch
@@ -98,7 +98,7 @@ environments:
     version: '2.6.0'
     miniconda: True
     python_version: 3
-    installer_version: 'py38_4.9.2'
+    installer_version: 'py39_4.10.3'
     condarc:
       channels:
         - conda-forge
@@ -119,7 +119,7 @@ environments:
     version: '21.08'
     miniconda: True
     python_version: 3
-    installer_version: 'py38_4.9.2'
+    installer_version: 'py39_4.10.3'
     condarc:
       channels:
         - rapidsai
@@ -230,13 +230,11 @@ collections:
       - cudatoolkit=11.*
       - pytorch=1.9.1=*cuda*
       - torchaudio
-  torchvision-pip:
-    conda_packages:
+      # torchvision dependencies
       - ffmpeg
       - jpeg
       - libpng
       - pillow
-      - numpy
     pip_packages:
       - torchvision==0.10.1
   mne:
