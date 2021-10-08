@@ -289,7 +289,7 @@ collections:
       - jupyter_contrib_nbextensions
       - jupyterlab
       - jupytext
-      - libblas=*=*mkl*
+      - conda-forge:libblas=*=*mkl*
       - librosa
       - libxscrnsaver-cos6-x86_64
       - line_profiler
