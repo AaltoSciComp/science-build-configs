@@ -97,13 +97,15 @@ packages:
       - '+blas'
       - '+mpi'
       - '+openmp'
-  - name: 'gsl'
-    version: '2.6'
   - name: 'geant4'
     version: '10.7.1'
     variants:
       - '+ipo'
       - '+python'
+  - name: 'gsl'
+    version: '2.6'
+  - name: 'gsl'
+    version: '2.7'
   - name: 'julia'
     version: '1.6.1'
     extra_flags:
