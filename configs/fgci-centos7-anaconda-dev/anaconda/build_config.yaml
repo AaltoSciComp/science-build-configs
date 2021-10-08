@@ -87,7 +87,6 @@ environments:
     collections:
       - triton-generic
       - pytorch
-      - torchvision-pip
       - gurobi
       - cplex
       - mosek
