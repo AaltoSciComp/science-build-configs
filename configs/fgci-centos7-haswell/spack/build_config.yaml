@@ -104,6 +104,8 @@ packages:
     variants:
       - '+ipo'
       - '+python'
+  - name: 'gsl'
+    version: '2.6'
   - name: 'julia'
     version: '1.6.1'
     extra_flags:
