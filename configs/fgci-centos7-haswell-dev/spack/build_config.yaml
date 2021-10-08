@@ -218,3 +218,8 @@ packages:
     variants:
       - '+source'
       - '+metis'
+  - name: 'suite-sparse'
+    version: '5.10.1'
+    variants:
+      - '+openmp'
+      - '+pic'
