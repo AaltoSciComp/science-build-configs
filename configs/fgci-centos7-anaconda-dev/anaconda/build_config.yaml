@@ -1,6 +1,7 @@
 installer_checksums:
   Miniconda3-py37_4.9.2-Linux-x86_64.sh: '79510c6e7bd9e012856e25dcb21b3e093aa4ac8113d9aa7e82a86987eabe1c31'
   Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
+  Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
 environments:
   - name: miniconda
@@ -75,18 +76,19 @@ environments:
     version: '1.9.1'
     miniconda: True
     python_version: 3
-    installer_version: 'py39_4.10.3'
-    condarc:
+    installer_version: 'py38_4.10.3'
+    condarc_install:
       channels:
         - pytorch
         - nvidia
         - conda-forge
+        - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - triton-generic
       - pytorch
-      - gurobipy
+      - gurobi
       - cplex
       - mosek
     extra_module_variables:
@@ -96,17 +98,18 @@ environments:
     version: '2.6.0'
     miniconda: True
     python_version: 3
-    installer_version: 'py39_4.10.3'
-    condarc:
+    installer_version: 'py38_4.10.3'
+    condarc_install:
       channels:
         - conda-forge
+        - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - tensorflow-v2-pip
       - triton-generic
       - mne
-      - gurobipy
+      - gurobi
       - cplex
       - mosek
     extra_module_variables:
@@ -116,18 +119,19 @@ environments:
     version: '21.08'
     miniconda: True
     python_version: 3
-    installer_version: 'py39_4.10.3'
-    condarc:
+    installer_version: 'py38_4.10.3'
+    condarc_install:
       channels:
         - rapidsai
         - nvidia
         - conda-forge
+        - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - rapidsai
       - triton-generic
-      - gurobipy
+      - gurobi
       - cplex
       - mosek
     extra_module_variables:
@@ -150,7 +154,7 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py39_4.10.3'
-    condarc:
+    condarc_install:
       channels:
         - defaults
         - conda-forge
