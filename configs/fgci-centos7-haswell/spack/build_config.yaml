@@ -63,6 +63,8 @@ packages:
     version: '10.1.243'
   - name: 'cuda'
     version: '11.0.2'
+  - name: 'cuda'
+    version: '11.2.1'
   - name: 'julia'
     version: '1.5.3'
     extra_flags:
