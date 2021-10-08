@@ -107,6 +107,7 @@ environments:
         - gurobi
         - IBMDecisionOptimization
         - mosek
+        - defaults
       channel_priority: strict
     collections:
       - tensorflow-v2-pip
@@ -235,7 +236,7 @@ collections:
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
-      - pytorch=1.9.1=*cuda*
+      - pytorch=1.9.1=*cuda11*
       - torchaudio
       # torchvision dependencies
       - ffmpeg
