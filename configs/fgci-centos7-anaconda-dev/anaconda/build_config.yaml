@@ -81,13 +81,12 @@ environments:
         - pytorch
         - nvidia
         - conda-forge
-        - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - triton-generic
       - pytorch
-      - gurobi
+      - gurobipy
       - cplex
       - mosek
     extra_module_variables:
@@ -101,14 +100,13 @@ environments:
     condarc:
       channels:
         - conda-forge
-        - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - tensorflow-v2-pip
       - triton-generic
       - mne
-      - gurobi
+      - gurobipy
       - cplex
       - mosek
     extra_module_variables:
@@ -124,13 +122,12 @@ environments:
         - rapidsai
         - nvidia
         - conda-forge
-        - gurobi
         - IBMDecisionOptimization
         - mosek
     collections:
       - rapidsai
       - triton-generic
-      - gurobi
+      - gurobipy
       - cplex
       - mosek
     extra_module_variables:
@@ -166,6 +163,9 @@ collections:
   gurobi:
     conda_packages:
       - gurobi
+  gurobipy:
+    pip_packages:
+      - gurobipy
   mosek:
     conda_packages:
       - mosek
