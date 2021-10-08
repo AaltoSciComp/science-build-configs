@@ -85,6 +85,8 @@ environments:
         - gurobi
         - IBMDecisionOptimization
         - mosek
+        - defaults
+      channel_priority: strict
     collections:
       - triton-generic
       - pytorch
@@ -105,6 +107,8 @@ environments:
         - gurobi
         - IBMDecisionOptimization
         - mosek
+        - defaults
+      channel_priority: strict
     collections:
       - tensorflow-v2-pip
       - triton-generic
@@ -128,6 +132,8 @@ environments:
         - gurobi
         - IBMDecisionOptimization
         - mosek
+        - defaults
+      channel_priority: strict
     collections:
       - rapidsai
       - triton-generic
