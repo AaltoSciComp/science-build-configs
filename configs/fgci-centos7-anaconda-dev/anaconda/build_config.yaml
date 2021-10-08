@@ -87,6 +87,8 @@ environments:
     collections:
       - triton-generic
       - pytorch
+      - torchvision-pip
+      - mne
       - gurobi
       - cplex
       - mosek
@@ -229,7 +231,15 @@ collections:
       - cudatoolkit=11.*
       - pytorch=1.9.1=*cuda*
       - torchaudio
-      - torchvision=*=*cu111*
+  torchvision-pip:
+    conda_packages:
+      - ffmpeg
+      - jpeg
+      - libpng
+      - pillow
+      - numpy
+    pip_packages:
+      - torchvision==0.10.1
   mne:
     conda_packages:
       - mne
