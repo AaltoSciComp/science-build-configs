@@ -107,7 +107,6 @@ environments:
         - gurobi
         - IBMDecisionOptimization
         - mosek
-        - defaults
       channel_priority: strict
     collections:
       - tensorflow-v2-pip
@@ -202,8 +201,8 @@ collections:
       - absl-py
       - astunparse
       - cudatoolkit=11.2.*
+      - cudatoolkit-dev=11.2.*
       - cudnn=8.1.*
-      - cupti
       - gast
       - google-pasta
       - grpcio
