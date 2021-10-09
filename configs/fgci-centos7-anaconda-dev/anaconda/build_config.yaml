@@ -221,7 +221,7 @@ collections:
       - wrapt
       - zlib
     pip_packages:
-      - tensorflow=2.6.0
+      - tensorflow==2.6.0
   rapidsai:
     conda_packages:
       - cudatoolkit=11.2
