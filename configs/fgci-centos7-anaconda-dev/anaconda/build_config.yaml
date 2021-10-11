@@ -131,7 +131,7 @@ environments:
         - gurobi
         - IBMDecisionOptimization
         - mosek
-      channel_priority: strict
+      channel_priority: flexible
     collections:
       - rapidsai
       - triton-generic
