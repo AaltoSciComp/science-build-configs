@@ -119,7 +119,7 @@ environments:
       setenv:
         GUROBI_HOME: '$prefix'
   - name: rapidsai
-    version: '21.08'
+    version: '21.10'
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.10.3'
@@ -224,14 +224,14 @@ collections:
       - tensorflow==2.6.0
   rapidsai:
     conda_packages:
-      - cudatoolkit=11.2
+      - cudatoolkit=11.4
       - cudf
       - cuml
       - cugraph
       - cusignal
       - cuspatial
       - cuxfilter
-      - rapids-blazing=21.08
+      - rapids-blazing=21.10
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
