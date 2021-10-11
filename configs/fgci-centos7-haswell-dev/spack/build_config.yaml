@@ -223,3 +223,10 @@ packages:
     variants:
       - '+openmp'
       - '+pic'
+  - name: 'quantum-espresso'
+    version: '6.8'
+    variants:
+      - '+epw'
+      - 'hdf5=parallel'
+      - '+mpi'
+      - '+scalapack'
