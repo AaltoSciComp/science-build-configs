@@ -230,3 +230,5 @@ packages:
       - 'hdf5=parallel'
       - '+mpi'
       - '+scalapack'
+    extra_flags:
+      - '-j 1'
