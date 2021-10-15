@@ -232,3 +232,5 @@ packages:
       - '+scalapack'
     extra_flags:
       - '-j 1'
+  - name: 'netcdf-cxx'
+    version: '4.3.1'
