@@ -63,6 +63,8 @@ packages:
     version: '10.1.243'
   - name: 'cuda'
     version: '11.0.2'
+  - name: 'cuda'
+    version: '11.2.1'
   - name: 'julia'
     version: '1.5.3'
     extra_flags:
@@ -97,13 +99,15 @@ packages:
       - '+blas'
       - '+mpi'
       - '+openmp'
-  - name: 'gsl'
-    version: '2.6'
   - name: 'geant4'
     version: '10.7.1'
     variants:
       - '+ipo'
       - '+python'
+  - name: 'gsl'
+    version: '2.6'
+  - name: 'gsl'
+    version: '2.7'
   - name: 'julia'
     version: '1.6.1'
     extra_flags:
@@ -118,3 +122,10 @@ packages:
     version: '1.3.3'
   - name: 'netcdf-cxx4'
     version: '4.3.1'
+  - name: 'fmt'
+    version: '8.0.1'
+  - name: 'suite-sparse'
+    version: '5.10.1'
+    variants:
+      - '+openmp'
+      - '+pic'
