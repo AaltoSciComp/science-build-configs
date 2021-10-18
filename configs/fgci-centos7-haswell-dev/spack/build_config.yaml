@@ -196,7 +196,7 @@ packages:
   - name: 'openblas'
     version: '0.3.14'
   - name: 'openblas'
-    version: '0.3.17'
+    version: '0.3.18'
   - name: 'stress'
     version: '1.0.4'
   - name: 'openbabel'
