@@ -88,6 +88,7 @@ environments:
       channel_priority: strict
     collections:
       - triton-generic
+      - blas-openblas
       - pytorch
       - mne
       - gurobi
@@ -111,6 +112,7 @@ environments:
     collections:
       - tensorflow-v2-pip
       - triton-generic
+      - blas-mkl
       - mne
       - gurobi
       - cplex
@@ -134,6 +136,7 @@ environments:
       channel_priority: flexible
     collections:
       - rapidsai
+      - blas-mkl
       - triton-generic
       - gurobi
       - cplex
@@ -244,6 +247,12 @@ collections:
       - pillow
     pip_packages:
       - torchvision==0.10.1
+  blas-mkl:
+    conda_packages:
+      - libblas=*=*mkl*
+  blas-openblas:
+    conda_packages:
+      - libblas=*=*openblas*
   mne:
     conda_packages:
       - mne
@@ -296,7 +305,6 @@ collections:
       - jupyter_contrib_nbextensions
       - jupyterlab
       - jupytext
-      - libblas=*=*mkl*
       - librosa
       - libxscrnsaver-cos6-x86_64
       - line_profiler
