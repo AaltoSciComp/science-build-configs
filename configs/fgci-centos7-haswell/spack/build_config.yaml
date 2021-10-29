@@ -131,3 +131,5 @@ packages:
       - '+pic'
   - name: 'jq'
     version: '1.6'
+  - name: 'p7zip'
+    version: '16.02'
