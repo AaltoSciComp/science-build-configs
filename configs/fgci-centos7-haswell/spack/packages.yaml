@@ -9,6 +9,8 @@ packages:
     variants: +libssh2 ~nghttp
   fftw:
     variants: +openmp
+  flex:
+    version: [2.6.4]
   fontconfig:
     version: [2.13.1]
   gcc:
