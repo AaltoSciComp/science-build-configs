@@ -129,3 +129,5 @@ packages:
     variants:
       - '+openmp'
       - '+pic'
+  - name: 'jq'
+    version: '1.6'
