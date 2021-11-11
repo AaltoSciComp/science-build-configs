@@ -176,6 +176,7 @@ collections:
     pip_packages:
       - tensorflow==2.6.0
   tensorflow-v2-conda-forge:
+    conda_packages:
       - cudatoolkit=11.*
       - tensorboard
       - tensorflow=2.6.0=cuda11*
