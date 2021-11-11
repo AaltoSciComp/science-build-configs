@@ -13,7 +13,7 @@ environments:
       channels:
         - defaults
   - name: anaconda
-    version: 'anaconda/2021-03-tf2'
+    version: '2021-03-tf2'
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.10.3'
