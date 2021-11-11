@@ -19,8 +19,6 @@ environments:
     installer_version: 'py38_4.10.3'
     condarc_install:
       channels:
-        - pytorch
-        - nvidia
         - conda-forge
         - gurobi
         - IBMDecisionOptimization
@@ -29,7 +27,7 @@ environments:
     collections:
       - triton-generic
       - tensorflow-v2-conda-forge
-      - pytorch
+      - pytorch-conda-forge
       - mne
       - gurobi
       - cplex
@@ -202,6 +200,11 @@ collections:
       - pillow
     pip_packages:
       - torchvision==0.10.1
+  pytorch-conda-forge:
+    conda_packages:
+      - cudatoolkit=11.*
+      - pytorch=1.9.1=cuda11*
+      - torchvision
   mne:
     conda_packages:
       - mne
