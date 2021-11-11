@@ -9,9 +9,34 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.9.2'
-    condarc:
+    condarc_install:
       channels:
         - defaults
+  - name: anaconda
+    version: 'anaconda/2021-03-tf2'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py38_4.10.3'
+    condarc_install:
+      channels:
+        - pytorch
+        - nvidia
+        - conda-forge
+        - gurobi
+        - IBMDecisionOptimization
+        - mosek
+      channel_priority: strict
+    collections:
+      - triton-generic
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - mne
+      - gurobi
+      - cplex
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
   - name: pytorch
     version: '1.9.1'
     miniconda: True
@@ -150,6 +175,10 @@ collections:
       - zlib
     pip_packages:
       - tensorflow==2.6.0
+  tensorflow-v2-conda-forge:
+      - cudatoolkit=11.*
+      - tensorboard
+      - tensorflow=2.6.0=cuda11*
   rapidsai:
     conda_packages:
       - cudatoolkit=11.4
