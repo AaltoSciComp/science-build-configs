@@ -247,7 +247,7 @@ packages:
     variants:
       - '~cuda'
       - '+mpi'
-      - '~openmp'
+      - '+openmp'
   - name: 'cp2k'
     version: '8.2'
     variants:
