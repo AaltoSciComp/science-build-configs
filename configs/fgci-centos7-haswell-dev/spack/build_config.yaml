@@ -275,3 +275,5 @@ packages:
       - '+cuda_blas'
       - '+cuda_fft'
       - 'cuda_arch=80'
+  - name: 'libgd'
+    version: '2.2.4'
