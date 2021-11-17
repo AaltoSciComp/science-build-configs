@@ -51,6 +51,7 @@ compilers:
     target_architecture:
       platform: linux
       os: centos7
+      arch: x86_64
   - name: 'gcc'
     version: 11.2.0
     variants:
