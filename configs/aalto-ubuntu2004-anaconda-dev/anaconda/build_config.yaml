@@ -13,7 +13,7 @@ environments:
       channels:
         - defaults
   - name: anaconda
-    version: '2021-03-tf2'
+    version: '2021-04-tf2'
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.10.3'
@@ -26,8 +26,6 @@ environments:
       channel_priority: strict
     collections:
       - triton-generic
-      - tensorflow-v2-conda-forge
-      - pytorch-conda-forge
       - mne
       - gurobi
       - cplex
@@ -72,7 +70,7 @@ environments:
         - mosek
       channel_priority: strict
     collections:
-      - tensorflow-v2-pip
+      - tensorflow-v2-conda-forge
       - triton-generic
       - mne
       - gurobi
