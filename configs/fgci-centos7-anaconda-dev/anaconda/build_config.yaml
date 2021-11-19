@@ -151,7 +151,7 @@ environments:
         - r
         - defaults
         - conda-forge
-      channel_priority: strict
+      channel_priority: flexible
     collections:
       - triton-r-generic
   - name: neuroimaging
