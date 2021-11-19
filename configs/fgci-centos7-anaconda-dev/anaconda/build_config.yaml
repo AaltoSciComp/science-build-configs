@@ -141,6 +141,19 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
+  - name: anaconda-r
+    version: '2021-01'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py39_4.10.3'
+    condarc_install:
+      channels:
+        - r
+        - defaults
+        - conda-forge
+      channel_priority: strict
+    collections:
+      - triton-r-generic
   - name: neuroimaging
     version: '2021-01'
     miniconda: True
@@ -352,6 +365,11 @@ collections:
       - xlsxwriter
       - xlwt
       - xmltodict
+  triton-r-generic:
+    conda_packages:
+      - r-essentials
+      - rstudio
+      - "blas * mkl"
   neuroimaging:
     conda_packages:
       - python>=3.8
