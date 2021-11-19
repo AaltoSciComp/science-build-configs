@@ -284,3 +284,7 @@ packages:
     version: '2.2.4'
   - name: 'freesurfer'
     version: '7.2.0'
+  - name: 'rstudio'
+    version: '1.4.1717'
+    variants:
+      - '+notebook'
