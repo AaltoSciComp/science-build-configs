@@ -369,7 +369,7 @@ collections:
     conda_packages:
       - r-essentials
       - rstudio
-      - "blas * mkl"
+      - "'blas * mkl'"
   neuroimaging:
     conda_packages:
       - python>=3.8
