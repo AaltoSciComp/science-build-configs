@@ -12,17 +12,3 @@
   rsync_flags: -surlptDxv
   chmod_options: 'Dg+s,ug+w,Fo-w,+X'
   delete: true
-- method: rsync
-  target_host: scibuilder
-  source: /share/apps/anaconda-ci/fgci-centos7-anaconda-dev/software
-  dest: /tw-scicomp/anaconda-ci/fgci-centos7-anaconda-dev/software
-  rsync_flags: -surlptDxv  --exclude='.nfs*'
-  chmod_options: 'Dg+s,ug+w,Fo-w,+X'
-  delete: false
-- method: rsync
-  target_host: scibuilder
-  source: /share/apps/anaconda-ci/fgci-centos7-anaconda-dev/modules
-  dest: /tw-scicomp/anaconda-ci/fgci-centos7-anaconda-dev/modules
-  rsync_flags: -surlptDxv  --exclude='.nfs*'
-  chmod_options: 'Dg+s,ug+w,Fo-w,+X'
-  delete: false
