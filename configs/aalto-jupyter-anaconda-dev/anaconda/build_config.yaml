@@ -20,3 +20,152 @@ collections:
   mamba:
     conda_packages:
       - mamba
+
+  # arviz: bayesian data analysis
+  # cma: ??
+  # folium: BE remote sensing course
+  # geopandas: BE remote sensing course
+  # igraph: complex networks (general)
+  # keras: general use (for gpu, keras-gpu)
+  # librarosa: datasci2018
+  # networkx: complex networks (general)
+  # nose: mlbp2018
+  # owslib: mlpython
+  # plotchecker: for nbgrader, mlbp2018
+  # plotly: student request
+  # pydotplus - dsfb2018 instructor request
+  # pydub: ???
+  # pytorch: general use
+  # pystan: general use, bayes course (updated prompt_toolkit needed as dependency)
+  # rasterio: BE remote sensing course
+  # scikit-learn: mlbp2018
+  # tensorflow, tensorflow-tensorboard (general use)
+  # cvxopt       - mlkern2019
+  # nbstripout   - generic package
+  # nltk         -  datasci2019  (use conda  when upgrading)
+  # lapack       - dependency for cvxpy
+  # cvxpy        - mlkern2019
+  # gpflow       - special course Gaussian Processes, 2019 (pinned to 2.0.0rc1 to force tf2.0 compat)
+  # bcolz        - introai2019
+  # tqdm         - introai2019
+  # qiskit       - Introduction to Quantum Technologies, Matti Raasakka, RT#14866
+  # wordcloud - datasci2019
+  # geopy - datasci2019
+  # imbalanced-learn (student request)
+  # opencv: mlpython
+  # configargparse: deeplearn2020, also generally useful
+  # ortools:   ai2020
+  jupyter-generic:
+    conda_packages:
+      - networkx
+      - nose
+      - pandas-datareader
+      - plotly
+      - pydotplus
+      - scikit-learn
+      - arviz
+      - folium
+      - python-igraph
+      - feather-format
+      - librosa
+      - bcolz
+      - tqdm
+      - wordcloud
+      - geopy
+      - rasterio
+      - geopandas
+      - lapack
+      - mlxtend
+      - scikit-plot
+      - imbalanced-learn
+      - nltk
+      - opencv
+      - owslib
+      - beautifulsoup4
+      - lifelines
+      - rpy2
+      - shap
+      - xlsxwriter
+      - xlwt
+      - sklearn-pandas
+    pip_packages:
+      - plotchecker
+      - gpflow==2.0.0rc1
+      - calysto
+      - cma
+      - cvxopt
+      - cvxpy
+      - metakernel
+      - pydub
+      - qiskit
+      - configargparse
+      - geoplotlib
+      - ipympl
+      - ortools
+      - prompt_toolkit
+      - mne
+      - pycox
+      - pysurvival
+      - scikit-survival
+      - https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
+    # Currently non-funectional packages:
+    #   geopandas (conda-forge)
+    #   rasterio (conda-forge)
+  scipy-notebook-upstream:
+    # Synced from
+    # https://github.com/jupyter/docker-stacks/blob/master/scipy-notebook/Dockerfile
+    # Re-sync occassionally, copy-and-repasted the whole thing
+    conda_packages:
+      - 'altair'
+      - 'beautifulsoup4'
+      - 'bokeh'
+      - 'bottleneck'
+      - 'cloudpickle'
+      - 'conda-forge::blas=*=openblas'
+      - 'cython'
+      - 'dask'
+      - 'dill'
+      - 'h5py'
+      - 'ipympl'
+      - 'ipywidgets'
+      - 'matplotlib-base'
+      - 'numba'
+      - 'numexpr'
+      - 'pandas'
+      - 'patsy'
+      - 'protobuf'
+      - 'pytables'
+      - 'scikit-image'
+      - 'scikit-learn'
+      - 'scipy'
+      - 'seaborn'
+      - 'sqlalchemy'
+      - 'statsmodels'
+      - 'sympy'
+      - 'widgetsnbextension'
+      - 'xlrd'
+  tensorflow:
+    conda_packages:
+      - tensorflow
+      - tensorboard
+      - tensorflow-hub
+      - keras
+  pystan:
+    conda_packages:
+      - pystan
+  torch:
+    conda_packages:
+      - pytorch
+      - torchtext
+      - torchvision
+
+  bdaaccounting:
+    # apt: unixodbc-dev - does this need to be installed on the builder?
+    conda_packages:
+      - freetds
+    pip_packages:
+      - gensim
+      - pdfplumber
+      - pyodbc
+      - pmdarima
+      - tweepy
