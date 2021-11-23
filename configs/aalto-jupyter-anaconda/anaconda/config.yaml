@@ -1,6 +1,7 @@
 config:
   install_path: /work/modules/automatic/anaconda/envs/aalto-jupyter-anaconda/software
   module_path: /work/modules/automatic/anaconda/envs/aalto-jupyter-anaconda/modules
+  conda_pack_path: /work/modules/automatic/anaconda/envs/aalto-jupyter-anaconda/packs
   source_cache: /cache/anaconda
   tmpdir: /tmp/anaconda
   remove_after_update: True
