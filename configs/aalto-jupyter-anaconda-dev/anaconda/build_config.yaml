@@ -37,6 +37,7 @@ environments:
       - torch
       - pystan
       - scikit_learn
+      - opencv
 collections:
   compilers:
     conda_packages:
@@ -67,7 +68,6 @@ collections:
       - rasterio     # rasterio: BE remote sensing course
       #- lapack       # lapack       - dependency for cvxpy
       #- nltk         # nltk         -  datasci2019  (use conda  when upgrading)
-      - opencv       # opencv: mlpython
       - owslib       # owslib: mlpython
       - beautifulsoup4
       - lifelines
@@ -156,6 +156,9 @@ collections:
       - mlxtend      # depends on scikit-learn
       - geopandas    # geopandas: BE remote sensing course
                      # depends on scikit-learn via mapclassify
+  opencv:
+    conda_packages:
+      - opencv       # opencv: mlpython
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
     conda_packages:
