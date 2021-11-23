@@ -146,7 +146,7 @@ collections:
       - 'xlrd'
   tensorflow:
     conda_packages:
-      - tensorflow
+      - tensorflow-cpu
       - tensorboard
       - tensorflow-hub
       - keras
@@ -163,9 +163,10 @@ collections:
     # apt: unixodbc-dev - does this need to be installed on the builder?
     conda_packages:
       - freetds
+      - pdfplumber
+      - pmdarima
+      - pyodbc
+      - tweepy
+      - unixodbc
     pip_packages:
       - gensim
-      - pdfplumber
-      - pyodbc
-      - pmdarima
-      - tweepy
