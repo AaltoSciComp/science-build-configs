@@ -29,7 +29,7 @@ environments:
     collections:
       - mamba
       - jupyter-generic
-      - scipy-notebook-upstream
+      #- scipy-notebook-upstream
       - tensorflow
       - torch
       - pystan
@@ -39,9 +39,9 @@ collections:
       - mamba
   jupyter-generic:
     conda_packages:
-      - cma          # cma: ??
+      #- cma          # cma: ??
       - networkx     # networkx: complex networks (general)
-      - nose         # nose: mlbp2018
+      #- nose         # nose: mlbp2018
       - pandas-datareader
       - plotly       # plotly: student request
       - pydotplus    # pydotplus - dsfb2018 instructor request
@@ -50,8 +50,8 @@ collections:
       - folium       # folium: BE remote sensing course
       - python-igraph  # igraph: complex networks (general)
       - feather-format
-      - librosa      # librarosa: datasci2018
-      - bcolz        # bcolz        - introai2019
+      #- librosa      # librarosa: datasci2018
+      #- bcolz        # bcolz        - introai2019  # now unmaintained
       - tqdm         # tqdm         - introai2019
       - wordcloud    # wordcloud - datasci2019
       - geopy        # geopy - datasci2019
@@ -61,23 +61,23 @@ collections:
       - mlxtend
       - scikit-plot
       - imbalanced-learn
-      - nltk         # nltk         -  datasci2019  (use conda  when upgrading)
+      #- nltk         # nltk         -  datasci2019  (use conda  when upgrading)
       - opencv       # opencv: mlpython
       - owslib       # owslib: mlpython
       - beautifulsoup4
       - lifelines
       - rpy2
-      - shap
+      #- shap
       - xlsxwriter
       - xlwt
       - sklearn-pandas
       - prompt_toolkit
-      - mne
-      - pycox
-      - cvxopt       # cvxopt       - mlkern2019
-      - cvxpy        # cvxpy        - mlkern2019
+      #- mne
+      #- pycox
+      #- cvxopt       # cvxopt       - mlkern2019
+      #- cvxpy        # cvxpy        - mlkern2019
       - scikit-survival
-      - geoplotlib
+      #- geoplotlib
       - ipympl
       - configargparse # configargparse: deeplearn2020, also generally useful
       - metakernel
@@ -90,7 +90,7 @@ collections:
       - qiskit       # qiskit       - Introduction to Quantum Technologies, RT#14866
       - ortools      # ortools:   ai2020
       - pysurvival
-      - https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
+      #- https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
     # Currently non-funectional packages:
     #   geopandas (conda-forge)
     #   rasterio (conda-forge)
@@ -100,9 +100,9 @@ collections:
     # Re-sync occassionally, copy-and-repasted the whole thing
     # But remove this line: 'conda-forge::blas=*=openblas'
     conda_packages:
-      - 'altair'
+      #- 'altair'
       - 'beautifulsoup4'
-      - 'bokeh'
+      #- 'bokeh'
       - 'bottleneck'
       - 'cloudpickle'
       - 'cython'
@@ -115,8 +115,8 @@ collections:
       - 'numba'
       - 'numexpr'
       - 'pandas'
-      - 'patsy'
-      - 'protobuf'
+      #- 'patsy'
+      #- 'protobuf'
       - 'pytables'
       - 'scikit-image'
       - 'scikit-learn'
@@ -140,7 +140,7 @@ collections:
   torch:
     conda_packages:
       - pytorch-cpu=1.10.*
-      - torchtext
+      #- torchtext
       - torchvision
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
