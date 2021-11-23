@@ -42,7 +42,7 @@ collections:
       - mamba
   nbconvert_5_pin:
     conda_packages:
-      - 'nbconvert<6'
+      - '"nbconvert<6"'
   jupyter-generic:
     conda_packages:
       #- cma          # cma: ??
