@@ -28,6 +28,7 @@ environments:
         - conda-forge
         - defaults
     collections:
+      - compilers
       - mamba
       - nbconvert_5_pin
       - jupyter-generic
@@ -37,6 +38,9 @@ environments:
       - pystan
       - scikit_learn
 collections:
+  compilers:
+    conda_packages:
+      - compilers
   mamba:
     conda_packages:
       - mamba
