@@ -6,7 +6,7 @@
   use_ssh: False
   delete: false
 - method: rsync
-  source: /m/scicomp/software/anaconda-ci/aalto-jupyter-anaconda/software
+  source: /m/scicomp/software/anaconda-ci/aalto-jupyter-anaconda/modules
   dest: /tw-scicomp/modules
   rsync_flags: -surlptDxv  --exclude='.nfs*' --exclude='.snapshot*'
   chmod_options: 'Dg+s,ug+w,Fo-w,+X'
