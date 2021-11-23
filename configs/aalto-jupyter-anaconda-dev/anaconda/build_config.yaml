@@ -62,7 +62,7 @@ collections:
       - geopy        # geopy - datasci2019
       - rasterio     # rasterio: BE remote sensing course
       - geopandas    # geopandas: BE remote sensing course
-      - lapack       # lapack       - dependency for cvxpy
+      #- lapack       # lapack       - dependency for cvxpy
       - mlxtend
       #- nltk         # nltk         -  datasci2019  (use conda  when upgrading)
       - opencv       # opencv: mlpython
