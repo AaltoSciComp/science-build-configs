@@ -38,7 +38,7 @@ environments:
       - pystan
       - scikit_learn
       - opencv
-      #- bdaaccounting
+      - bdaaccounting
 collections:
   compilers:
     conda_packages:
@@ -61,14 +61,14 @@ collections:
       - folium       # folium: BE remote sensing course
       - python-igraph  # igraph: complex networks (general)
       - feather-format
-      #- librosa      # librarosa: datasci2018
-      #- bcolz        # bcolz        - introai2019  # now unmaintained
+      - librosa      # librarosa: datasci2018
+      #- bcolz        # bcolz        - introai2019  # now unmaintained, python <3.7
       - tqdm         # tqdm         - introai2019
       - wordcloud    # wordcloud - datasci2019
       - geopy        # geopy - datasci2019
       - rasterio     # rasterio: BE remote sensing course
       #- lapack       # lapack       - dependency for cvxpy
-      #- nltk         # nltk         -  datasci2019  (use conda  when upgrading)
+      - nltk         # nltk         -  datasci2019  (use conda  when upgrading)
       - owslib       # owslib: mlpython
       - beautifulsoup4
       - lifelines
@@ -78,10 +78,10 @@ collections:
       - xlwt
       - prompt_toolkit
       #- mne
-      #- pycox
-      #- cvxopt       # cvxopt       - mlkern2019
-      #- cvxpy        # cvxpy        - mlkern2019
-      #- geoplotlib
+      - pycox
+      - cvxopt       # cvxopt       - mlkern2019
+      - cvxpy        # cvxpy        - mlkern2019
+      - geoplotlib
       - ipympl
       - configargparse # configargparse: deeplearn2020, also generally useful
       - metakernel
@@ -106,7 +106,7 @@ collections:
     conda_packages:
       #- 'altair'
       - 'beautifulsoup4'
-      #- 'bokeh'
+      - 'bokeh'
       - 'bottleneck'
       - 'cloudpickle'
       - 'cython'
