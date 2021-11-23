@@ -23,8 +23,8 @@ environments:
     conda_pack: True
     condarc_install:
       channels:
-        - defaults
         - conda-forge
+        - defaults
     collections:
       - mamba
       - jupyter-generic
@@ -161,7 +161,7 @@ collections:
       - 'xlrd'
   tensorflow:
     conda_packages:
-      - tensorflow=2.6.2=cpu_*
+      - tensorflow-cpu=2.6.*
       - tensorboard
       - tensorflow-hub
       - keras
@@ -170,16 +170,17 @@ collections:
       - pystan
   torch:
     conda_packages:
-      - pytorch=1.9.1=cpu_*
+      - pytorch-cpu=1.10.*
       - torchtext
       - torchvision
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
     conda_packages:
       - freetds
+      - pdfplumber
+      - pmdarima
+      - pyodbc
+      - tweepy
+      - unixodbc
     pip_packages:
       - gensim
-      - pdfplumber
-      - pyodbc
-      - pmdarima
-      - tweepy
