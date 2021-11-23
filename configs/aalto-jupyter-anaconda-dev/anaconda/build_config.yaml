@@ -24,12 +24,13 @@ environments:
     conda_pack: True
     condarc_install:
       channels:
+        - pytorch
         - conda-forge
         - defaults
     collections:
       - mamba
       - jupyter-generic
-      #- scipy-notebook-upstream
+      - scipy-notebook-upstream
       - tensorflow
       - torch
       - pystan
@@ -139,8 +140,9 @@ collections:
       - pystan
   torch:
     conda_packages:
-      - pytorch-cpu=1.10.*
-      #- torchtext
+      - pytorch
+      - cpuonly
+      - torchtext
       - torchvision
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
