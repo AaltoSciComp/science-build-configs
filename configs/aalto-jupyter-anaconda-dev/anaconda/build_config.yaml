@@ -35,6 +35,7 @@ environments:
       - tensorflow
       - torch
       - pystan
+      - scikit_learn
 collections:
   mamba:
     conda_packages:
@@ -50,7 +51,6 @@ collections:
       - pandas-datareader
       - plotly       # plotly: student request
       - pydotplus    # pydotplus - dsfb2018 instructor request
-      - scikit-learn # scikit-learn: mlbp2018
       - arviz        # arviz: bayesian data analysis
       - folium       # folium: BE remote sensing course
       - python-igraph  # igraph: complex networks (general)
@@ -64,8 +64,6 @@ collections:
       - geopandas    # geopandas: BE remote sensing course
       - lapack       # lapack       - dependency for cvxpy
       - mlxtend
-      - scikit-plot
-      - imbalanced-learn
       #- nltk         # nltk         -  datasci2019  (use conda  when upgrading)
       - opencv       # opencv: mlpython
       - owslib       # owslib: mlpython
@@ -75,13 +73,11 @@ collections:
       #- shap
       - xlsxwriter
       - xlwt
-      - sklearn-pandas
       - prompt_toolkit
       #- mne
       #- pycox
       #- cvxopt       # cvxopt       - mlkern2019
       #- cvxpy        # cvxpy        - mlkern2019
-      - scikit-survival
       #- geoplotlib
       - ipympl
       - configargparse # configargparse: deeplearn2020, also generally useful
@@ -148,6 +144,13 @@ collections:
       - cpuonly
       - torchtext
       - torchvision
+  scikit_learn:
+    conda_packages:
+      - imbalanced-learn
+      - scikit-learn # scikit-learn: mlbp2018
+      - scikit-plot
+      - scikit-survival
+      - sklearn-pandas
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
     conda_packages:
