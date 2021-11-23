@@ -94,7 +94,7 @@ collections:
       - pydub        # pydub: ???
       - qiskit       # qiskit       - Introduction to Quantum Technologies, RT#14866
       - ortools      # ortools:   ai2020
-      - pysurvival
+      #- pysurvival (Supported for Python<=3.7 https://github.com/berleon/pysurvival#what-is-pysurvival)
       #- https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
     # Currently non-funectional packages:
     #   geopandas (conda-forge)
