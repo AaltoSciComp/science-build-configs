@@ -29,6 +29,7 @@ environments:
         - defaults
     collections:
       - mamba
+      - nbconvert_5_pin
       - jupyter-generic
       - scipy-notebook-upstream
       - tensorflow
@@ -38,6 +39,9 @@ collections:
   mamba:
     conda_packages:
       - mamba
+  nbconvert_5_pin:
+    conda_packages:
+      - 'nbconvert<6'
   jupyter-generic:
     conda_packages:
       #- cma          # cma: ??
