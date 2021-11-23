@@ -36,66 +36,34 @@ collections:
   mamba:
     conda_packages:
       - mamba
-  # arviz: bayesian data analysis
-  # cma: ??
-  # folium: BE remote sensing course
-  # geopandas: BE remote sensing course
-  # igraph: complex networks (general)
-  # keras: general use (for gpu, keras-gpu)
-  # librarosa: datasci2018
-  # networkx: complex networks (general)
-  # nose: mlbp2018
-  # owslib: mlpython
-  # plotchecker: for nbgrader, mlbp2018
-  # plotly: student request
-  # pydotplus - dsfb2018 instructor request
-  # pydub: ???
-  # pytorch: general use
-  # pystan: general use, bayes course (updated prompt_toolkit needed as dependency)
-  # rasterio: BE remote sensing course
-  # scikit-learn: mlbp2018
-  # tensorflow, tensorflow-tensorboard (general use)
-  # cvxopt       - mlkern2019
-  # nbstripout   - generic package
-  # nltk         -  datasci2019  (use conda  when upgrading)
-  # lapack       - dependency for cvxpy
-  # cvxpy        - mlkern2019
-  # gpflow       - special course Gaussian Processes, 2019 (pinned to 2.0.0rc1 to force tf2.0 compat)
-  # bcolz        - introai2019
-  # tqdm         - introai2019
-  # qiskit       - Introduction to Quantum Technologies, Matti Raasakka, RT#14866
-  # wordcloud - datasci2019
-  # geopy - datasci2019
-  # imbalanced-learn (student request)
-  # opencv: mlpython
-  # configargparse: deeplearn2020, also generally useful
-  # ortools:   ai2020
+
   jupyter-generic:
     conda_packages:
-      - networkx
-      - nose
+      - cma          # cma: ??
+      - networkx     # networkx: complex networks (general)
+      - nose         # nose: mlbp2018
       - pandas-datareader
-      - plotly
-      - pydotplus
-      - scikit-learn
-      - arviz
-      - folium
-      - python-igraph
+      - plotly       # plotly: student request
+      - pydotplus    # pydotplus - dsfb2018 instructor request
+      - scikit-learn # scikit-learn: mlbp2018
+      - arviz        # arviz: bayesian data analysis
+      - folium       # folium: BE remote sensing course
+      - python-igraph  # igraph: complex networks (general)
       - feather-format
-      - librosa
-      - bcolz
-      - tqdm
-      - wordcloud
-      - geopy
-      - rasterio
-      - geopandas
-      - lapack
+      - librosa      # librarosa: datasci2018
+      - bcolz        # bcolz        - introai2019
+      - tqdm         # tqdm         - introai2019
+      - wordcloud    # wordcloud - datasci2019
+      - geopy        # geopy - datasci2019
+      - rasterio     # rasterio: BE remote sensing course
+      - geopandas    # geopandas: BE remote sensing course
+      - lapack       # lapack       - dependency for cvxpy
       - mlxtend
       - scikit-plot
       - imbalanced-learn
-      - nltk
-      - opencv
-      - owslib
+      - nltk         # nltk         -  datasci2019  (use conda  when upgrading)
+      - opencv       # opencv: mlpython
+      - owslib       # owslib: mlpython
       - beautifulsoup4
       - lifelines
       - rpy2
@@ -103,25 +71,25 @@ collections:
       - xlsxwriter
       - xlwt
       - sklearn-pandas
-    pip_packages:
-      - plotchecker
-      - gpflow==2.0.0rc1
-      - calysto
-      - cma
-      - cvxopt
-      - cvxpy
-      - metakernel
-      - pydub
-      - qiskit
-      - configargparse
-      - geoplotlib
-      - ipympl
-      - ortools
       - prompt_toolkit
       - mne
       - pycox
-      - pysurvival
+      - cvxopt       # cvxopt       - mlkern2019
+      - cvxpy        # cvxpy        - mlkern2019
       - scikit-survival
+      - geoplotlib
+      - ipympl
+      - configargparse # configargparse: deeplearn2020, also generally useful
+      - metakernel
+    pip_packages:
+      - plotchecker  # plotchecker: for nbgrader, mlbp2018
+      - gpflow       # 2021-11, c-f has old version
+                     # gpflow       - special course Gaussian Processes, 2019 (pinned to 2.0.0rc1 to force tf2.0 compat)
+      - calysto           # 2021-11, c-f missing
+      - pydub        # pydub: ???
+      - qiskit       # qiskit       - Introduction to Quantum Technologies, RT#14866
+      - ortools      # ortools:   ai2020
+      - pysurvival
       - https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
     # Currently non-funectional packages:
     #   geopandas (conda-forge)
@@ -165,6 +133,7 @@ collections:
       - tensorboard
       - tensorflow-hub
       - keras
+  # pystan: general use, bayes course (updated prompt_toolkit needed as dependency)
   pystan:
     conda_packages:
       - pystan
