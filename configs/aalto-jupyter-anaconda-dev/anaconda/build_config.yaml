@@ -65,15 +65,13 @@ collections:
       - wordcloud    # wordcloud - datasci2019
       - geopy        # geopy - datasci2019
       - rasterio     # rasterio: BE remote sensing course
-      - geopandas    # geopandas: BE remote sensing course
       #- lapack       # lapack       - dependency for cvxpy
-      - mlxtend
       #- nltk         # nltk         -  datasci2019  (use conda  when upgrading)
       - opencv       # opencv: mlpython
       - owslib       # owslib: mlpython
       - beautifulsoup4
       - lifelines
-      - rpy2
+      #- rpy2
       #- shap
       - xlsxwriter
       - xlwt
@@ -155,6 +153,9 @@ collections:
       - scikit-plot
       - scikit-survival
       - sklearn-pandas
+      - mlxtend      # depends on scikit-learn
+      - geopandas    # geopandas: BE remote sensing course
+                     # depends on scikit-learn via mapclassify
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
     conda_packages:
