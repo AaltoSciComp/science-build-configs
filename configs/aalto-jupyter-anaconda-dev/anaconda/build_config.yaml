@@ -38,6 +38,7 @@ environments:
       - pystan
       - scikit_learn
       - opencv
+      #- bdaaccounting
 collections:
   compilers:
     conda_packages:
