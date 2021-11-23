@@ -15,12 +15,27 @@ environments:
         - defaults
         - conda-forge
     collections:
+  - name: jupyter-generic
+    version: '2021-11-23'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py39_4.10.3'
+    conda_pack: True
+    condarc_install:
+      channels:
+        - defaults
+        - conda-forge
+    collections:
       - mamba
+      - jupyter-generic
+      - scipy-notebook-upstream
+      - tensorflow
+      - torch
+      - pystan
 collections:
   mamba:
     conda_packages:
       - mamba
-
   # arviz: bayesian data analysis
   # cma: ??
   # folium: BE remote sensing course
@@ -146,7 +161,7 @@ collections:
       - 'xlrd'
   tensorflow:
     conda_packages:
-      - tensorflow
+      - tensorflow=2.6.2=cpu_*
       - tensorboard
       - tensorflow-hub
       - keras
@@ -155,10 +170,9 @@ collections:
       - pystan
   torch:
     conda_packages:
-      - pytorch
+      - pytorch=1.9.1=cpu_*
       - torchtext
       - torchvision
-
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
     conda_packages:
