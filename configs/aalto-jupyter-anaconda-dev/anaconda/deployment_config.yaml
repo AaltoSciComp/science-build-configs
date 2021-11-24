@@ -4,18 +4,18 @@
   rsync_flags: -surlptDxv  --exclude='.nfs*' --exclude='.snapshot*'
   chmod_options: 'Dg+s,ug+w,Fo-w,+X'
   use_ssh: False
-  delete: false
+  delete: True
 - method: rsync
   source: /m/scicomp/software/anaconda-ci/aalto-jupyter-anaconda-dev/modules
   dest: /tw-scicomp/modules
   rsync_flags: -surlptDxv  --exclude='.nfs*' --exclude='.snapshot*'
   chmod_options: 'Dg+s,ug+w,Fo-w,+X'
   use_ssh: False
-  delete: false
+  delete: True
 - method: rsync
   source: /m/scicomp/software/anaconda-ci/aalto-jupyter-anaconda-dev/packs
   dest: /tw-scicomp/packs
   rsync_flags: -surlptDxv  --exclude='.nfs*' --exclude='.snapshot*'
   chmod_options: 'Dg+s,u+rw,g+r,Fo-w,+rX'
   use_ssh: False
-  delete: false
+  delete: False
