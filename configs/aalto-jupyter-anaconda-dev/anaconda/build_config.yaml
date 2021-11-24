@@ -46,6 +46,7 @@ collections:
   mamba:
     conda_packages:
       - mamba
+      - conda-tree
   nbconvert_5_pin:
     conda_packages:
       - '"nbconvert<6"'
