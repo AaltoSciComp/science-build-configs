@@ -80,6 +80,7 @@ collections:
       - prompt_toolkit
       #- mne
       - pycox
+      - pydub        # pydub: ??? - Available in c-f
       - cvxopt       # cvxopt       - mlkern2019
       - cvxpy        # cvxpy        - mlkern2019
       - geoplotlib
@@ -92,7 +93,6 @@ collections:
       - gpflow       # 2021-11, c-f has old version
                      # gpflow       - special course Gaussian Processes, 2019 (pinned to 2.0.0rc1 to force tf2.0 compat)
       - calysto           # 2021-11, c-f missing
-      - pydub        # pydub: ???
       - qiskit       # qiskit       - Introduction to Quantum Technologies, RT#14866
       #- pysurvival (Supported for Python<=3.7 https://github.com/berleon/pysurvival#what-is-pysurvival)
       #- https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
@@ -164,11 +164,10 @@ collections:
   bdaaccounting:
     # apt: unixodbc-dev - does this need to be installed on the builder?
     conda_packages:
+      - gensim # 4.1.2. is available via c-f
       - freetds
       - pdfplumber
       - pmdarima
       - pyodbc
       - tweepy
       - unixodbc
-    pip_packages:
-      - gensim
