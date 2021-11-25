@@ -283,4 +283,6 @@ packages:
   - name: 'libgd'
     version: '2.2.4'
   - name: 'freesurfer'
+    licenses:
+      - 'license.txt'
     version: '7.2.0'
