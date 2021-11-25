@@ -182,7 +182,7 @@ collections:
       - webdataset
     conda_packages:
       - astropy
-      - bcolz
+      # - bcolz # No longer maintained
       - beautifulsoup4
       - bitarray
       # - blaze # No python3.8 build
