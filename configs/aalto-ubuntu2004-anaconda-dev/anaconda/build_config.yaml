@@ -16,54 +16,10 @@ environments:
     version: '2021-04-tf2'
     miniconda: True
     python_version: 3
-    installer_version: 'py38_4.10.3'
-    condarc_install:
-      channels:
-        - conda-forge
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-      channel_priority: strict
-    collections:
-      - triton-generic
-      - mne
-      - gurobi
-      - cplex
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
-  - name: pytorch
-    version: '1.9.1'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.10.3'
+    installer_version: 'py39_4.10.3'
     condarc_install:
       channels:
         - pytorch
-        - nvidia
-        - conda-forge
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-      channel_priority: strict
-    collections:
-      - triton-generic
-      - pytorch
-      - mne
-      - gurobi
-      - cplex
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
-  - name: tensorflow
-    version: '2.6.0'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.10.3'
-    condarc_install:
-      channels:
         - conda-forge
         - gurobi
         - IBMDecisionOptimization
@@ -71,6 +27,7 @@ environments:
       channel_priority: strict
     collections:
       - tensorflow-v2-conda-forge
+      - pytorch
       - triton-generic
       - mne
       - gurobi
@@ -83,7 +40,7 @@ environments:
     version: '21.10'
     miniconda: True
     python_version: 3
-    installer_version: 'py38_4.10.3'
+    installer_version: 'py39_4.10.3'
     condarc_install:
       channels:
         - rapidsai
@@ -96,6 +53,7 @@ environments:
     collections:
       - rapidsai
       - triton-generic
+      - mne
       - gurobi
       - cplex
       - mosek
@@ -175,7 +133,7 @@ collections:
     conda_packages:
       - cudatoolkit=11.*
       - tensorboard
-      - tensorflow=2.6.0=cuda11*
+      - tensorflow=2.*=cuda11*
   rapidsai:
     conda_packages:
       - cudatoolkit=11.4
@@ -189,7 +147,7 @@ collections:
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
-      - pytorch=1.9.1=*cuda11*
+      - pytorch=*=*cuda11*
       - torchaudio
       # torchvision dependencies
       - ffmpeg
