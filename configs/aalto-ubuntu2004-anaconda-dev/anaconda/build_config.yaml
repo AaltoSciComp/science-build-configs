@@ -16,7 +16,7 @@ environments:
     version: '2021-04-tf2'
     miniconda: True
     python_version: 3
-    installer_version: 'py39_4.10.3'
+    installer_version: 'py38_4.10.3'
     condarc_install:
       channels:
         - pytorch
@@ -40,7 +40,7 @@ environments:
     version: '21.10'
     miniconda: True
     python_version: 3
-    installer_version: 'py39_4.10.3'
+    installer_version: 'py38_4.10.3'
     condarc_install:
       channels:
         - rapidsai
