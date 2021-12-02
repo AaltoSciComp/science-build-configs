@@ -24,7 +24,7 @@ environments:
         - gurobi
         - IBMDecisionOptimization
         - mosek
-      channel_priority: strict
+      channel_priority: flexible
     collections:
       - tensorflow-v2-conda-forge
       - pytorch
