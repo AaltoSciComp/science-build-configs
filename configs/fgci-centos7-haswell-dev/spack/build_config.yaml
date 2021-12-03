@@ -295,9 +295,4 @@ packages:
     version: '3.10'
     variants:
       - '+cuda'
-      - 'cuda_arch=70'
-  - name: 'mumax'
-    version: '3.10'
-    variants:
-      - '+cuda'
       - 'cuda_arch=80'
