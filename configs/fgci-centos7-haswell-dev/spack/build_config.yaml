@@ -283,6 +283,21 @@ packages:
   - name: 'libgd'
     version: '2.2.4'
   - name: 'freesurfer'
+    version: '7.2.0'
     licenses:
       - 'license.txt'
-    version: '7.2.0'
+  - name: 'mumax'
+    version: '3.10'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=60'
+  - name: 'mumax'
+    version: '3.10'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=70'
+  - name: 'mumax'
+    version: '3.10'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=80'
