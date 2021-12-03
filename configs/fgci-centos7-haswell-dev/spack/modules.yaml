@@ -113,11 +113,6 @@ modules:
       mesa:
         suffixes:
           '+llvm'          : 'llvm'
-      mumax:
-        suffixes:
-          'cuda_arch=60'   : 'pascal'
-          'cuda_arch=70'   : 'volta'
-          'cuda_arch=80'   : 'ampere'
       scalapack:
         suffixes:
           '^openblas threads=none': 'singlethreaded'
