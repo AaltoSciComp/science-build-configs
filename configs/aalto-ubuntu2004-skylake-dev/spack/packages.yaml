@@ -41,7 +41,7 @@ packages:
     variants: fabrics=none +pmi +thread_multiple schedulers=none +legacylaunchers
   openssl:
     externals:
-      - spec: openssl@.1.1f
+      - spec: openssl@1.1.1f
         prefix: /usr
     buildable: False
   pango:
