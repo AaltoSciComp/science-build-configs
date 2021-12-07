@@ -2,10 +2,10 @@ config:
   install_tree:
     projections:
       all: ${PACKAGE}/${VERSION}/${HASH:7}
-    root: /work/modules/automatic/spack/envs/aalto-ubuntu2004-skylake-dev/software
+    root: /m/scicomp/software/spack/aalto-ubuntu2004-skylake-dev/software
   module_roots:
-    tcl: /work/modules/automatic/spack/envs/aalto-ubuntu2004-skylake-dev/modules
-    lmod: /work/modules/automatic/spack/envs/aalto-ubuntu2004-skylake-dev/lmod
+    tcl: /m/scicomp/software/spack/aalto-ubuntu2004-skylake-dev/modules
+    mod: /m/scicomp/software/spack/aalto-ubuntu2004-skylake-dev/lmod
   source_cache: /cache/spack
   misc_cache: /tmp/spack_misc_cache
   build_stage:
