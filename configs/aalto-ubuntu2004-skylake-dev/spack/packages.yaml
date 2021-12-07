@@ -38,7 +38,7 @@ packages:
     version: [11.0.8_10]
   openmpi:
     version: [4.0.5]
-    variants: fabrics=none +pmi +thread_multiple schedulers=none +legacylaunchers
+    variants: fabrics=none +thread_multiple schedulers=none
   openssl:
     externals:
       - spec: openssl@1.1.1f
