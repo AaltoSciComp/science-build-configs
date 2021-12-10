@@ -36,9 +36,8 @@ modules:
         - 'clhep'
         - 'xerces-c'
       blacklist:
-        - '%gcc@4.8.5'
+        - '%gcc@9.3.0'
       core_compilers:
-        - 'gcc@9.3.0'
         - 'gcc@8.4.0'
         - 'gcc@6.5.0'
       hash_length: 0
