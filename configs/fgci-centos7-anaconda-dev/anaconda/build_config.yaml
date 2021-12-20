@@ -149,6 +149,7 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.10.3'
+    freeze: True
     condarc_install:
       channels:
         - rapidsai
