@@ -1,0 +1,334 @@
+installer_checksums:
+  Miniconda3-py37_4.9.2-Linux-x86_64.sh: '79510c6e7bd9e012856e25dcb21b3e093aa4ac8113d9aa7e82a86987eabe1c31'
+  Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
+  Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
+  Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
+environments:
+  - name: miniconda
+    version: '4.9.2'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py38_4.9.2'
+    condarc_install:
+      channels:
+        - defaults
+  - name: anaconda
+    version: '2021-04-tf2'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py38_4.10.3'
+    condarc_install:
+      channels:
+        - pytorch
+        - conda-forge
+        - gurobi
+        - IBMDecisionOptimization
+        - mosek
+      channel_priority: flexible
+    collections:
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - mne
+      - gurobi
+      - cplex
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+  - name: rapidsai
+    version: '21.10'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py38_4.10.3'
+    condarc_install:
+      channels:
+        - rapidsai
+        - nvidia
+        - conda-forge
+        - gurobi
+        - IBMDecisionOptimization
+        - mosek
+      channel_priority: flexible
+    collections:
+      - rapidsai
+      - triton-generic
+      - gurobi
+      - cplex
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+  - name: neuroimaging
+    version: '2021-02'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py39_4.10.3'
+    condarc_install:
+      channels:
+        - defaults
+        - conda-forge
+    collections:
+      - neuroimaging
+collections:
+  cplex:
+    conda_packages:
+      - cplex
+  gurobi:
+    conda_packages:
+      - gurobi
+  gurobipy:
+    pip_packages:
+      - gurobipy
+  mosek:
+    conda_packages:
+      - mosek
+  tensorflow-v1:
+    conda_packages:
+      - tensorboard
+      - tensorboard-plugin-wit
+      - tensorflow=1.15.0
+      - tensorflow-base
+      - tensorflow-estimator
+      - tensorflow-gpu
+  tensorflow-v2:
+    conda_packages:
+      - cudatoolkit
+      - tensorboard
+      - tensorboard-plugin-wit
+      - tensorflow=2.4.1=gpu_*
+      - tensorflow-base
+      - tensorflow-estimator
+      - tensorflow-gpu
+  tensorflow-v2-pip:
+    # Check this page for compatible versions of tensorflow, cudatoolkit and cudnn.
+    # https://www.tensorflow.org/install/source#gpu
+    conda_packages:
+      - absl-py
+      - astunparse
+      - cudatoolkit=11.2.*
+      - cudatoolkit-dev=11.2.*
+      - cudnn=8.1.*
+      - gast
+      - google-pasta
+      - grpcio
+      - h5py
+      - keras-preprocessing
+      - libgcc-ng
+      - libstdcxx-ng
+      - numpy
+      - opt_einsum
+      - protobuf
+      - python-flatbuffers
+      - scipy
+      - six
+      - sqlite
+      - termcolor
+      - wrapt
+      - zlib
+    pip_packages:
+      - tensorflow==2.6.0
+  tensorflow-v2-conda-forge:
+    conda_packages:
+      - cudatoolkit=11.*
+      - tensorboard
+      - tensorflow=2.*=cuda11*
+  rapidsai:
+    conda_packages:
+      - cudatoolkit=11.4
+      - cudf
+      - cuml
+      - cugraph
+      - cusignal
+      - cuspatial
+      - cuxfilter
+      - rapids-blazing=21.10
+  pytorch:
+    conda_packages:
+      - cudatoolkit=11.*
+      - pytorch=*=*cuda11*
+      - torchaudio
+      # torchvision dependencies
+      - ffmpeg
+      - jpeg
+      - libpng
+      - pillow
+    pip_packages:
+      - torchvision==0.10.1
+  pytorch-conda-forge:
+    conda_packages:
+      - cudatoolkit=11.*
+      - pytorch=1.9.1=cuda11*
+      - torchvision
+  mne:
+    conda_packages:
+      - mne
+  triton-generic:
+    pip_packages:
+      - bash-kernel
+      - forthon
+      - jupyterlab-git
+      - matlab-kernel
+      - mppl
+      - nbscript
+      - nbval
+      - nbzip
+      - opencv-contrib-python
+      - pymanopt
+      - python-igraph
+      - roboschool
+      - snakemake
+      - webdataset
+    conda_packages:
+      - astropy
+      # - bcolz # No longer maintained
+      - beautifulsoup4
+      - bitarray
+      # - blaze # No python3.8 build
+      - boto
+      - bottleneck
+      - clyent
+      - conda-tree
+      - configargparse
+      - contextlib2
+      - cython
+      - dask
+      - datalad
+      - dill
+      - docopt
+      - easygui
+      - filelock
+      - glob2
+      - gpy
+      - greenlet
+      - html5lib
+      - importnb
+      - iniconfig
+      - ipdb
+      - ipympl    # jupyter + matplotlib interactive
+      - jbig
+      - joblib
+      - jupyter
+      - jupyter_contrib_nbextensions
+      - jupyterlab
+      - jupytext
+      - libblas=*=*mkl*
+      - librosa
+      - libxscrnsaver-cos6-x86_64
+      - line_profiler
+      - metakernel
+      - more-itertools
+      - mpi4py
+      - nbdime
+      - nbstripout
+      - nbval
+      - nitime
+      - nltk
+      - nose
+      - numpy
+      - openpyxl
+      - pango
+      - patchelf
+      - path.py
+      - pathlib2
+      - pbr
+      - pep8
+      - phonopy
+      - pipdeptree
+      - pkginfo
+      - plotly
+      - ply
+      - py
+      - py-lief
+      - pyarrow
+      - pybind11
+      - pycrypto
+      - pycurl
+      - pympler
+      - pysoundfile
+      - pytest-astropy
+      - python-libarchive-c
+      - python-snappy
+      - ripgrep
+      - scikit-image
+      - sh
+      - simplegeneric
+      - singledispatch
+      - sortedcollections
+      - sphinx_rtd_theme
+      - sphinxcontrib-websupport
+      - spyder
+      - spyder-line-profiler
+      - sympy
+      - twisted
+      - typing
+      - unicodecsv
+      - unixodbc
+      - xgboost
+      - xlsxwriter
+      - xlwt
+      - xmltodict
+  neuroimaging:
+    conda_packages:
+      - python>=3.8
+      - darkdetect
+      - datalad
+      - dipy
+      - doit
+      - h5py
+      - imageio
+      - imageio-ffmpeg>=0.4.1
+      - importlib_resources
+      - ipympl
+      - ipyvtklink
+      - ipywidgets
+      - joblib
+      - jupyter
+      - jupyter_client!=6.1.5
+      - libblas=*=*mkl*
+      - matplotlib
+      - mayavi
+      - mffpy>=0.5.7
+      - mne
+      - nibabel
+      - nilearn
+      - numba
+      - numexpr
+      - numpy
+      - pandas
+      - pillow
+      - pip
+      - psutil
+      - pyface
+      - pyqt!=5.15.3
+      - PySurfer
+      - python-picard
+      - pyvista>=0.30
+      - pyvistaqt>=0.4
+      - qdarkstyle
+      - scikit-learn
+      - scipy
+      - spyder
+      - spyder-kernels>=1.10.0
+      - spyder-line-profiler
+      - statsmodels
+      - tqdm
+      - traits
+      - traitsui
+      - vtk>=9.0.1
+      - xlrd
+    pip_packages:
+      - autoreject
+      - bids_validator
+      - codespell
+      - filename-templates
+      - nipy
+      - nipype
+      - nitime
+      - sphinx_bootstrap_theme
+      - sphinx_fontawesome
+      - sphinx-gallery
+      - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
+      - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
+      - "https://github.com/wmvanvliet/mne_microstates/archive/master.zip"
+      - "https://github.com/wmvanvliet/mne-rsa/archive/master.zip"
