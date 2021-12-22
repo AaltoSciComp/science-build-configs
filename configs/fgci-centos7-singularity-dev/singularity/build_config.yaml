@@ -153,3 +153,48 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-fsl'
+    docker_user: 'nipreps'
+    docker_image: 'fsl'
+    module_namespace: 'common'
+    tags:
+      - '6.0.4'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
+  - name: 'singularity-mriqc'
+    docker_user: 'poldracklab'
+    docker_image: 'mriqc'
+    module_namespace: 'common'
+    tags:
+      - '0.16.1'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
+  - name: 'nvidia-kaldi'
+    docker_user: 'nvidia'
+    docker_image: 'kaldi'
+    registry: 'nvcr.io'
+    module_namespace: 'common'
+    tags:
+      - '20.03-py3'
+    command_collections:
+      - 'common'
+      - 'compilers'
+    flag_collections:
+      - 'common'
+      - 'nvidia'
+  - name: 'singularity-openfoam'
+    docker_user: 'openfoam'
+    docker_image: 'openfoam9-paraview56'
+    module_namespace: 'common'
+    fakeroot: False
+    sudo: True
+    tags:
+      - '9'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'

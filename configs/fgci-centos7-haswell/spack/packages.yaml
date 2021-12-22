@@ -9,6 +9,8 @@ packages:
     variants: +libssh2 ~nghttp
   fftw:
     variants: +openmp
+  flex:
+    version: [2.6.4]
   fontconfig:
     version: [2.13.1]
   gcc:
@@ -59,6 +61,11 @@ packages:
     variants: +jit +utf
   pkgconf:
     version: [1.7.3]
+  pmix:
+    externals:
+      - spec: pmix@2.2.2
+        prefix: /opt/ohpc/admin/pmix
+    buildable: False
   python:
     version: [3.8.7]
     variants: +pic +shared +optimizations +uuid +pythoncmd
@@ -71,15 +78,17 @@ packages:
     variants: +X +external-lapack
   slurm:
     externals:
-      - spec: slurm@18-08-8-1
+      - spec: slurm@21-08-0-1 +pmix +hwloc ^pmix@2.2.2
         prefix: /usr
     buildable: False
   sqlite:
     version: [3.34.0]
     variants: +column_metadata +fts +functions +rtree
   ucx:
-    version: [1.9.0]
-    variants: +thread_multiple
+    externals:
+      - spec: ucx@1.8.0 +thread_multiple +pic +rc +dc +cm +cma +dm +knem +optimizations
+        prefix: /usr
+    buildable: False
   all:
     compiler: [gcc@8.4.0, gcc, intel, pgi, clang, xl, nag]
     providers:

@@ -1,6 +1,4 @@
 modules:
-  enable:
-    - lmod
   prefix_inspections:
     bin:
       - PATH
@@ -24,108 +22,113 @@ modules:
       - PKG_CONFIG_PATH
     '':
       - CMAKE_PREFIX_PATH
-  lmod:
-    hierarchy:
-      - mpi
-    whitelist:
-      - 'gcc'
-      - 'intel-oneapi-compilers'
-      - 'paraview'
-      - 'openmpi'
-      - 'clhep'
-      - 'xerces-c'
-    blacklist:
-      - '%gcc@4.8.5'
-    core_compilers:
-      - 'gcc@9.3.0'
-      - 'gcc@8.4.0'
-      - 'gcc@6.5.0'
-      - 'gcc@4.8.5'
-    hash_length: 0
-    all:
-      filter:
-        environment_blacklist:
-          - 'MODULEPATH'
-      autoload: 'direct'
-      environment:
-        set:
-          '${PACKAGE}_ROOT': '${PREFIX}'
-      suffixes:
-        '^cuda'          : 'cuda'
-        '^libpng@1.2.0:1.2.99' : 'libpng-1.2'
-        '^openmpi'       : 'openmpi'
-        '^scalapack'     : 'scalapack'
-        '+qt'            : 'qt'
-        '+opengl2'       : 'opengl2'
-        '+opengl'        : 'opengl'
-        '+osmesa'        : 'osmesa'
-        '+mesa'          : 'mesa'
-        '+metis'         : 'metis'
-        '+nvptx'         : 'nvptx'
-        '+sprayfix'      : 'sprayfix'
-        '+ucs4'          : 'ucs4'
-        '^python@3:'     : 'python3'
-        '^python@:2.9'   : 'python2'
-        '^r@3.6.3'       : 'r-3.6.3'
-        '%gcc@6.5.0'     : 'gcc-6.5.0'
-    cp2k:
-      environment:
-        set:
-          CP2K_DATA_DIR: '${PREFIX}/share/data'
-      suffixes:
-        '+openmp +mpi'   : 'psmp'
-        '~openmp +mpi'   : 'popt'
-        'cuda_arch=37'   : 'kepler'
-        'cuda_arch=60'   : 'pascal'
-        'cuda_arch=70'   : 'volta'
-    geant4:
-      environment:
-        set:
-          G4INSTALL: '${PREFIX}'
-          G4VERSION: '${VERSION}'
-          G4INCLUDE: '${PREFIX}/include/Geant4'
-          G4LIB: '${PREFIX}/lib64/Geant4'
-    gcc:
-      environment:
-        prepend_path:
-          LIBRARY_PATH: '${PREFIX}/lib/gcc/x86_64-unknown-linux-gnu/${VERSION}:${PREFIX}/lib/gcc/x86_64-pc-linux-gnu/${VERSION}'
-          LD_LIBRARY_PATH: '${PREFIX}/lib/gcc/x86_64-unknown-linux-gnu/${VERSION}:${PREFIX}/lib/gcc/x86_64-pc-linux-gnu/${VERSION}'
-    fftw:
-      suffixes:
-        '+openmp'        : 'openmp'
-    intel-parallel-studio:
-      environment:
-        set:
-          SLURM_MPI_TYPE: 'pmi2'
-          I_MPI_OFI_PROVIDER: 'verbs'
-      suffixes:
-        '+mpi'           : 'intelmpi'
-    openblas:
-      suffixes:
-        'threads=none'   : 'singlethreaded'
-        'threads=openmp' : 'openmp'
-    openmpi:
-      environment:
-        set:
-          SLURM_MPI_TYPE: 'pmix_v2'
-    mesa:
-      suffixes:
-        '+llvm'          : 'llvm'
-    scalapack:
-      suffixes:
-        '^openblas threads=none': 'singlethreaded'
-        '^openblas threads=openmp': 'openmp'
-    ucx:
-      environment:
-        set:
-          UCX_WARN_UNUSED_ENV_VARS: 'n'
-    mujoco:
-      suffixes:
-        '^mesa' : 'mesa'
-        '^opengl': 'systemgl'
-      environment:
-        set:
-          MUJOCO_PY_MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
-          MUJOCO_PY_MUJOCO_PATH: '${PREFIX}'
-          MJLIB_PATH: '${PREFIX}/bin/libmujoco200.so'
-          MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
+  default:
+    enable:
+      - lmod
+    lmod:
+      hierarchy:
+        - mpi
+      whitelist:
+        - 'gcc'
+        - 'intel-oneapi-compilers'
+        - 'paraview'
+        - 'openmpi'
+        - 'clhep'
+        - 'xerces-c'
+      blacklist:
+        - '%gcc@4.8.5'
+      core_compilers:
+        - 'gcc@9.3.0'
+        - 'gcc@8.4.0'
+        - 'gcc@6.5.0'
+        - 'gcc@4.8.5'
+      hash_length: 0
+      all:
+        filter:
+          environment_blacklist:
+            - 'MODULEPATH'
+        autoload: 'direct'
+        environment:
+          set:
+            '${PACKAGE}_ROOT': '${PREFIX}'
+        suffixes:
+          '^cuda'          : 'cuda'
+          '^libpng@1.2.0:1.2.99' : 'libpng-1.2'
+          '^openmpi'       : 'openmpi'
+          '^scalapack'     : 'scalapack'
+          '+qt'            : 'qt'
+          '+opengl2'       : 'opengl2'
+          '+opengl'        : 'opengl'
+          '+osmesa'        : 'osmesa'
+          '+mesa'          : 'mesa'
+          '+metis'         : 'metis'
+          '+nvptx'         : 'nvptx'
+          '+sprayfix'      : 'sprayfix'
+          '+ucs4'          : 'ucs4'
+          '^python@3:'     : 'python3'
+          '^python@:2.9'   : 'python2'
+          '^r@3.6.3'       : 'r-3.6.3'
+          '%gcc@6.5.0'     : 'gcc-6.5.0'
+      cp2k:
+        environment:
+          set:
+            CP2K_DATA_DIR: '${PREFIX}/share/data'
+        suffixes:
+          '+openmp +mpi'   : 'psmp'
+          '~openmp +mpi'   : 'popt'
+          'cuda_arch=37'   : 'kepler'
+          'cuda_arch=60'   : 'pascal'
+          'cuda_arch=70'   : 'volta'
+          'cuda_arch=80'   : 'ampere'
+      geant4:
+        environment:
+          set:
+            G4INSTALL: '${PREFIX}'
+            G4VERSION: '${VERSION}'
+            G4INCLUDE: '${PREFIX}/include/Geant4'
+            G4LIB: '${PREFIX}/lib64/Geant4'
+      gcc:
+        environment:
+          prepend_path:
+            LIBRARY_PATH: '${PREFIX}/lib/gcc/x86_64-unknown-linux-gnu/${VERSION}:${PREFIX}/lib/gcc/x86_64-pc-linux-gnu/${VERSION}'
+            LD_LIBRARY_PATH: '${PREFIX}/lib/gcc/x86_64-unknown-linux-gnu/${VERSION}:${PREFIX}/lib/gcc/x86_64-pc-linux-gnu/${VERSION}'
+      fftw:
+        suffixes:
+          '+openmp'        : 'openmp'
+      intel-parallel-studio:
+        environment:
+          set:
+            SLURM_MPI_TYPE: 'pmi2'
+            I_MPI_OFI_PROVIDER: 'verbs'
+        suffixes:
+          '+mpi'           : 'intelmpi'
+      openblas:
+        suffixes:
+          'threads=none'   : 'singlethreaded'
+          'threads=openmp' : 'openmp'
+      openmpi:
+        environment:
+          set:
+            SLURM_MPI_TYPE: 'pmix_v2'
+      mesa:
+        suffixes:
+          '+llvm'          : 'llvm'
+      scalapack:
+        suffixes:
+          '^openblas threads=none': 'singlethreaded'
+          '^openblas threads=openmp': 'openmp'
+      ucx:
+        environment:
+          set:
+            UCX_WARN_UNUSED_ENV_VARS: 'n'
+            SLURM_PMIX_DIRECT_CONN_UCX: 'false'
+      mujoco:
+        suffixes:
+          '^mesa' : 'mesa'
+          '^opengl': 'systemgl'
+        environment:
+          set:
+            MUJOCO_PY_MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
+            MUJOCO_PY_MUJOCO_PATH: '${PREFIX}'
+            MJLIB_PATH: '${PREFIX}/bin/libmujoco200.so'
+            MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'

@@ -1,0 +1,7 @@
+config:
+  install_path: /m/scicomp/software/anaconda-ci/aalto-jupyter-anaconda/software
+  module_path: /m/scicomp/software/anaconda-ci/aalto-jupyter-anaconda/modules
+  conda_pack_path: /m/scicomp/software/anaconda-ci/aalto-jupyter-anaconda/packs
+  source_cache: /cache/anaconda
+  tmpdir: /tmp/anaconda
+  remove_after_update: True

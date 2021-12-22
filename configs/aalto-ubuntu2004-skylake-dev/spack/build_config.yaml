@@ -1,56 +1,28 @@
 target_architecture:
   platform: linux
-  os: centos7
-  arch: haswell
+  os: ubuntu20.04
+  arch: skylake
 compilers:
   - name: 'gcc'
-    version: 4.8.5
+    version: 9.3.0
     system_compiler: true
     flags:
       cflags: -O2 -g
       cxxflags: -O2 -g
       fflags: -O2 -g
   - name: 'gcc'
-    version: 9.3.0
-    variants:
-      - '+piclibs'
-    dependencies:
-      - '%gcc@4.8.5'
-    flags:
-      cflags: -O2 -g -march=haswell -ftree-vectorize
-      cxxflags: -O2 -g -march=haswell -ftree-vectorize
-      fflags: -O2 -g -march=haswell -ftree-vectorize
-    target_architecture:
-      platform: linux
-      os: centos7
-      arch: x86_64
-  - name: 'gcc'
-    version: 6.5.0
-    variants:
-      - '+piclibs'
-    dependencies:
-      - '%gcc@4.8.5'
-    flags:
-      cflags: -O2 -g -march=haswell -ftree-vectorize
-      cxxflags: -O2 -g -march=haswell -ftree-vectorize
-      fflags: -O2 -g -march=haswell -ftree-vectorize
-    target_architecture:
-      platform: linux
-      os: centos7
-      arch: x86_64
-  - name: 'gcc'
     version: 8.4.0
     variants:
       - '+piclibs'
     dependencies:
-      - '%gcc@4.8.5'
+      - '%gcc@9.3.0'
     flags:
-      cflags: -O2 -g -march=haswell -ftree-vectorize
-      cxxflags: -O2 -g -march=haswell -ftree-vectorize
-      fflags: -O2 -g -march=haswell -ftree-vectorize
+      cflags: -O2 -g -march=skylake -ftree-vectorize
+      cxxflags: -O2 -g -march=skylake -ftree-vectorize
+      fflags: -O2 -g -march=skylake -ftree-vectorize
     target_architecture:
       platform: linux
-      os: centos7
+      os: ubuntu20.04
       arch: x86_64
 packages:
   - name: 'abinit'
@@ -61,6 +33,8 @@ packages:
       - '+scalapack'
   - name: 'cuda'
     version: '10.1.243'
+  - name: 'cuda'
+    version: '10.2.89'
   - name: 'cuda'
     version: '11.0.2'
   - name: 'cuda'
@@ -82,13 +56,6 @@ packages:
       - '^cuda@10.1.243'
     extra_flags:
       - '-j 4'
-#  - name: 'quantum-espresso'
-#    version: '6.6'
-#    variants:
-#      - '+epw'
-#      - 'hdf5=parallel'
-#      - '+mpi'
-#      - '+scalapack'
   - name: 'hdf5'
     version: 1.10.7
     variants:
@@ -104,8 +71,6 @@ packages:
     variants:
       - '+ipo'
       - '+python'
-  - name: 'namd'
-    version: '2.14'
   - name: 'gsl'
     version: '2.6'
   - name: 'gsl'

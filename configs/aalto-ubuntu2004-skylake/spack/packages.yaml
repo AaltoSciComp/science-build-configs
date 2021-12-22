@@ -27,11 +27,6 @@ packages:
   llvm:
     version: [11.0.1]
     variants: +python
-  m4:
-    externals:
-      - spec: m4@1.4.16
-        prefix: /usr
-    buildable: False
   mesa:
     variants: +glx +llvm +opengl +osmesa swr=avx2
   netcdf-c:
@@ -39,19 +34,14 @@ packages:
   openblas:
     version: [0.3.13]
     variants: +virtual_machine threads=openmp +pic
-  opengl:
-    externals:
-      - spec: opengl@4.5 arch=linux-centos7-haswell
-        prefix: /usr
-    buildable: False
   openjdk:
     version: [11.0.8_10]
   openmpi:
     version: [4.0.5]
-    variants: fabrics=ucx +pmi +thread_multiple schedulers=slurm +legacylaunchers
+    variants: fabrics=none +thread_multiple schedulers=none
   openssl:
     externals:
-      - spec: openssl@1.0.2k
+      - spec: openssl@1.1.1f
         prefix: /usr
     buildable: False
   pango:
@@ -61,11 +51,6 @@ packages:
     variants: +jit +utf
   pkgconf:
     version: [1.7.3]
-  pmix:
-    externals:
-      - spec: pmix@2.2.2
-        prefix: /opt/ohpc/admin/pmix
-    buildable: False
   python:
     version: [3.8.7]
     variants: +pic +shared +optimizations +uuid +pythoncmd
@@ -76,19 +61,9 @@ packages:
   r:
     version: [4.0.3]
     variants: +X +external-lapack
-  slurm:
-    externals:
-      - spec: slurm@21-08-0-1 +pmix +hwloc ^pmix@2.2.2
-        prefix: /usr
-    buildable: False
   sqlite:
     version: [3.34.0]
     variants: +column_metadata +fts +functions +rtree
-  ucx:
-    externals:
-      - spec: ucx@1.8.0 +thread_multiple +pic +rc +dc +cm +cma +dm +knem +optimizations
-        prefix: /usr
-    buildable: False
   all:
     compiler: [gcc@8.4.0, gcc, intel, pgi, clang, xl, nag]
     providers:
