@@ -27,6 +27,10 @@ environments:
         - pytorch
         - conda-forge
         - defaults
+    condarc_postinstall:
+      pkgs_dirs:
+        - '~/.conda/pkgs'
+      ssl_verify: /etc/ssl/certs/ca-certificates.crt
     collections:
       - compilers
       - mamba
