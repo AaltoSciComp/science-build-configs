@@ -95,7 +95,7 @@ compilers:
       os: centos7
       arch: x86_64
   - name: 'intel-oneapi-compilers'
-    version: '2022.0.1'
+    version: '2021.3.0'
     dependencies:
       - '%gcc@4.8.5'
     flags:
