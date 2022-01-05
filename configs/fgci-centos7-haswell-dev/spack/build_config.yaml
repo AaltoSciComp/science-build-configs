@@ -94,6 +94,18 @@ compilers:
       platform: linux
       os: centos7
       arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2022.0.1'
+    dependencies:
+      - '%gcc@4.8.5'
+    flags:
+      cflags: -O2 -g -march=haswell
+      cxxflags: -O2 -g -march=haswell
+      fflags: -O2 -g -march=haswell
+    target_architecture:
+      platform: linux
+      os: centos7
+      arch: x86_64
 packages:
   - name: 'abinit'
     version: '8.10.3'
