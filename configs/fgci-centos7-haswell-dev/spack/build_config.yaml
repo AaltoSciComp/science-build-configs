@@ -207,6 +207,11 @@ packages:
       - '~tests'
   - name: 'namd'
     version: '2.14'
+  - name: 'namd'
+    version: '2.14'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=60'
   - name: 'ior'
     version: '3.3.0'
   - name: 'julia'
