@@ -207,13 +207,6 @@ packages:
       - '~tests'
   - name: 'namd'
     version: '2.14'
-  - name: 'namd'
-    version: '2.14'
-    variants:
-      - '+cuda'
-      - 'cuda_arch=60'
-    dependencies:
-      - '^charmpp backend=verbs'
   - name: 'ior'
     version: '3.3.0'
   - name: 'julia'
