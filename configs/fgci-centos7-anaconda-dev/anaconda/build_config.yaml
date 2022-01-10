@@ -467,7 +467,10 @@ collections:
       - sphinx_bootstrap_theme
       - sphinx_fontawesome
       - sphinx-gallery
+      - mne-bids
+      - mne-rsa
+      - mne-nirs
+      - mne-connectivity
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - "https://github.com/wmvanvliet/mne_microstates/archive/master.zip"
-      - "https://github.com/wmvanvliet/mne-rsa/archive/master.zip"
