@@ -213,7 +213,7 @@ packages:
       - '+cuda'
       - 'cuda_arch=60'
     dependencies:
-      - '^charmpp backend=ucx'
+      - '^charmpp backend=verbs'
   - name: 'ior'
     version: '3.3.0'
   - name: 'julia'
