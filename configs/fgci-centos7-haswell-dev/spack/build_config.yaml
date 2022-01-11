@@ -153,6 +153,12 @@ packages:
       - '+cuda'
       - 'cuda_arch=35,60,70'
       - '+gui'
+  - name: 'relion'
+    version: '3.1.1'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=35,60,70,80'
+      - '+gui'
   - name: 'hpl'
     version: '2.3'
   - name: 'gromacs'
