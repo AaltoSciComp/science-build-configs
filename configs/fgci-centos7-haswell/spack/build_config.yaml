@@ -156,3 +156,7 @@ packages:
     version: '16.02'
   - name: 'libgd'
     version: '2.2.4'
+  - name: 'freesurfer'
+    version: '7.2.0'
+    licenses:
+      - 'license.txt'
