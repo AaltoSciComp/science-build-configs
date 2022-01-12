@@ -162,6 +162,15 @@ packages:
     variants:
       - '+openmp'
       - '+pic'
+  - name: 'quantum-espresso'
+    version: '6.8'
+    variants:
+      - '+epw'
+      - 'hdf5=parallel'
+      - '+mpi'
+      - '+scalapack'
+    extra_flags:
+      - '-j 1'
   - name: 'jq'
     version: '1.6'
   - name: 'p7zip'
