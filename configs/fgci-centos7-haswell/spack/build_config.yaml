@@ -125,6 +125,8 @@ packages:
       - '+blas'
       - '+mpi'
       - '+openmp'
+  - name: 'mdsplus'
+    version: 'stable_release-7-96-17'
   - name: 'mesa'
     version: '21.0.3'
   - name: 'geant4'
