@@ -127,6 +127,8 @@ packages:
       - '+openmp'
   - name: 'mdsplus'
     version: 'stable_release-7-96-17'
+  - name: 'mesa'
+    version: '21.0.3'
   - name: 'geant4'
     version: '10.7.1'
     variants:
@@ -144,6 +146,8 @@ packages:
       - '-j 1'
   - name: 'nvhpc'
     version: '21.5'
+  - name: 'openblas'
+    version: '0.3.17'
   - name: 'openbabel'
     version: '3.1.1'
   - name: 'py-virtualenv'
@@ -179,5 +183,10 @@ packages:
     version: '16.02'
   - name: 'libgd'
     version: '2.2.4'
+  - name: 'mumax'
+    version: '3.10'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=60,70,80'
   - name: 'intel-oneapi-mkl'
     version: '2021.3.0'
