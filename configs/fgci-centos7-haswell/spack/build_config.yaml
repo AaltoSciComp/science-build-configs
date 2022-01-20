@@ -125,6 +125,8 @@ packages:
       - '+blas'
       - '+mpi'
       - '+openmp'
+  - name: 'mesa'
+    version: '21.0.3'
   - name: 'geant4'
     version: '10.7.1'
     variants:
