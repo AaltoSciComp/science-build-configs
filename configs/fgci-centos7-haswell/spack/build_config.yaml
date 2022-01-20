@@ -125,6 +125,8 @@ packages:
       - '+blas'
       - '+mpi'
       - '+openmp'
+  - name: 'mdsplus'
+    version: 'stable_release-7-96-17'
   - name: 'geant4'
     version: '10.7.1'
     variants:
