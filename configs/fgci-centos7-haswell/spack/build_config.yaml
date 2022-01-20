@@ -142,6 +142,8 @@ packages:
       - '-j 1'
   - name: 'nvhpc'
     version: '21.5'
+  - name: 'openblas'
+    version: '0.3.17'
   - name: 'openbabel'
     version: '3.1.1'
   - name: 'py-virtualenv'
