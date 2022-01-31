@@ -211,6 +211,10 @@ packages:
       - 'cuda_arch=70'
   - name: 'libgd'
     version: '2.2.4'
+  - name: 'freesurfer'
+    version: '7.2.0'
+    licenses:
+      - 'license.txt'
   - name: 'mumax'
     version: '3.10'
     variants:
