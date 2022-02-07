@@ -312,7 +312,7 @@ collections:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.2
-      - pytorch=1.10.*=*cuda11*
+      - pytorch=1.10.2=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
       - torchaudio
       # torchvision dependencies
       - ffmpeg
@@ -320,7 +320,7 @@ collections:
       - libpng
       - pillow
     pip_packages:
-      - torchvision==0.10.1
+      - torchvision==0.11.3 # Specific version due to pytorch version: https://github.com/pytorch/vision
   pytorch-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
