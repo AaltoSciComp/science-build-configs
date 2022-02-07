@@ -108,7 +108,6 @@ environments:
         - huggingface
         - conda-forge
         - gurobi
-        - IBMDecisionOptimization
         - mosek
       channel_priority: flexible
     collections:
@@ -118,7 +117,6 @@ environments:
       - triton-generic
       - mne
       - gurobi
-      - cplex
       - mosek
     extra_module_variables:
       setenv:
