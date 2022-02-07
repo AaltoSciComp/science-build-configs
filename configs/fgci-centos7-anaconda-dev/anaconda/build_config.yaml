@@ -334,9 +334,7 @@ collections:
       - flax
       - deepspeed
       - dm-haiku
-      - '"jax[cuda]"'
-      - '-f'
-      - "https://storage.googleapis.com/jax-releases/jax_releases.html"
+      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_releases.html"'
   mne:
     conda_packages:
       - mne
