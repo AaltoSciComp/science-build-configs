@@ -296,7 +296,7 @@ collections:
   tensorflow-v2-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
-      - '"cudnn>=8.2"'
+      - cudnn>=8.2
       - tensorboard
       - tensorflow=2.*=cuda11*
   rapidsai:
