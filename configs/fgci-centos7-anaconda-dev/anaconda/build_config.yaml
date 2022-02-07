@@ -117,6 +117,7 @@ environments:
       - triton-generic
       - mne
       - gurobi
+      - cplex_pip
       - mosek
     extra_module_variables:
       setenv:
@@ -232,6 +233,9 @@ environments:
 collections:
   cplex:
     conda_packages:
+      - cplex
+  cplex_pip:
+    pip_packages:
       - cplex
   gurobi:
     conda_packages:
