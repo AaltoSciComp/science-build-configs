@@ -116,6 +116,7 @@ environments:
       - tensorflow-v2-conda-forge
       - pytorch
       - triton-generic
+      - gurobi_pip
       - mne
       - cplex_pip
       - mosek
@@ -240,7 +241,7 @@ collections:
   gurobi:
     conda_packages:
       - gurobi
-  gurobipy:
+  gurobi_pip:
     pip_packages:
       - gurobipy
   mosek:
