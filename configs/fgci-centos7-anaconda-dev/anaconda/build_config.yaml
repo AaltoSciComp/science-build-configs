@@ -312,7 +312,7 @@ collections:
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
-      - '"cudnn>=8.2"'
+      - cudnn>=8.2
       - pytorch=1.10.*=*cuda11*
       - torchaudio
       # torchvision dependencies
