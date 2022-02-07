@@ -77,6 +77,7 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.10.3'
+    freeze: True
     condarc_install:
       channels:
         - pytorch
@@ -86,6 +87,32 @@ environments:
         - mosek
       channel_priority: flexible
     collections:
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - mne
+      - gurobi
+      - cplex
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+  - name: anaconda
+    version: '2022-01'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py39_4.10.3'
+    condarc_install:
+      channels:
+        - pytorch
+        - huggingface
+        - conda-forge
+        - gurobi
+        - IBMDecisionOptimization
+        - mosek
+      channel_priority: flexible
+    collections:
+      - deep_learning_extras
       - tensorflow-v2-conda-forge
       - pytorch
       - triton-generic
@@ -294,6 +321,17 @@ collections:
       - cudatoolkit=11.*
       - pytorch=1.9.1=cuda11*
       - torchvision
+  deep_learning_extras:
+    conda_packages:
+      - transformers
+      - pytorch-lightning
+    pip_packages:
+      - flax
+      - deepspeed
+      - dm-haiku
+      - '"jax[cuda]"'
+      - '-f'
+      - "https://storage.googleapis.com/jax-releases/jax_releases.html"
   mne:
     conda_packages:
       - mne
