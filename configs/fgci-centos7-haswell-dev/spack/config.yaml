@@ -12,3 +12,4 @@ config:
     - $spack/var/spack/stage
   locks: false
   build_language: 'en_US.utf8'
+  concretizer: clingo
