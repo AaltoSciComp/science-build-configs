@@ -2,6 +2,8 @@ target_architecture:
   platform: linux
   os: centos7
   arch: haswell
+build_options:
+  reuse_packages: true
 compilers:
   - name: 'gcc'
     version: 4.8.5
