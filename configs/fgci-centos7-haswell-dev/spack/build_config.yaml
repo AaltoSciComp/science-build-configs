@@ -127,11 +127,14 @@ packages:
       - '-j 1'
   - name: 'llvm'
     version: 11.0.1
+    variants:
+      - '~omp_as_runtime'
     extra_flags:
       - '-j 4'
   - name: 'llvm'
     version: 11.0.1
     variants:
+      - '~omp_as_runtime'
       - '+cuda'
       - 'cuda_arch=35,60,70'
     dependencies:
