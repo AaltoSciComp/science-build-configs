@@ -58,7 +58,7 @@ collections:
     conda_packages:
       #- cma          # cma: ??
       - networkx     # networkx: complex networks (general)
-      #- nose         # nose: mlbp2018
+      - nose         # nose: mlbp2018, snlp2022 (RT#20396)
       - pandas-datareader
       - plotly       # plotly: student request
       - pydotplus    # pydotplus - dsfb2018 instructor request

@@ -1,0 +1,4 @@
+bootstrap:
+  trusted:
+    github-actions: true
+    spack-install:  false

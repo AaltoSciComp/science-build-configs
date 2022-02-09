@@ -66,6 +66,18 @@ compilers:
       platform: linux
       os: centos7
       arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.3.0'
+    dependencies:
+      - '%gcc@4.8.5'
+    flags:
+      cflags: -O2 -g -march=haswell
+      cxxflags: -O2 -g -march=haswell
+      fflags: -O2 -g -march=haswell
+    target_architecture:
+      platform: linux
+      os: centos7
+      arch: x86_64
 packages:
   - name: 'abinit'
     version: '8.10.3'
@@ -113,6 +125,10 @@ packages:
       - '+blas'
       - '+mpi'
       - '+openmp'
+  - name: 'mdsplus'
+    version: 'stable_release-7-96-17'
+  - name: 'mesa'
+    version: '21.0.3'
   - name: 'geant4'
     version: '10.7.1'
     variants:
@@ -128,8 +144,14 @@ packages:
     version: '1.6.1'
     extra_flags:
       - '-j 1'
+  - name: 'julia'
+    version: '1.6.2'
+    extra_flags:
+      - '-j 1'
   - name: 'nvhpc'
     version: '21.5'
+  - name: 'openblas'
+    version: '0.3.17'
   - name: 'openbabel'
     version: '3.1.1'
   - name: 'py-virtualenv'
@@ -150,9 +172,53 @@ packages:
     variants:
       - '+openmp'
       - '+pic'
+  - name: 'quantum-espresso'
+    version: '6.8'
+    variants:
+      - '+epw'
+      - 'hdf5=parallel'
+      - '+mpi'
+      - '+scalapack'
+    extra_flags:
+      - '-j 1'
   - name: 'jq'
     version: '1.6'
   - name: 'p7zip'
     version: '16.02'
+  - name: 'cp2k'
+    version: '8.2'
+    variants:
+      - '~cuda'
+      - '+mpi'
+      - '+openmp'
+  - name: 'cp2k'
+    version: '8.2'
+    variants:
+      - '+cuda'
+      - '+mpi'
+      - '+openmp'
+      - '+cuda_blas'
+      - '+cuda_fft'
+      - 'cuda_arch=60'
+  - name: 'cp2k'
+    version: '8.2'
+    variants:
+      - '+cuda'
+      - '+mpi'
+      - '+openmp'
+      - '+cuda_blas'
+      - '+cuda_fft'
+      - 'cuda_arch=70'
   - name: 'libgd'
     version: '2.2.4'
+  - name: 'freesurfer'
+    version: '7.2.0'
+    licenses:
+      - 'license.txt'
+  - name: 'mumax'
+    version: '3.10'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=60,70,80'
+  - name: 'intel-oneapi-mkl'
+    version: '2021.3.0'

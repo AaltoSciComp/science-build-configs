@@ -2,6 +2,8 @@ target_architecture:
   platform: linux
   os: centos7
   arch: haswell
+build_options:
+  reuse_packages: false
 compilers:
   - name: 'gcc'
     version: 4.8.5
@@ -153,6 +155,12 @@ packages:
       - '+cuda'
       - 'cuda_arch=35,60,70'
       - '+gui'
+  - name: 'relion'
+    version: '3.1.1'
+    variants:
+      - '+cuda'
+      - 'cuda_arch=35,60,70,80'
+      - '+gui'
   - name: 'hpl'
     version: '2.3'
   - name: 'gromacs'
@@ -165,7 +173,8 @@ packages:
     version: 'stable_release-7-96-17'
   - name: 'mesa'
     version: '20.2.1'
-
+  - name: 'mesa'
+    version: '21.0.3'
   - name: 'mujoco'
     version: '2.0.0'
     licenses:
@@ -215,6 +224,10 @@ packages:
       - '-j 1'
   - name: 'julia'
     version: '1.6.1'
+    extra_flags:
+      - '-j 1'
+  - name: 'julia'
+    version: '1.6.2'
     extra_flags:
       - '-j 1'
   - name: 'nvhpc'
