@@ -134,6 +134,8 @@ packages:
     variants:
       - '+ipo'
       - '+python'
+  - name: 'libsvm'
+    version: '323'
   - name: 'namd'
     version: '2.14'
   - name: 'gsl'
