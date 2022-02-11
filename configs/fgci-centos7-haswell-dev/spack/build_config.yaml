@@ -168,6 +168,8 @@ packages:
       - '+openmp'
   - name: 'mdsplus'
     version: 'stable_release-7-96-17'
+    dependencies:
+      - '^openjdk@11.0.8_10'
   - name: 'mesa'
     version: '20.2.1'
   - name: 'mesa'
