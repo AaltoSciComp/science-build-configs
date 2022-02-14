@@ -209,6 +209,8 @@ packages:
     version: '27.1'
   - name: 'bazel'
     version: '3.7.1'
+    dependencies:
+      - '^openjdk@11.0.8_10'
   - name: 'mpifileutils'
     version: '0.11'
     variants:
