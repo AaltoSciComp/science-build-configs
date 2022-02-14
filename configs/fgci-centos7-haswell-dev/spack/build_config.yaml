@@ -172,8 +172,12 @@ packages:
       - '^openjdk@11.0.8_10'
   - name: 'mesa'
     version: '20.2.1'
+    dependencies:
+      - '^llvm@11.0.1 ~omp_as_runtime'
   - name: 'mesa'
     version: '21.0.3'
+    dependencies:
+      - '^llvm@11.0.1 ~omp_as_runtime'
   - name: 'mujoco'
     version: '2.0.0'
     licenses:
