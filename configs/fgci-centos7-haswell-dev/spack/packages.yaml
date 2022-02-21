@@ -33,9 +33,9 @@ packages:
         prefix: /usr
     buildable: False
   mesa:
-    variants: +glx +llvm +opengl +osmesa swr=avx2 ^llvm@11.0.1 ~omp_as_runtime
+    variants: +glx +llvm +opengl +osmesa swr=avx2
   meson:
-    version: [0.59.0]
+    version: [0.60.0]
   netcdf-c:
     version: [4.7.4]
   openblas:
