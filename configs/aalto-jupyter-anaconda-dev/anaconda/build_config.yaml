@@ -176,4 +176,5 @@ collections:
       - pyodbc
       - tweepy
       - unixodbc
-  
+      - openpyxl  # RT#20808
+
