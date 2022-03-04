@@ -19,6 +19,34 @@ environments:
   - name: jupyter-generic
     version: '2021-11-23'
     miniconda: True
+    freeze: True
+    python_version: 3
+    installer_version: 'py39_4.10.3'
+    conda_pack: True
+    condarc_install:
+      channels:
+        - pytorch
+        - conda-forge
+        - defaults
+    condarc_postinstall:
+      pkgs_dirs:
+        - '~/.conda/pkgs'
+      ssl_verify: /etc/ssl/certs/ca-certificates.crt
+    collections:
+      - compilers
+      - mamba
+      - nbconvert_5_pin
+      - jupyter-generic
+      - scipy-notebook-upstream
+      - tensorflow
+      - torch
+      - pystan
+      - scikit_learn
+      - opencv
+      - bdaaccounting
+  - name: jupyter-generic
+    version: '2022-03-04'
+    miniconda: True
     python_version: 3
     installer_version: 'py39_4.10.3'
     conda_pack: True
