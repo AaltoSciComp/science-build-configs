@@ -4,19 +4,164 @@ installer_checksums:
   Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
 environments:
-  - name: miniconda
-    version: '4.9.2'
+  - name: jupyter-generic
+    version: '2022-03-04'
     miniconda: True
     python_version: 3
-    installer_version: 'py38_4.9.2'
+    installer_version: 'py39_4.10.3'
     conda_pack: True
     condarc_install:
       channels:
-        - defaults
+        - pytorch
         - conda-forge
+        - defaults
+    condarc_postinstall:
+      pkgs_dirs:
+        - '~/.conda/pkgs'
+      ssl_verify: /etc/ssl/certs/ca-certificates.crt
     collections:
+      - compilers
       - mamba
+      - nbconvert_5_pin
+      - jupyter-generic
+      - scipy-notebook-upstream
+      - tensorflow
+      - torch
+      - pystan
+      - scikit_learn
+      - opencv
+      - bdaaccounting
 collections:
+  compilers:
+    conda_packages:
+      - compilers
   mamba:
     conda_packages:
       - mamba
+      - conda-tree
+  nbconvert_5_pin:
+    conda_packages:
+      - '"nbconvert<6"'
+  jupyter-generic:
+    conda_packages:
+      #- cma          # cma: ??
+      - networkx     # networkx: complex networks (general)
+      - nose         # nose: mlbp2018, snlp2022 (RT#20396)
+      - pandas-datareader
+      - plotly       # plotly: student request
+      - pydotplus    # pydotplus - dsfb2018 instructor request
+      - arviz        # arviz: bayesian data analysis
+      - folium       # folium: BE remote sensing course
+      - python-igraph  # igraph: complex networks (general)
+      - feather-format
+      - librosa      # librarosa: datasci2018
+      #- bcolz        # bcolz        - introai2019  # now unmaintained, python <3.7
+      - tqdm         # tqdm         - introai2019
+      - wordcloud    # wordcloud - datasci2019
+      - geopy        # geopy - datasci2019
+      - rasterio     # rasterio: BE remote sensing course
+      #- lapack       # lapack       - dependency for cvxpy
+      - nltk         # nltk         -  datasci2019  (use conda  when upgrading)
+      - owslib       # owslib: mlpython
+      - beautifulsoup4
+      - lifelines
+      #- rpy2
+      #- shap
+      - xlsxwriter
+      - xlwt
+      - prompt_toolkit
+      #- mne
+      - pycox
+      - pydub        # pydub: ??? - Available in c-f
+      - cvxopt       # cvxopt       - mlkern2019
+      - cvxpy        # cvxpy        - mlkern2019
+      - geoplotlib
+      - ipympl
+      - configargparse # configargparse: deeplearn2020, also generally useful
+      - metakernel
+      - ortools-python      # ortools:   ai2020
+      - xgboost      # dsfbi2022 RT#20284
+    pip_packages:
+      - plotchecker  # plotchecker: for nbgrader, mlbp2018
+      - gpflow       # 2021-11, c-f has old version
+                     # gpflow       - special course Gaussian Processes, 2019 (pinned to 2.0.0rc1 to force tf2.0 compat)
+      - calysto           # 2021-11, c-f missing
+      - qiskit       # qiskit       - Introduction to Quantum Technologies, RT#14866
+      #- pysurvival (Supported for Python<=3.7 https://github.com/berleon/pysurvival#what-is-pysurvival)
+      #- https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
+    # Currently non-funectional packages:
+    #   geopandas (conda-forge)
+    #   rasterio (conda-forge)
+  scipy-notebook-upstream:
+    # Synced from
+    # https://github.com/jupyter/docker-stacks/blob/master/scipy-notebook/Dockerfile
+    # Re-sync occassionally, copy-and-repasted the whole thing
+    # But remove this line: 'conda-forge::blas=*=openblas'
+    conda_packages:
+      #- 'altair'
+      - 'beautifulsoup4'
+      - 'bokeh'
+      - 'bottleneck'
+      - 'cloudpickle'
+      - 'cython'
+      - 'dask'
+      - 'dill'
+      - 'h5py'
+      - 'ipympl'
+      - 'ipywidgets'
+      - 'matplotlib-base'
+      - 'numba'
+      - 'numexpr'
+      - 'pandas'
+      #- 'patsy'
+      #- 'protobuf'
+      - 'pytables'
+      - 'scikit-image'
+      - 'scikit-learn'
+      - 'scipy'
+      - 'seaborn'
+      - 'sqlalchemy'
+      - 'statsmodels'
+      - 'sympy'
+      - 'widgetsnbextension'
+      - 'xlrd'
+  tensorflow:
+    conda_packages:
+      - tensorflow-cpu=2.6.*
+      - tensorboard
+      - tensorflow-hub
+      - keras
+  # pystan: general use, bayes course (updated prompt_toolkit needed as dependency)
+  pystan:
+    conda_packages:
+      - pystan
+  torch:
+    conda_packages:
+      - pytorch
+      - cpuonly
+      - torchtext
+      - torchvision
+  scikit_learn:
+    conda_packages:
+      - imbalanced-learn
+      - scikit-learn # scikit-learn: mlbp2018
+      - scikit-plot
+      - scikit-survival
+      - sklearn-pandas
+      - mlxtend      # depends on scikit-learn
+      - geopandas    # geopandas: BE remote sensing course
+                     # depends on scikit-learn via mapclassify
+  opencv:
+    conda_packages:
+      - opencv       # opencv: mlpython
+  bdaaccounting:
+    # apt: unixodbc-dev - does this need to be installed on the builder?
+    conda_packages:
+      - gensim # 4.1.2. is available via c-f
+      - freetds
+      - pdfplumber
+      - pmdarima
+      - pyodbc
+      - tweepy
+      - unixodbc
+      - openpyxl  # RT#20808
