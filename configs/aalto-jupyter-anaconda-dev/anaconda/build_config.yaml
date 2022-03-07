@@ -121,6 +121,7 @@ collections:
       - metakernel
       - ortools-python      # ortools:   ai2020
       - xgboost      # dsfbi2022 RT#20284
+      - python-sounddevice  # RT#20810
     pip_packages:
       - plotchecker  # plotchecker: for nbgrader, mlbp2018
       - gpflow       # 2021-11, c-f has old version
