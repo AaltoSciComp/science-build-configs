@@ -45,7 +45,7 @@ environments:
       - opencv
       - bdaaccounting
   - name: jupyter-generic
-    version: '2022-03-04'
+    version: '2022-03-07'
     miniconda: True
     python_version: 3
     installer_version: 'py39_4.10.3'
@@ -205,4 +205,3 @@ collections:
       - tweepy
       - unixodbc
       - openpyxl  # RT#20808
-
