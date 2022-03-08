@@ -61,10 +61,6 @@ command_collections:
       - 'chmod -R a=r,a+X /home/openface-build'
       - 'find /home/openface-build/build/bin/ -maxdepth 1 -type f -exec chmod a+rx {} \;'
     environment_commands:
-      - 'alias FaceLandmarkImg="/home/openface-build/build/bin/FaceLandmarkImg"'       
-      - 'alias FaceLandmarkVid="/home/openface-build/build/bin/FaceLandmarkVid"'
-      - 'alias FaceLandmarkVidMulti="/home/openface-build/build/bin/FaceLandmarkVidMulti"'  
-      - 'alias FeatureExtraction="/home/openface-build/build/bin/FeatureExtraction"'
       - 'export LC_ALL=C'
 flag_collections:
   common:
