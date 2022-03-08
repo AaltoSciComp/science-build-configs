@@ -2,6 +2,8 @@ target_architecture:
   platform: linux
   os: centos7
   arch: haswell
+build_options:
+  reuse_packages: false
 compilers:
   - name: 'gcc'
     version: 4.8.5
@@ -66,6 +68,34 @@ compilers:
       platform: linux
       os: centos7
       arch: x86_64
+  - name: 'intel-parallel-studio'
+    version: 'cluster.2020.0'
+    licenses:
+      - 'license.lic'
+    variants:
+      - '+mpi'
+    dependencies:
+      - '%gcc@4.8.5'
+    flags:
+      cflags: -O2 -g -march=haswell
+      cxxflags: -O2 -g -march=haswell
+      fflags: -O2 -g -march=haswell
+    target_architecture:
+      platform: linux
+      os: centos7
+      arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.2.0'
+    dependencies:
+      - '%gcc@4.8.5'
+    flags:
+      cflags: -O2 -g -march=haswell
+      cxxflags: -O2 -g -march=haswell
+      fflags: -O2 -g -march=haswell
+    target_architecture:
+      platform: linux
+      os: centos7
+      arch: x86_64
   - name: 'intel-oneapi-compilers'
     version: '2021.3.0'
     dependencies:
@@ -97,11 +127,14 @@ packages:
       - '-j 1'
   - name: 'llvm'
     version: 11.0.1
+    variants:
+      - '~omp_as_runtime'
     extra_flags:
       - '-j 4'
   - name: 'llvm'
     version: 11.0.1
     variants:
+      - '~omp_as_runtime'
       - '+cuda'
       - 'cuda_arch=35,60,70'
     dependencies:
@@ -127,6 +160,8 @@ packages:
       - '+openmp'
   - name: 'mdsplus'
     version: 'stable_release-7-96-17'
+    dependencies:
+      - '^openjdk@11.0.8_10'
   - name: 'mesa'
     version: '21.0.3'
     extra_flags:
@@ -138,8 +173,18 @@ packages:
       - '+python'
   - name: 'libsvm'
     version: '323'
+  - name: 'libxscrnsaver'
+    version: '1.2.2'
+  - name: 'xterm'
+    version: '353'
+  - name: 'snakemake'
+    version: '6.1.1'
+  - name: 'emacs'
+    version: '27.1'
   - name: 'namd'
     version: '2.14'
+    dependencies:
+      - '^charmpp@6.10.2'
   - name: 'gsl'
     version: '2.6'
   - name: 'gsl'
@@ -158,6 +203,10 @@ packages:
     version: '0.3.17'
   - name: 'openbabel'
     version: '3.1.1'
+    extra_flags:
+      - '-j 1'
+  - name: 'rclone'
+    version: '1.56.0'
   - name: 'py-virtualenv'
     version: '16.7.6'
   - name: 'flac'
@@ -185,6 +234,10 @@ packages:
       - '+scalapack'
     extra_flags:
       - '-j 1'
+  - name: 'netcdf-cxx4'
+    version: '4.3.1'
+  - name: 'fmt'
+    version: '8.0.1'
   - name: 'jq'
     version: '1.6'
   - name: 'p7zip'
@@ -226,3 +279,5 @@ packages:
       - 'cuda_arch=60,70,80'
   - name: 'intel-oneapi-mkl'
     version: '2021.3.0'
+    dependencies:
+      - '^intel-oneapi-tbb@2021.3.0'
