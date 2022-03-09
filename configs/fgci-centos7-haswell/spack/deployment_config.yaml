@@ -1,7 +1,14 @@
 - method: rsync
   target_host: triton
-  source: /share/apps/spack/envs/fgci-centos7-haswell
-  dest: /share/apps/spack/envs/fgci-centos7-haswell
-  rsync_flags: -surlptDxv --exclude='.nfs*'
+  source: /share/apps/spack/envs/fgci-centos7-haswell/software
+  dest: /share/apps/spack/envs/fgci-centos7-haswell/software
+  rsync_flags: -surlptDxv  --exclude='.nfs*'
+  chmod_options: 'Dg+s,ug+w,Fo-w,+X'
+  delete: false
+- method: rsync
+  target_host: triton
+  source: /share/apps/spack/envs/fgci-centos7-haswell/lmod
+  dest: /share/apps/spack/envs/fgci-centos7-haswell/lmod
+  rsync_flags: -surlptDxv  --exclude='.nfs*'
   chmod_options: 'Dg+s,ug+w,Fo-w,+X'
   delete: false
