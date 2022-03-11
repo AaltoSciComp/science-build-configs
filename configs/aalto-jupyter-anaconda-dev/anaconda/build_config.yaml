@@ -110,7 +110,7 @@ collections:
       - xlsxwriter
       - xlwt
       - prompt_toolkit
-      #- mne
+      - mne
       - pycox
       - pydub        # pydub: ??? - Available in c-f
       - cvxopt       # cvxopt       - mlkern2019
