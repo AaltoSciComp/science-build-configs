@@ -174,6 +174,10 @@ packages:
     version: '21.0.3'
     extra_flags:
       - '-j 1'
+  - name: 'mesa'
+    version: '21.2.3'
+    extra_flags:
+      - '-j 1'
   - name: 'geant4'
     version: '10.7.1'
     variants:
