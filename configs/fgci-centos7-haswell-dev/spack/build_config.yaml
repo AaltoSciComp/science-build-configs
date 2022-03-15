@@ -323,3 +323,6 @@ packages:
       - 'osmesa=8'
   - name: 'glew'
     version: 2.1.0
+    dependencies:
+      - '^mesa-glu'
+      - '^mesa'
