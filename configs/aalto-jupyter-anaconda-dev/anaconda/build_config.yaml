@@ -71,6 +71,7 @@ environments:
       - scikit_learn
       - opencv
       - bdaaccounting
+      - mne_pip
   - name: jupyter-generic
     version: '2022-03-07'
     miniconda: True
@@ -102,6 +103,9 @@ collections:
   compilers:
     conda_packages:
       - compilers
+  mne_pip:
+    pip_packages:
+      - mne[data]
   mamba:
     conda_packages:
       - mamba
@@ -137,7 +141,6 @@ collections:
       - xlsxwriter
       - xlwt
       - prompt_toolkit
-      - mne
       - pycox
       - pydub        # pydub: ??? - Available in c-f
       - cvxopt       # cvxopt       - mlkern2019
