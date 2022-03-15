@@ -34,6 +34,8 @@ packages:
     buildable: False
   mesa:
     variants: +glx +llvm +opengl +osmesa swr=avx2
+  mesa-glu:
+    variants: ^mesa
   meson:
     version: [0.59.2]
   netcdf-c:
