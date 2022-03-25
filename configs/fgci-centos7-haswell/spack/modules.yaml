@@ -111,6 +111,7 @@ modules:
           set:
             SLURM_MPI_TYPE: 'pmix_v2'
       mesa:
+        autoload: 'none'
         suffixes:
           '+llvm'          : 'llvm'
       namd:
