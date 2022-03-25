@@ -117,6 +117,9 @@ modules:
         autoload: 'none'
         suffixes:
           '+llvm'          : 'llvm'
+        environment:
+          set:
+            GALLIUM_DRIVER : 'llvmpipe'
       namd:
         suffixes:
           'cuda_arch=60'   : 'pascal'
