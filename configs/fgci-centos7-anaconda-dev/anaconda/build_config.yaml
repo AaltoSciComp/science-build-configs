@@ -326,7 +326,7 @@ collections:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.2
-      - pytorch=1.10.2=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
+      - pytorch=1.11.0=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
       - torchaudio
       # torchvision dependencies
       - ffmpeg
@@ -342,6 +342,7 @@ collections:
       - torchvision
   deep_learning_extras:
     conda_packages:
+      - datasets
       - transformers
       - pytorch-lightning
     pip_packages:
