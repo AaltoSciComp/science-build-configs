@@ -281,3 +281,9 @@ packages:
     version: '2021.3.0'
     dependencies:
       - '^intel-oneapi-tbb@2021.3.0'
+  - name: 'mujoco'
+    version: '2.1.0'
+  - name: 'mujoco'
+    version: '2.1.1'
+    variants:
+      - 'osmesa=8'

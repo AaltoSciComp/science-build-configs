@@ -111,6 +111,7 @@ modules:
           set:
             SLURM_MPI_TYPE: 'pmix_v2'
       mesa:
+        autoload: 'none'
         suffixes:
           '+llvm'          : 'llvm'
       namd:
@@ -135,5 +136,5 @@ modules:
           set:
             MUJOCO_PY_MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
             MUJOCO_PY_MUJOCO_PATH: '${PREFIX}'
-            MJLIB_PATH: '${PREFIX}/bin/libmujoco200.so'
-            MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
+            #MJLIB_PATH: '${PREFIX}/bin/libmujoco200.so'
+            #MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
