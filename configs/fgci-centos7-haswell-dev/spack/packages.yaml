@@ -50,7 +50,7 @@ packages:
     version: [11.0.8_10]
   openmpi:
     version: [4.0.5]
-    variants: fabrics=ucx +pmi +pmix ~static +thread_multiple schedulers=slurm +legacylaunchers
+    variants: fabrics=ucx ~pmi +pmix +static +thread_multiple schedulers=slurm +legacylaunchers
   openssl:
     externals:
       - spec: openssl@1.0.2k
