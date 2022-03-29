@@ -47,6 +47,12 @@ command_collections:
       - "echo '/opt/DPABI/DPABI_StandAlone/run_DPABISurf_run_StandAlone.sh /opt/mcr/v98 \"$@\"' >> /usr/local/bin/DPABISurf"
       - "chmod +x /usr/local/bin/DPABISurf"
       - "/usr/local/bin/DPABISurf missing_file.m || echo 'Ran DPABISurf to unpack ctf'"
+  openface:
+    post_commands:
+      - 'chmod -R a=r,a+X /home/openface-build'
+      - 'find /home/openface-build/build/bin/ -maxdepth 1 -type f -exec chmod a+rx {} \;'
+    environment_commands:
+      - 'export LC_ALL=C'
 flag_collections:
   common:
     - '-B /m:/m'
@@ -88,5 +94,16 @@ definitions:
       - '20.2.3'
     command_collections:
       - 'common'
+    flag_collections:
+      - 'common'
+  - name: 'singularity-openface'
+    docker_user: 'algebr'
+    docker_image: 'openface'
+    module_namespace: 'common'
+    tags:
+      - 'latest'
+    command_collections:
+      - 'common'
+      - 'openface'
     flag_collections:
       - 'common'
