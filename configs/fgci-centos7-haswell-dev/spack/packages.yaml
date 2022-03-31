@@ -65,7 +65,7 @@ packages:
     version: [1.7.3]
   pmix:
     version: [3.2.1]
-    variants: +pmi_backwards_compatibility
+    variants: ~pmi_backwards_compatibility
   python:
     version: [3.8.7]
     variants: +pic +shared +optimizations +uuid +pythoncmd
