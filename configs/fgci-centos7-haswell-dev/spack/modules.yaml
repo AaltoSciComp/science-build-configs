@@ -139,7 +139,7 @@ modules:
           set:
             MUJOCO_PY_MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
             MUJOCO_PY_MUJOCO_PATH: '${PREFIX}'
-      "mujoco@2.1.0:":
+      mujoco@2.1.0:
         environment:
           set:
             MJLIB_PATH: '${PREFIX}/bin/libmujoco210.so'
