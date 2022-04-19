@@ -327,6 +327,6 @@ packages:
       - '^mesa-glu'
       - '^mesa'
   - name: 'rust'
-    version: '1.51.0'
+    version: '1.55.0'
   - name: 'paraver'
     version: '4.10.0'
