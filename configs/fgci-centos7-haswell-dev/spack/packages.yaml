@@ -50,7 +50,7 @@ packages:
     version: [11.0.8_10]
   openmpi:
     version: [4.0.5]
-    variants: fabrics=ucx +pmi +pmix +thread_multiple schedulers=slurm +legacylaunchers
+    variants: fabrics=ucx +pmi +pmix +static +thread_multiple schedulers=slurm +legacylaunchers
   openssl:
     externals:
       - spec: openssl@1.0.2k
@@ -64,10 +64,8 @@ packages:
   pkgconf:
     version: [1.7.3]
   pmix:
-    externals:
-      - spec: pmix@2.2.2
-        prefix: /opt/ohpc/admin/pmix
-    buildable: False
+    version: [3.2.1]
+    variants: ~pmi_backwards_compatibility
   python:
     version: [3.8.7]
     variants: +pic +shared +optimizations +uuid +pythoncmd
@@ -80,7 +78,7 @@ packages:
     variants: +X +external-lapack
   slurm:
     externals:
-      - spec: slurm@21-08-0-1 +pmix +hwloc ^pmix@2.2.2
+      - spec: slurm@21-08-0-1 +pmix +hwloc
         prefix: /usr
     buildable: False
   sqlite:
