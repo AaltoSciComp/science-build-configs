@@ -326,3 +326,5 @@ packages:
     dependencies:
       - '^mesa-glu'
       - '^mesa'
+  - name: 'paraver'
+    version: '4.10.0'
