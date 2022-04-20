@@ -287,3 +287,5 @@ packages:
     version: '2.1.1'
     variants:
       - 'osmesa=8'
+  - name: 'extrae'
+    version: '4.0.0'
