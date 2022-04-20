@@ -107,5 +107,5 @@ packages:
     version: '16.02'
   - name: 'libgd'
     version: '2.2.4'
-  - name: 'paraver'
-    version: '4.10.0'
+  - name: 'extrae'
+    version: '4.0.0'
