@@ -198,10 +198,10 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
-  - name: 'singularity-paraver'
+  - name: 'singularity-wxparaver'
     registry: 'registry.cs.aalto.fi'
     docker_user: 'aaltoscienceit'
-    docker_image: 'paraver'
+    docker_image: 'wxparaver'
     module_namespace: 'common'
     tags:
       - '4.10.0'
