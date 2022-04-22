@@ -68,7 +68,11 @@ modules:
           '^python@3:'     : 'python3'
           '^python@:2.9'   : 'python2'
           '^r@3.6.3'       : 'r-3.6.3'
+          '^intel-oneapi-mpi': 'intelmpi'
           '%gcc@6.5.0'     : 'gcc-6.5.0'
+          '%intel@2021.2.0': 'intel-2021.2.0'
+          '%intel@2021.3.0': 'intel-2021.3.0'
+          '%intel@2021.4.0': 'intel-2021.4.0'
       cp2k:
         environment:
           set:

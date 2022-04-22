@@ -328,3 +328,9 @@ packages:
       - '^mesa'
   - name: 'extrae'
     version: '4.0.0'
+  - name: 'vasp'
+    version: '5.4.4.pl2'
+    dependencies:
+      - '^intel-oneapi-mpi@2021.3.0'
+      - '^intel-oneapi-mkl@2021.3.0'
+      - '%intel@2021.3.0'
