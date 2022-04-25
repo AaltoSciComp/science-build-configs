@@ -329,4 +329,4 @@ packages:
     dependencies:
       - '^charmpp@6.10.2'
     variants:
-      - 'interface=python'
+      - 'interface=tcl'
