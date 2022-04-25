@@ -207,10 +207,6 @@ packages:
     version: '2.3.5'
     variants:
       - '~tests'
-  - name: 'namd'
-    version: '2.14'
-    dependencies:
-      - '^charmpp@6.10.2'
   - name: 'ior'
     version: '3.3.0'
   - name: 'julia'
@@ -333,4 +329,4 @@ packages:
     dependencies:
       - '^charmpp@6.10.2'
     variants:
-      - 'interface=tcl'
+      - 'interface=python'
