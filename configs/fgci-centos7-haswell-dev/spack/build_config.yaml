@@ -334,3 +334,9 @@ packages:
       - '^intel-oneapi-mpi@2021.3.0'
       - '^intel-oneapi-mkl@2021.3.0'
       - '%intel@2021.3.0'
+  - name: 'namd'
+    version: '2.14'
+    dependencies:
+      - '^charmpp@6.10.2'
+    variants:
+      - 'interface=tcl,python'
