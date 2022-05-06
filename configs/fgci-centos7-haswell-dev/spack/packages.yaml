@@ -64,7 +64,7 @@ packages:
   pkgconf:
     version: [1.7.3]
   pmix:
-    version: [3.2.1]
+    version: [2.2.2]
     variants: ~pmi_backwards_compatibility
   python:
     version: [3.8.7]
