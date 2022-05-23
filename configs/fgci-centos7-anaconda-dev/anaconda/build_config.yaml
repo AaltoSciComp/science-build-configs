@@ -347,8 +347,8 @@ collections:
     conda_packages:
       - datasets
       - transformers
-      - pytorch-lightning
     pip_packages:
+      - pytorch-lightning
       - flax
       - deepspeed
       - dm-haiku
