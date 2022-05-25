@@ -332,3 +332,5 @@ packages:
       - 'interface=tcl'
   - name: 'virtualgl'
     version: '3.0.1'
+    dependencies:
+      - '^mesa-glu'
