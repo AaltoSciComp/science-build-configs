@@ -330,3 +330,5 @@ packages:
       - '^charmpp@6.10.2'
     variants:
       - 'interface=tcl'
+  - name: 'virtualgl'
+    version: '3.0.1'
