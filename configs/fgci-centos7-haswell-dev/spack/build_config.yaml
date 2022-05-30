@@ -330,17 +330,17 @@ packages:
       - '^charmpp@6.10.2'
     variants:
       - 'interface=tcl'
-  - name: 'virtualgl'
-    version: '3.0.1'
-    dependencies:
-      - '^mesa-glu'
-      - '^mesa'
-    variants:
-      - '+ssl'
-      - '+forceinline'
-      - '~usexv'
-      - '~fakexcb'
-      - '~fakeopencl'
-      - '~eglbackend'
+#  - name: 'virtualgl'
+#    version: '3.0.1'
+#    dependencies:
+#      - '^mesa-glu'
+#      - '^mesa'
+#    variants:
+#      - '+ssl'
+#      - '+forceinline'
+#      - '~usexv'
+#      - '~fakexcb'
+#      - '~fakeopencl'
+#      - '~eglbackend'
   - name: 'cudnn'
     version: '7.6.5.32-10.2'
