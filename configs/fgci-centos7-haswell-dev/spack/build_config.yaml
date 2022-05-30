@@ -342,3 +342,5 @@ packages:
       - '~fakexcb'
       - '~fakeopencl'
       - '~eglbackend'
+  - name: 'cudnn'
+    version: '7.6.5.32-10.2'
