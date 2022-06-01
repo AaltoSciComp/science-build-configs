@@ -4,6 +4,7 @@ installer_checksums:
   Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
   Mambaforge-4.11.0-0-Linux-x86_64.sh: '49268ee30d4418be4de852dda3aa4387f8c95b55a76f43fb1af68dcbf8b205c3'
+  Miniforge3-4.12.0-2-Linux-x86_64.sh: 'e8bd60572d1bdcd9fc16114f423653c95e02f0be1393383f77fba17cf8acb10e'
 environments:
   - name: miniconda
     version: '4.9.2'
@@ -101,9 +102,10 @@ environments:
   - name: anaconda
     version: '2022-01'
     miniconda: False
-    mambaforge: True
+    miniforge: True
+    mamba: True
     python_version: 3
-    installer_version: '4.11.0-0'
+    installer_version: '4.12.0-2'
     condarc_install:
       channels:
         - pytorch
