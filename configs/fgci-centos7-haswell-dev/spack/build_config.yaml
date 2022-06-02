@@ -344,3 +344,7 @@ packages:
 #      - '~eglbackend'
   - name: 'cudnn'
     version: '7.6.5.32-10.2'
+  - name: 'nccl'
+    version: '2.9.9-1'
+    dependencies:
+      - '^cuda@10.2.89'
