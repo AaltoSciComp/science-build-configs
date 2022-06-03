@@ -107,6 +107,18 @@ definitions:
       - 'openface'
     flag_collections:
       - 'common'
+  - name: 'singularity-openfoam'
+    docker_user: 'openfoam'
+    docker_image: 'openfoam9-paraview56'
+    module_namespace: 'common'
+    fakeroot: False
+    sudo: True
+    tags:
+      - '9'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
   - name: 'singularity-wxparaver'
     registry: 'registry.cs.aalto.fi'
     docker_user: 'aaltoscienceit'
