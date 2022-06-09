@@ -364,3 +364,5 @@ packages:
     version: '2.9.9-1'
     dependencies:
       - '^cuda@10.2.89'
+  - name: 'lammps'
+    version: '20210310'
