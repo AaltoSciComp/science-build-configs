@@ -210,3 +210,13 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-pytorch-amd'
+    docker_user: 'amdih'
+    docker_image: 'pytorch'
+    tags:
+      - 'rocm5.0_ubuntu18.04_py3.7_pytorch_1.10.0'
+    module_namespace: 'common'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
