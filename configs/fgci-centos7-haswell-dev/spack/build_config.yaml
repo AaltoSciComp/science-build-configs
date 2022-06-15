@@ -370,3 +370,8 @@ packages:
     version: '2.2.28'
   - name: 'gdal'
     version: '3.3.3'
+    variants:
+      - '+geos'
+      - '+java'
+      - '+libiconv'
+      - '+libz'
