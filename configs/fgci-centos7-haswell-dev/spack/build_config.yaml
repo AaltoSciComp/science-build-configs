@@ -368,3 +368,5 @@ packages:
     version: '20210310'
   - name: 'udunits'
     version: '2.2.28'
+  - name: 'gdal'
+    version: '3.3.3'
