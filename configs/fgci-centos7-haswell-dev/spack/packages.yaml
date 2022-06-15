@@ -20,6 +20,8 @@ packages:
     version: [1.15.6]
   graphviz:
     variants: +expat +ghostscript +gtkplus +gts +java +libgd +pangocairo +qt
+  harfbuzz:
+    variants: +graphite2
   hdf5:
     variants: +cxx +fortran +hl +pic +shared +szip +threadsafe
   latte:
