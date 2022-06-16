@@ -89,6 +89,7 @@ definitions:
     module_namespace: 'common'
     tags:
       - '21.03-py3'
+      - '22.05-py3'
     command_collections:
       - 'common'
       - 'compilers'
