@@ -377,3 +377,5 @@ packages:
       - '+libz'
   - name: 'r'
     version: '4.1.1'
+  - name: 'parallel'
+    version: '20210922'
