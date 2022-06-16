@@ -379,3 +379,7 @@ packages:
     version: '4.1.1'
   - name: 'parallel'
     version: '20210922'
+  - name: 'libpng'
+    version: '1.6.37'
+    variants:
+      - '^zlib@1.2.9'
