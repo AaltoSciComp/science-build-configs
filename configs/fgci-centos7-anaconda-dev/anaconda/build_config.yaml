@@ -438,6 +438,7 @@ collections:
       - pycrypto
       - pycurl
       - pympler
+      - pyqtwebengine
       - pysoundfile
       - pytest-astropy
       - python-libarchive-c
