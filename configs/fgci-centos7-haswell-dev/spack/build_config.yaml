@@ -387,3 +387,5 @@ packages:
     version: '1.2.57'
     variants:
       - '^zlib'
+  - name: 'openjdk'
+    version: '11.0.12_7'
