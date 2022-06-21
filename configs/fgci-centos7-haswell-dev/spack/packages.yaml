@@ -17,7 +17,7 @@ packages:
     version: [8.4.0, 9.3.0, 6.5.0]
     variants: +piclibs
   go:
-    version: [1.15.6]
+    version: [1.17.2]
   graphviz:
     variants: +expat +ghostscript +gtkplus +gts +java +libgd +pangocairo +qt
   harfbuzz:
