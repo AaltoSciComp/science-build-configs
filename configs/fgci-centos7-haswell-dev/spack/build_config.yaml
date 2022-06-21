@@ -393,3 +393,5 @@ packages:
       - '^zlib'
   - name: 'openjdk'
     version: '11.0.12_7'
+  - name: 'telegraf'
+    version: '1.23.0'
