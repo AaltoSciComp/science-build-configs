@@ -326,3 +326,7 @@ packages:
       - '+libz'
   - name: 'parallel'
     version: '20210922'
+  - name: 'telegraf'
+    version: '1.23.0'
+    extra_flags:
+      - '-j 1'
