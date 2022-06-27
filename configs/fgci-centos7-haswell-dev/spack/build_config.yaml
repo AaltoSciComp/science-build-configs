@@ -403,3 +403,5 @@ packages:
       - '-j 1'
   - name: 'ocaml'
     version: '4.13.1'
+  - name: 'feh'
+    version: '3.9'
