@@ -330,3 +330,5 @@ packages:
     version: '1.23.0'
     extra_flags:
       - '-j 1'
+  - name: 'feh'
+    version: '3.9'
