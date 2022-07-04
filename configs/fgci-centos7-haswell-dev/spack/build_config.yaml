@@ -411,3 +411,7 @@ packages:
     version: '4.13.1'
   - name: 'feh'
     version: '3.9'
+  - name: 'nvhpc'
+    version: '21.9'
+    variants:
+      - 'install_type=network'
