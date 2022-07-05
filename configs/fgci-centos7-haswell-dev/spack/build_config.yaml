@@ -415,5 +415,3 @@ packages:
     version: '21.9'
     variants:
       - 'install_type=network'
-  - name: 'hipblas'
-    version: '4.5.2'
