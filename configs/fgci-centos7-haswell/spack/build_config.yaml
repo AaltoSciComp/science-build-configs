@@ -330,6 +330,12 @@ packages:
       - '+java'
       - '+libiconv'
       - '+libz'
+    dependencies:
+      - '^openjdk@11.0.8_10'
+  - name: 'r'
+    version: '4.1.1'
+    dependencies:
+      - '^openjdk@11.0.8_10'
   - name: 'parallel'
     version: '20210922'
   - name: 'telegraf'
