@@ -497,7 +497,8 @@ collections:
   neuroimaging:
     conda_packages:
       - python>=3.9
-      - cudatoolkit=11.3
+      - cudatoolkit=11.*
+      - cudnn>=8.2
       - cupy
       - cython
       - darkdetect
@@ -532,6 +533,8 @@ collections:
       - pyqt!=5.15.3
       - PySurfer
       - python-picard
+      - pytorch=1.11.0=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
+      - pytorch-lightning
       - pyvista>=0.30
       - pyvistaqt>=0.4
       - qdarkstyle
