@@ -266,6 +266,20 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py39_4.10.3'
+    freeze: True
+    condarc_install:
+      channels:
+        - defaults
+        - conda-forge
+        - pytorch
+        - nvidia
+    collections:
+      - neuroimaging
+  - name: neuroimaging
+    version: '2022-02'
+    miniconda: True
+    python_version: 3
+    installer_version: 'py39_4.10.3'
     condarc_install:
       channels:
         - defaults
