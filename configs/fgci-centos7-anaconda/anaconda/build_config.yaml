@@ -106,6 +106,33 @@ environments:
     mamba: True
     python_version: 3
     installer_version: '4.12.0-2'
+    freeze: True
+    condarc_install:
+      channels:
+        - pytorch
+        - huggingface
+        - conda-forge
+        - mosek
+      channel_priority: flexible
+    collections:
+      - deep_learning_extras
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - gurobi_pip
+      - mne
+      - cplex_pip
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+  - name: anaconda
+    version: '2022-02'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '4.12.0-2'
     condarc_install:
       channels:
         - pytorch
@@ -318,6 +345,8 @@ collections:
       - torchvision
   deep_learning_extras:
     conda_packages:
+      - cudatoolkit>=11.1
+      - cudnn>=8.2
       - datasets
       - transformers
       - pytorch-lightning
@@ -325,7 +354,7 @@ collections:
       - flax
       - deepspeed
       - dm-haiku
-      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_releases.html"'
+      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"'
   mne:
     conda_packages:
       - mne
@@ -411,6 +440,7 @@ collections:
       - pycrypto
       - pycurl
       - pympler
+      - pyqtwebengine
       - pysoundfile
       - pytest-astropy
       - python-libarchive-c
