@@ -152,7 +152,6 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
-      - cudatoolkit=11.*
   - name: pytorch
     version: '1.9.1'
     miniconda: True
