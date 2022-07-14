@@ -386,6 +386,8 @@ collections:
       - torchvision
   deep_learning_extras:
     conda_packages:
+      - cudatoolkit>=11.1
+      - cudnn>=8.2
       - datasets
       - transformers
       - pytorch-lightning
@@ -393,7 +395,7 @@ collections:
       - flax
       - deepspeed
       - dm-haiku
-      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_releases.html"'
+      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"'
   mne:
     conda_packages:
       - mne
