@@ -152,6 +152,7 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
+      - cudatoolkit=11.*
   - name: pytorch
     version: '1.9.1'
     miniconda: True
@@ -512,7 +513,7 @@ collections:
       - "'blas * mkl'"
   neuroimaging:
     conda_packages:
-      - python>=3.9
+      - python==3.9
       - cudatoolkit=11.6
       - cupy
       - cython
