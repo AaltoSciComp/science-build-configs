@@ -415,3 +415,5 @@ packages:
     version: '21.9'
     variants:
       - 'install_type=network'
+  - name: 'perl-bioperl'
+    version: '1.7.6'
