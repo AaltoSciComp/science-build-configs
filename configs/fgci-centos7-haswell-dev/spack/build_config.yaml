@@ -201,6 +201,11 @@ packages:
     variants:
       - '+ipo'
       - '+python'
+  - name: 'geant4'
+    version: '11.0.2'
+    variants:
+      - '+ipo'
+      - '+python'
   - name: 'gsl'
     version: '2.6'
   - name: 'libsvm'
