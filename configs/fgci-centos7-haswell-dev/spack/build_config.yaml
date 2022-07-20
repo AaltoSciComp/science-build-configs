@@ -421,3 +421,5 @@ packages:
     version: '21.9'
     variants:
       - 'install_type=network'
+  - name: 'tmux'
+    version: '3.2a'
