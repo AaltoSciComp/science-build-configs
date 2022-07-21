@@ -424,6 +424,16 @@ packages:
   - name: 'tmux'
     version: '3.2a'
   - name: 'paraview'
+    version: '5.8.1'
+    variants:
+      - '+hdf5'
+      - '+mpi'
+      - '+opengl2'
+      - '+osmesa'
+      - '+python3'
+    dependencies:
+      - '^mesa'
+  - name: 'paraview'
     version: '5.9.1'
     variants:
       - '+hdf5'
