@@ -431,3 +431,5 @@ packages:
       - '+opengl2'
       - '+osmesa'
       - '+python3'
+    dependencies:
+      - '^mesa'
