@@ -425,6 +425,8 @@ packages:
     version: '3.2a'
   - name: 'paraview'
     version: '5.8.1'
+    extra_flags:
+      - '-j 1'
     variants:
       - '+hdf5'
       - '+mpi'
@@ -435,6 +437,8 @@ packages:
       - '^mesa'
   - name: 'paraview'
     version: '5.9.1'
+    extra_flags:
+      - '-j 1'
     variants:
       - '+hdf5'
       - '+mpi'
