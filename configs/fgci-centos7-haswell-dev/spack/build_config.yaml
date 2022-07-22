@@ -459,4 +459,5 @@ packages:
       - '+python3'
     dependencies:
       - '^mesa'
+      - '^netcdf-c~mpi'
       - '^hdf5~mpi'
