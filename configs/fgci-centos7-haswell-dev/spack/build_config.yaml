@@ -457,3 +457,4 @@ packages:
       - '+python3'
     dependencies:
       - '^mesa'
+      - '^hdf5~mpi'
