@@ -294,6 +294,8 @@ packages:
       - '-j 1'
   - name: 'netcdf-cxx4'
     version: '4.3.1'
+    dependencies:
+      - '^netcdf-c+mpi'
   - name: 'fmt'
     version: '8.0.1'
   - name: 'jq'
