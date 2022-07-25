@@ -184,6 +184,10 @@ packages:
     version: '21.0.3'
     extra_flags:
       - '-j 1'
+  - name: 'mesa'
+    version: '21.2.3'
+    extra_flags:
+      - '-j 1'
   - name: 'geant4'
     version: '10.7.1'
     variants:
@@ -352,3 +356,13 @@ packages:
     version: '3.9'
   - name: 'tmux'
     version: '3.2a'
+  - name: 'paraview'
+    version: '5.9.1'
+    variants:
+      - '+hdf5'
+      - '+mpi'
+      - '+opengl2'
+      - '+osmesa'
+      - '+python3'
+    dependencies:
+      - '^mesa'
