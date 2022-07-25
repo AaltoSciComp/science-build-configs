@@ -435,6 +435,11 @@ packages:
       - '+python3'
     dependencies:
       - '^mesa'
+  - name: 'qt'
+    version: '5.15.2'
+    variants:
+      - '~dbus'
+      - '~webkit'
   - name: 'paraview'
     version: '5.9.1'
     variants:
@@ -444,5 +449,5 @@ packages:
       - '+qt'
       - '+python3'
     dependencies:
-      - '^qt~webkit'
+      - '^qt@5.15.2~webkit~dbus'
       - '^mesa'
