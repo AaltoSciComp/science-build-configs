@@ -444,4 +444,5 @@ packages:
       - '+qt'
       - '+python3'
     dependencies:
+      - '^qt~webkit'
       - '^mesa'
