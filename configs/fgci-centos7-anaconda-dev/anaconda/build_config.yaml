@@ -152,54 +152,6 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
-  - name: pytorch
-    version: '1.9.1'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.10.3'
-    freeze: True
-    condarc_install:
-      channels:
-        - pytorch
-        - nvidia
-        - conda-forge
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-      channel_priority: strict
-    collections:
-      - triton-generic
-      - pytorch
-      - mne
-      - gurobi
-      - cplex
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
-  - name: tensorflow
-    version: '2.6.0'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.10.3'
-    freeze: True
-    condarc_install:
-      channels:
-        - conda-forge
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-      channel_priority: strict
-    collections:
-      - tensorflow-v2-pip
-      - triton-generic
-      - mne
-      - gurobi
-      - cplex
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
   - name: rapidsai
     version: '21.10'
     miniconda: True
