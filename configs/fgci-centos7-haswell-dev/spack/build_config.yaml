@@ -435,3 +435,13 @@ packages:
       - '+python3'
     dependencies:
       - '^mesa'
+  - name: 'paraview'
+    version: '5.9.1'
+    variants:
+      - '+hdf5'
+      - '+mpi'
+      - '+opengl2'
+      - '+qt'
+      - '+python3'
+    dependencies:
+      - '^mesa'
