@@ -189,6 +189,12 @@ packages:
     variants:
       - '+ipo'
       - '+python'
+  - name: 'geant4'
+    version: '11.0.2'
+    variants:
+      - 'cxxstd=17'
+      - '+ipo'
+      - '+python'
   - name: 'libsvm'
     version: '323'
   - name: 'libxscrnsaver'
