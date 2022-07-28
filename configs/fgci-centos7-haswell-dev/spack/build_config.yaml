@@ -436,7 +436,7 @@ packages:
     dependencies:
       - '^mesa'
   - name: 'qt'
-    version: '5.15.4'
+    version: '5.14.2'
     extra_flags:
       - '-j 1'
     variants:
@@ -453,5 +453,5 @@ packages:
       - '+qt'
       - '+python3'
     dependencies:
-      - '^qt@5.15.4~webkit~dbus'
+      - '^qt@5.14.2~webkit~dbus'
       - '^mesa+opengl~osmesa'
