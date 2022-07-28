@@ -441,7 +441,7 @@ packages:
       - '~dbus'
       - '~webkit'
     dependencies:
-      - '^mesa+opengl~osmesa'
+      - '^mesa'
   - name: 'paraview'
     version: '5.9.1'
     variants:
@@ -452,4 +452,4 @@ packages:
       - '+python3'
     dependencies:
       - '^qt@5.14.2~webkit~dbus'
-      - '^mesa+opengl~osmesa'
+      - '^mesa'
