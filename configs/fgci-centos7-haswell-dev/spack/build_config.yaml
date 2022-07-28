@@ -437,8 +437,6 @@ packages:
       - '^mesa'
   - name: 'qt'
     version: '5.14.2'
-    extra_flags:
-      - '-j 1'
     variants:
       - '~dbus'
       - '~webkit'
