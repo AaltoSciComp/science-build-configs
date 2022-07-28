@@ -436,12 +436,14 @@ packages:
     dependencies:
       - '^mesa'
   - name: 'qt'
-    version: '5.15.2'
+    version: '5.15.4'
     extra_flags:
       - '-j 1'
     variants:
       - '~dbus'
       - '~webkit'
+    dependencies:
+      - '^mesa+opengl~osmesa'
   - name: 'paraview'
     version: '5.9.1'
     variants:
@@ -451,5 +453,5 @@ packages:
       - '+qt'
       - '+python3'
     dependencies:
-      - '^qt@5.15.2~webkit~dbus'
-      - '^mesa'
+      - '^qt@5.15.4~webkit~dbus'
+      - '^mesa+opengl~osmesa'
