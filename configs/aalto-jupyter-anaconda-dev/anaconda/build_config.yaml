@@ -100,7 +100,7 @@ environments:
       - opencv
       - bdaaccounting
   - name: jupyter-generic
-    version: '2022-07-27'
+    version: '2022-07-29'
     miniconda: True
     python_version: 3
     installer_version: 'py39_4.10.3'
