@@ -2,7 +2,7 @@ packages:
   boost:
     variants: +pic
   cairo:
-    variants: +X +gobject +pdf
+    variants: +X +gobject +pdf +fc
   charmpp:
     variants: backend=mpi
   curl:
