@@ -366,3 +366,21 @@ packages:
       - '+python3'
     dependencies:
       - '^mesa'
+  - name: 'qt'
+    version: '5.14.2'
+    variants:
+      - '~dbus'
+      - '~webkit'
+    dependencies:
+      - '^mesa'
+  - name: 'paraview'
+    version: '5.9.1'
+    variants:
+      - '+hdf5'
+      - '+mpi'
+      - '+opengl2'
+      - '+qt'
+      - '+python3'
+    dependencies:
+      - '^qt@5.14.2~webkit~dbus'
+      - '^mesa'
