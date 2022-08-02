@@ -91,6 +91,8 @@ packages:
       - spec: ucx@1.8.0 +thread_multiple +pic +rc +dc +cm +cma +dm +knem +optimizations
         prefix: /usr
     buildable: False
+  vim:
+    variants: features=huge
   all:
     compiler: [gcc@8.4.0, gcc, intel, pgi, clang, xl, nag]
     providers:

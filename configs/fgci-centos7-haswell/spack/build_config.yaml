@@ -384,3 +384,5 @@ packages:
     dependencies:
       - '^qt@5.14.2~webkit~dbus'
       - '^mesa'
+  - name: 'vim'
+    version: '8.2.2541'
