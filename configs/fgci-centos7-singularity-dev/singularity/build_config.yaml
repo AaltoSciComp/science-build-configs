@@ -221,3 +221,14 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-fastsurfer'
+    docker_user: 'deepmi'
+    docker_image: 'fastsurfer'
+    tags:
+      - 'gpu-v1.1.0'
+    module_namespace: 'common'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
+      - 'nvidia'
