@@ -455,3 +455,5 @@ packages:
       - '^mesa'
   - name: 'vim'
     version: '8.2.2541'
+  - name: 'blast-plus'
+    version: '2.12.0'
