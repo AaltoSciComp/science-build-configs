@@ -130,3 +130,14 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-wine'
+    registry: 'registry.cs.aalto.fi'
+    docker_user: 'aaltoscienceit'
+    docker_image: 'wine'
+    tags:
+      - '2022-08'
+    module_namespace: 'common'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
