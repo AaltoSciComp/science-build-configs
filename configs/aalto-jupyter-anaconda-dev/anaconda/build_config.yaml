@@ -182,6 +182,7 @@ collections:
       - xgboost      # dsfbi2022 RT#20284
       - spectrum     # ELEC-C5212: RT#21070
       - gym          # CS-C3240: RT#21491
+      - diffprivlib  # CS-E407507: RT#21732
     pip_packages:
       - plotchecker  # plotchecker: for nbgrader, mlbp2018
       - gpflow       # 2021-11, c-f has old version
