@@ -143,7 +143,7 @@ collections:
   jupyter-generic:
     conda_packages:
       # The package is already pulled in as a dependency, forcing an update here
-      - 'ca-certificates>2022.0.0'
+      - 'ca-certificates>2022.07.0'
       #- cma          # cma: ??
       - networkx     # networkx: complex networks (general)
       - nose         # nose: mlbp2018, snlp2022 (RT#20396)
