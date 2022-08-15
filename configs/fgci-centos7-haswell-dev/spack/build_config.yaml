@@ -332,6 +332,10 @@ packages:
     version: '7.2.0'
     licenses:
       - 'license.txt'
+  - name: 'freesurfer'
+    version: '7.3.2'
+    licenses:
+      - 'license.txt'
   - name: 'mumax'
     version: '3.10'
     variants:
