@@ -18,7 +18,7 @@ command_collections:
       - 'export PYTHONPATH=$PYTHONPATH:/detectron/lib'
   freesurfer_mesa:
     post_commands:
-      - 'yum update'
+      - 'yum update -y'
       - 'yum install -y mesa-dri-drivers mesa-libGLU'
   openfoam:
     post_commands:
