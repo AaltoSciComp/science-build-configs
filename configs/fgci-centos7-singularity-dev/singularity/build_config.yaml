@@ -16,6 +16,10 @@ command_collections:
   detectron:
     environment_commands:
       - 'export PYTHONPATH=$PYTHONPATH:/detectron/lib'
+  freesurfer_mesa:
+    post_commands:
+      - 'yum update'
+      - 'yum install -y mesa-dri-drivers mesa-libGLU'
   openfoam:
     post_commands:
       - 'cat /opt/OpenFOAM/setImage_v1712.sh >> /environment'
@@ -253,6 +257,7 @@ definitions:
     module_namespace: 'common'
     command_collections:
       - 'common'
+      - 'freesurfer_mesa'
     flag_collections:
       - 'common'
       - 'freesurfer_license'
