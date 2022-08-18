@@ -7,6 +7,8 @@ packages:
     variants: backend=mpi
   curl:
     variants: +libssh2 ~nghttp
+  cuda:
+    version: [11.5.0]
   fftw:
     variants: +openmp
   flex:
