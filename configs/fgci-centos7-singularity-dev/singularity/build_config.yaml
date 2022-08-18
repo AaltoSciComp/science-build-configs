@@ -81,6 +81,8 @@ flag_collections:
     - '--workdir /opt/openpose'
   dpabi:
     - '-B /share/apps/licenses/freesurfer/6.0.0/license.txt:/opt/freesurfer/license.txt'
+  freesurfer_license:
+    - '--env FS_LICENSE=/share/apps/licenses/freesurfer/6.0.0/license.txt'
 definitions:
   - name: 'nvidia-pytorch'
     docker_user: 'nvidia'
@@ -243,3 +245,14 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-freesurfer'
+    docker_user: 'freesurfer'
+    docker_image: 'freesurfer'
+    tags:
+      - '7.2.0'
+    module_namespace: 'common'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
+      - 'freesurfer_license'
