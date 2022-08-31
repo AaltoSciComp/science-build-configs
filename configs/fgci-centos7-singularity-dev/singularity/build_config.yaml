@@ -261,3 +261,13 @@ definitions:
     flag_collections:
       - 'common'
       - 'freesurfer_license'
+  - name: 'singularity-sinergym'
+    docker_user: 'sailugr'
+    docker_image: 'sinergym'
+    tags:
+      - '2.0.0'
+    module_namespace: 'common'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
