@@ -67,7 +67,17 @@ modules:
           '^python@3:'     : 'python3'
           '^python@:2.9'   : 'python2'
           '^r@3.6.3'       : 'r-3.6.3'
+          '^intel-oneapi-mpi': 'intelmpi'
           '%gcc@6.5.0'     : 'gcc-6.5.0'
+          '%intel@2021.2.0': 'intel-2021.2.0'
+          '%intel@2021.3.0': 'intel-2021.3.0'
+          '%intel@2021.4.0': 'intel-2021.4.0'
+      boost:
+        suffixes:
+          'cxxstd=17'      : 'cxx17'
+      clhep:
+        suffixes:
+          'cxxstd=17'      : 'cxx17'
       cp2k:
         environment:
           set:
@@ -78,7 +88,10 @@ modules:
           'cuda_arch=37'   : 'kepler'
           'cuda_arch=60'   : 'pascal'
           'cuda_arch=70'   : 'volta'
+          'cuda_arch=80'   : 'ampere'
       geant4:
+        suffixes:
+          'cxxstd=17'      : 'cxx17'
         environment:
           set:
             G4INSTALL: '${PREFIX}'
@@ -90,10 +103,14 @@ modules:
           prepend_path:
             LIBRARY_PATH: '${PREFIX}/lib/gcc/x86_64-unknown-linux-gnu/${VERSION}:${PREFIX}/lib/gcc/x86_64-pc-linux-gnu/${VERSION}'
             LD_LIBRARY_PATH: '${PREFIX}/lib/gcc/x86_64-unknown-linux-gnu/${VERSION}:${PREFIX}/lib/gcc/x86_64-pc-linux-gnu/${VERSION}'
+      glew:
+        suffixes:
+          '^mesa'          : 'mesa'
       fftw:
         suffixes:
           '+openmp'        : 'openmp'
       intel-parallel-studio:
+        environment:
         suffixes:
           '+mpi'           : 'intelmpi'
       openblas:
@@ -101,8 +118,17 @@ modules:
           'threads=none'   : 'singlethreaded'
           'threads=openmp' : 'openmp'
       mesa:
+        autoload: 'none'
         suffixes:
           '+llvm'          : 'llvm'
+        environment:
+          set:
+            GALLIUM_DRIVER : 'llvmpipe'
+      namd:
+        suffixes:
+          'cuda_arch=60'   : 'pascal'
+          'cuda_arch=70'   : 'volta'
+          'cuda_arch=80'   : 'ampere'
       scalapack:
         suffixes:
           '^openblas threads=none': 'singlethreaded'

@@ -24,6 +24,42 @@ compilers:
       platform: linux
       os: ubuntu20.04
       arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.2.0'
+    dependencies:
+      - '%gcc@9.3.0'
+    flags:
+      cflags: -O2 -g -march=skylake
+      cxxflags: -O2 -g -march=skylake
+      fflags: -O2 -g -march=skylake
+    target_architecture:
+      platform: linux
+      os: centos7
+      arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.3.0'
+    dependencies:
+      - '%gcc@9.3.0'
+    flags:
+      cflags: -O2 -g -march=skylake
+      cxxflags: -O2 -g -march=skylake
+      fflags: -O2 -g -march=skylake
+    target_architecture:
+      platform: linux
+      os: centos7
+      arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.4.0'
+    dependencies:
+      - '%gcc@9.3.0'
+    flags:
+      cflags: -O2 -g -march=skylake
+      cxxflags: -O2 -g -march=skylake
+      fflags: -O2 -g -march=skylake
+    target_architecture:
+      platform: linux
+      os: centos7
+      arch: x86_64
 packages:
   - name: 'abinit'
     version: '8.10.3'
@@ -107,5 +143,13 @@ packages:
     version: '16.02'
   - name: 'libgd'
     version: '2.2.4'
+  - name: 'intel-oneapi-mkl'
+    version: '2021.3.0'
+    dependencies:
+      - '^intel-oneapi-tbb@2021.3.0'
+  - name: 'intel-oneapi-mkl'
+    version: '2021.4.0'
+    dependencies:
+      - '^intel-oneapi-tbb@2021.4.0'
   - name: 'extrae'
     version: '4.0.0'

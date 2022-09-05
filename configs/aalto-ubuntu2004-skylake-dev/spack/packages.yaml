@@ -2,11 +2,13 @@ packages:
   boost:
     variants: +pic
   cairo:
-    variants: +X +gobject +pdf
+    variants: +X +gobject +pdf +fc
   charmpp:
     variants: backend=mpi
   curl:
     variants: +libssh2 ~nghttp
+  cuda:
+    version: [11.5.0]
   fftw:
     variants: +openmp
   flex:
@@ -17,18 +19,22 @@ packages:
     version: [8.4.0, 9.3.0, 6.5.0]
     variants: +piclibs
   go:
-    version: [1.15.6]
+    version: [1.18.3]
   graphviz:
     variants: +expat +ghostscript +gtkplus +gts +java +libgd +pangocairo +qt
+  harfbuzz:
+    variants: +graphite2
   hdf5:
     variants: +cxx +fortran +hl +pic +shared +szip +threadsafe
   latte:
     variants: +progress
   llvm:
-    version: [11.0.1]
+    version: [13.0.0]
     variants: +python
   mesa:
     variants: +glx +llvm +opengl +osmesa swr=avx2
+  meson:
+    version: [0.59.2]
   netcdf-c:
     version: [4.7.4]
   openblas:
@@ -59,11 +65,13 @@ packages:
   qt:
     variants: +phonon +dbus +opengl +webkit
   r:
-    version: [4.0.3]
+    version: [4.1.1]
     variants: +X +external-lapack
   sqlite:
     version: [3.34.0]
     variants: +column_metadata +fts +functions +rtree
+  vim:
+    variants: features=huge
   all:
     compiler: [gcc@8.4.0, gcc, intel, pgi, clang, xl, nag]
     providers:
@@ -79,7 +87,7 @@ packages:
       lapack: [openblas]
       mkl: [intel-mkl]
       mpe: [mpe2]
-      mpi: [openmpi, mpich]
+      mpi: [openmpi]
       opencl: [pocl]
       openfoam: [openfoam-com, openfoam-org, foam-extend]
       pil: [py-pillow]
