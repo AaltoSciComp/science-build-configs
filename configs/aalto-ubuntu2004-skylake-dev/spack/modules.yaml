@@ -110,7 +110,6 @@ modules:
         suffixes:
           '+openmp'        : 'openmp'
       intel-parallel-studio:
-        environment:
         suffixes:
           '+mpi'           : 'intelmpi'
       openblas:
