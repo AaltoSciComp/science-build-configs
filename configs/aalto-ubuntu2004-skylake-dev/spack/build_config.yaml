@@ -34,7 +34,7 @@ compilers:
       fflags: -O2 -g -march=skylake
     target_architecture:
       platform: linux
-      os: centos7
+      os: ubuntu20.04
       arch: x86_64
   - name: 'intel-oneapi-compilers'
     version: '2021.3.0'
@@ -46,7 +46,7 @@ compilers:
       fflags: -O2 -g -march=skylake
     target_architecture:
       platform: linux
-      os: centos7
+      os: ubuntu20.04
       arch: x86_64
   - name: 'intel-oneapi-compilers'
     version: '2021.4.0'
@@ -58,7 +58,7 @@ compilers:
       fflags: -O2 -g -march=skylake
     target_architecture:
       platform: linux
-      os: centos7
+      os: ubuntu20.04
       arch: x86_64
 packages:
   - name: 'abinit'
