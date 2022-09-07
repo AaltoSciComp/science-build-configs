@@ -24,6 +24,42 @@ compilers:
       platform: linux
       os: ubuntu20.04
       arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.2.0'
+    dependencies:
+      - '%gcc@9.3.0'
+    flags:
+      cflags: -O2 -g -march=skylake
+      cxxflags: -O2 -g -march=skylake
+      fflags: -O2 -g -march=skylake
+    target_architecture:
+      platform: linux
+      os: ubuntu20.04
+      arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.3.0'
+    dependencies:
+      - '%gcc@9.3.0'
+    flags:
+      cflags: -O2 -g -march=skylake
+      cxxflags: -O2 -g -march=skylake
+      fflags: -O2 -g -march=skylake
+    target_architecture:
+      platform: linux
+      os: ubuntu20.04
+      arch: x86_64
+  - name: 'intel-oneapi-compilers'
+    version: '2021.4.0'
+    dependencies:
+      - '%gcc@9.3.0'
+    flags:
+      cflags: -O2 -g -march=skylake
+      cxxflags: -O2 -g -march=skylake
+      fflags: -O2 -g -march=skylake
+    target_architecture:
+      platform: linux
+      os: ubuntu20.04
+      arch: x86_64
 packages:
   - name: 'abinit'
     version: '8.10.3'
@@ -45,11 +81,14 @@ packages:
       - '-j 1'
   - name: 'llvm'
     version: 11.0.1
+    variants:
+      - '~omp_as_runtime'
     extra_flags:
       - '-j 4'
   - name: 'llvm'
     version: 11.0.1
     variants:
+      - '~omp_as_runtime'
       - '+cuda'
       - 'cuda_arch=35,60,70'
     dependencies:
@@ -107,3 +146,13 @@ packages:
     version: '16.02'
   - name: 'libgd'
     version: '2.2.4'
+  - name: 'intel-oneapi-mkl'
+    version: '2021.3.0'
+    dependencies:
+      - '^intel-oneapi-tbb@2021.3.0'
+  - name: 'intel-oneapi-mkl'
+    version: '2021.4.0'
+    dependencies:
+      - '^intel-oneapi-tbb@2021.4.0'
+  - name: 'extrae'
+    version: '4.0.0'
