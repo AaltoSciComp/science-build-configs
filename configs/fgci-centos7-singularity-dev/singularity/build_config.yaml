@@ -155,6 +155,7 @@ definitions:
     docker_image: 'fmriprep'
     module_namespace: 'common'
     tags:
+      - '22.0.2'
       - '21.0.2'
       - '20.2.3'
     command_collections:
