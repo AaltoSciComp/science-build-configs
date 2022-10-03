@@ -406,3 +406,5 @@ packages:
     version: '8.2.2541'
   - name: 'blast-plus'
     version: '2.12.0'
+  - name: 'dcmtk'
+    version: '3.6.6'
