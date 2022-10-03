@@ -156,3 +156,5 @@ packages:
       - '^intel-oneapi-tbb@2021.4.0'
   - name: 'extrae'
     version: '4.0.0'
+  - name: 'dcmtk'
+    version: '3.6.6'
