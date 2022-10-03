@@ -479,3 +479,5 @@ packages:
     version: '1.6.5'
     extra_flags:
       - '-j 1'
+  - name: 'dcmtk'
+    version: '3.6.6'
