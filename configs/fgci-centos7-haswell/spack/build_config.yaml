@@ -231,6 +231,10 @@ packages:
     version: '2.6'
   - name: 'gsl'
     version: '2.7'
+  - name: 'ants'
+    version: '2.3.5'
+    variants:
+      - '~tests'
   - name: 'julia'
     version: '1.6.1'
     extra_flags:
