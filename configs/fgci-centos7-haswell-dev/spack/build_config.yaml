@@ -181,7 +181,7 @@ packages:
 #      - '+mpi'
 #      - '+scalapack'
   - name: 'hdf5'
-    version: 1.10.7
+    version: '1.10.6'
     variants:
       - '~mpi'
   - name: 'relion'
