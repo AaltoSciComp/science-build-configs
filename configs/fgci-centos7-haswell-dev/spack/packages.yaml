@@ -26,7 +26,7 @@ packages:
     variants: +graphite2
   hdf5:
     version: [1.10.5]
-    variants: +cxx +fortran +hl +pic +shared +szip +threadsafe
+    variants: ~cxx +fortran +hl +pic +shared +szip +threadsafe
   latte:
     variants: +progress
   llvm:
