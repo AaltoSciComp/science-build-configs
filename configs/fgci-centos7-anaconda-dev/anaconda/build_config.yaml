@@ -332,7 +332,7 @@ collections:
       - cudatoolkit=11.*
       - cudnn>=8.2
       - tensorboard
-      - tensorflow=2.*=cuda11*
+      - tensorflow=2.10.0*=cuda11*
   rapidsai:
     conda_packages:
       - cudatoolkit=11.4
@@ -346,8 +346,8 @@ collections:
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
-      - cudnn>=8.2
-      - pytorch=1.11.0=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
+      - cudnn>=8.3
+      - pytorch=1.12.1=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
       - torchaudio
       - torchvision
       # torchvision dependencies
@@ -364,8 +364,8 @@ collections:
       - torchvision
   deep_learning_extras:
     conda_packages:
-      - cudatoolkit>=11.1
-      - cudnn>=8.2
+      - cudatoolkit>=11.3
+      - cudnn>=8.3
       - datasets
       - transformers
       - pytorch-lightning
