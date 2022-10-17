@@ -348,7 +348,7 @@ collections:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.3
-      - pytorch=1.12.1=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
+      - pytorch=1.12.*=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
       - torchaudio
       - torchvision
       # torchvision dependencies
@@ -407,7 +407,7 @@ collections:
       - configargparse
       - contextlib2
       - cython
-      - dask=2022.10.*
+      - dask
       - datalad
       - dill
       - docopt
@@ -440,7 +440,7 @@ collections:
       - nitime
       - nltk
       - nose
-      - numpy>=1.20
+      - numpy
       - openpyxl
       - pango
       - patchelf
