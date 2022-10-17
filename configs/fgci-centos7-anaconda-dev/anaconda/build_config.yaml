@@ -477,7 +477,6 @@ collections:
       - spyder-line-profiler
       - sympy
       - twisted
-      - tornado>=6.1,<6.2 # distributed requires tornado <6.2
       - typing
       - unicodecsv
       - unixodbc
