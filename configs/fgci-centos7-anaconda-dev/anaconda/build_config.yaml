@@ -439,7 +439,7 @@ collections:
       - nitime
       - nltk
       - nose
-      - numpy
+      - numpy>=1.20
       - openpyxl
       - pango
       - patchelf
