@@ -406,7 +406,7 @@ collections:
       - configargparse
       - contextlib2
       - cython
-      - dask
+      - dask=2022.10.*
       - datalad
       - dill
       - docopt
