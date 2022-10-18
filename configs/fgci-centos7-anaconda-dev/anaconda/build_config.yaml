@@ -160,6 +160,7 @@ environments:
     mamba: True
     python_version: 3
     installer_version: '4.12.0-2'
+    conda_override_cuda: '11.3'
     condarc_install:
       channels:
         - pytorch
