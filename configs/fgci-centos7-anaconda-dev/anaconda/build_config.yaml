@@ -167,7 +167,7 @@ environments:
         - huggingface
         - conda-forge
         - mosek
-      channel_priority: flexible
+      channel_priority: strict
     collections:
       - deep_learning_extras
       - tensorflow-v2-conda-forge
