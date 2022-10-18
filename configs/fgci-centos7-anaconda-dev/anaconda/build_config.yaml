@@ -167,7 +167,7 @@ environments:
         - huggingface
         - conda-forge
         - mosek
-      channel_priority: strict
+      channel_priority: flexible
     collections:
       - deep_learning_extras
       - tensorflow-v2-conda-forge
@@ -349,9 +349,9 @@ collections:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.3
-      - pytorch=1.12.*=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
-      - torchaudio
-      - torchvision
+      - pytorch::pytorch=1.12.*=*cuda11*
+      - pytorch::torchaudio
+      - pytorch::torchvision
       # torchvision dependencies
       #- ffmpeg
       #- jpeg
