@@ -466,6 +466,7 @@ collections:
       - pytest-astropy
       - python-libarchive-c
       - python-snappy
+      - requests>=2.28
       - ripgrep
       - scikit-image
       - sh
