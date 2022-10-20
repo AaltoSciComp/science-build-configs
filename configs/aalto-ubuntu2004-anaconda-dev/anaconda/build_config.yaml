@@ -17,6 +17,7 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.10.3'
+    freeze: True
     condarc_install:
       channels:
         - pytorch
@@ -36,11 +37,39 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
+  - name: anaconda
+    version: '2022-03'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '4.12.0-2'
+    conda_override_cuda: '11.3'
+    condarc_install:
+      channels:
+        - pytorch
+        - huggingface
+        - conda-forge
+        - mosek
+      channel_priority: flexible
+    collections:
+      - deep_learning_extras
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - gurobi_pip
+      - mne
+      - cplex_pip
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
   - name: rapidsai
     version: '21.10'
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.10.3'
+    freeze: True
     condarc_install:
       channels:
         - rapidsai
@@ -87,10 +116,13 @@ collections:
   cplex:
     conda_packages:
       - cplex
+  cplex_pip:
+    pip_packages:
+      - cplex
   gurobi:
     conda_packages:
       - gurobi
-  gurobipy:
+  gurobi_pip:
     pip_packages:
       - gurobipy
   mosek:
@@ -144,8 +176,9 @@ collections:
   tensorflow-v2-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
+      - cudnn>=8.2
       - tensorboard
-      - tensorflow=2.*=cuda11*
+      - tensorflow=2.10.0*=cuda11*
   rapidsai:
     conda_packages:
       - cudatoolkit=11.4
@@ -159,8 +192,10 @@ collections:
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
-      - pytorch=*=*cuda11*
-      - torchaudio
+      - cudnn>=8.3
+      - pytorch::pytorch=1.12.*=*cuda11*
+      - pytorch::torchaudio
+      - pytorch::torchvision
       # torchvision dependencies
       - ffmpeg
       - jpeg
@@ -173,6 +208,18 @@ collections:
       - cudatoolkit=11.*
       - pytorch=1.9.1=cuda11*
       - torchvision
+  deep_learning_extras:
+    conda_packages:
+      - cudatoolkit>=11.3
+      - cudnn>=8.3
+      - datasets
+      - transformers
+      - pytorch-lightning
+    pip_packages:
+      - flax
+      - deepspeed
+      - dm-haiku
+      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"'
   mne:
     conda_packages:
       - mne
