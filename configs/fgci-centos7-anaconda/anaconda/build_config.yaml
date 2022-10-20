@@ -269,6 +269,7 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.9.2'
+    freeze: True
     condarc:
       channels:
         - defaults
