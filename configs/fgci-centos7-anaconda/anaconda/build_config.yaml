@@ -133,6 +133,34 @@ environments:
     mamba: True
     python_version: 3
     installer_version: '4.12.0-2'
+    freeze: True
+    condarc_install:
+      channels:
+        - pytorch
+        - huggingface
+        - conda-forge
+        - mosek
+      channel_priority: flexible
+    collections:
+      - deep_learning_extras
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - gurobi_pip
+      - mne
+      - cplex_pip
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+  - name: anaconda
+    version: '2022-03'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '4.12.0-2'
+    conda_override_cuda: '11.3'
     condarc_install:
       channels:
         - pytorch
@@ -313,7 +341,7 @@ collections:
       - cudatoolkit=11.*
       - cudnn>=8.2
       - tensorboard
-      - tensorflow=2.*=cuda11*
+      - tensorflow=2.10.0*=cuda11*
   rapidsai:
     conda_packages:
       - cudatoolkit=11.4
@@ -327,10 +355,10 @@ collections:
   pytorch:
     conda_packages:
       - cudatoolkit=11.*
-      - cudnn>=8.2
-      - pytorch=1.11.0=*cuda11* # Specific version due to torchvision version: https://github.com/pytorch/vision
-      - torchaudio
-      - torchvision
+      - cudnn>=8.3
+      - pytorch::pytorch=1.12.*=*cuda11*
+      - pytorch::torchaudio
+      - pytorch::torchvision
       # torchvision dependencies
       #- ffmpeg
       #- jpeg
@@ -345,8 +373,8 @@ collections:
       - torchvision
   deep_learning_extras:
     conda_packages:
-      - cudatoolkit>=11.1
-      - cudnn>=8.2
+      - cudatoolkit>=11.3
+      - cudnn>=8.3
       - datasets
       - transformers
       - pytorch-lightning
@@ -445,6 +473,7 @@ collections:
       - pytest-astropy
       - python-libarchive-c
       - python-snappy
+      - requests>=2.28
       - ripgrep
       - scikit-image
       - sh
