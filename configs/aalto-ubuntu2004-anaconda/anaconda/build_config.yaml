@@ -185,12 +185,12 @@ collections:
       - pytorch::torchaudio
       - pytorch::torchvision
       # torchvision dependencies
-      - ffmpeg
-      - jpeg
-      - libpng
-      - pillow
-    pip_packages:
-      - torchvision==0.10.1
+      #- ffmpeg
+      #- jpeg
+      #- libpng
+      #- pillow
+      #pip_packages:
+      #- torchvision==0.11.3 # Specific version due to pytorch version: https://github.com/pytorch/vision
   pytorch-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
@@ -293,10 +293,12 @@ collections:
       - pycrypto
       - pycurl
       - pympler
+      - pyqtwebengine
       - pysoundfile
       - pytest-astropy
       - python-libarchive-c
       - python-snappy
+      - requests>=2.28
       - ripgrep
       - scikit-image
       - sh
