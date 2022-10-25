@@ -481,3 +481,5 @@ packages:
       - '-j 1'
   - name: 'dcmtk'
     version: '3.6.6'
+  - name: 'stress-ng'
+    version: '0.12.06'
