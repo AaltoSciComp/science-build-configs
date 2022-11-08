@@ -292,6 +292,11 @@ packages:
     variants:
       - '+source'
       - '+metis'
+  - name: 'openfoam-org'
+    version: '9-20220602'
+    variants:
+      - '+source'
+      - '+metis'
   - name: 'suite-sparse'
     version: '5.10.1'
     variants:
