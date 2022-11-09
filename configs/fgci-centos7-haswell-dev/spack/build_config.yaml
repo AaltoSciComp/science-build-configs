@@ -483,3 +483,5 @@ packages:
     version: '3.6.6'
   - name: 'stress-ng'
     version: '0.12.06'
+  - name: 'graphviz'
+    version: '2.49.0'

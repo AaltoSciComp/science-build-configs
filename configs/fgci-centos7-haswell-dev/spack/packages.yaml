@@ -21,7 +21,7 @@ packages:
   go:
     version: [1.18.3]
   graphviz:
-    variants: +expat +ghostscript +gtkplus +gts +java +libgd +pangocairo +qt
+    variants: +expat ~ghostscript +gtkplus +gts ~java +libgd ~pangocairo ~qt
   harfbuzz:
     variants: +graphite2
   hdf5:
