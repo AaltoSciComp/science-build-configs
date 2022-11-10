@@ -162,3 +162,5 @@ packages:
     version: '4.0.0'
   - name: 'dcmtk'
     version: '3.6.6'
+  - name: 'graphviz'
+    version: '2.49.0'
