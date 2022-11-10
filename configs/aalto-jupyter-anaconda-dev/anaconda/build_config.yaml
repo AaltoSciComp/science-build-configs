@@ -41,7 +41,7 @@ collections:
       - conda-tree
   nbconvert_5_pin:
     conda_packages:
-      - '"nbconvert<6"'
+      - nbconvert<6
   jupyter-generic:
     conda_packages:
       # The package is already pulled in as a dependency, forcing an update here
