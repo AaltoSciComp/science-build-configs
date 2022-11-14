@@ -414,3 +414,5 @@ packages:
     version: '3.6.6'
   - name: 'graphviz'
     version: '2.49.0'
+  - name: 'mpich'
+    version: '3.4.2'

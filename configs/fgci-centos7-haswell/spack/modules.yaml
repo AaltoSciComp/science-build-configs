@@ -125,6 +125,10 @@ modules:
         environment:
           set:
             GALLIUM_DRIVER : 'llvmpipe'
+      mpich:
+        environment:
+          set:
+            SLURM_MPI_TYPE: 'pmix_v2'
       namd:
         suffixes:
           'cuda_arch=60'   : 'pascal'
