@@ -41,6 +41,8 @@ packages:
     variants: +glx +llvm +opengl +osmesa swr=avx2
   meson:
     version: [0.59.2]
+  mpich:
+    variants: +fortran +hwloc ~hydra +libxml2 netmod=ucx +pci pmi=pmix +romio +slurm +verbs +wrapperrpath
   netcdf-c:
     version: [4.7.4]
   openblas:
