@@ -90,6 +90,11 @@ modules:
           'cuda_arch=60'   : 'pascal'
           'cuda_arch=70'   : 'volta'
           'cuda_arch=80'   : 'ampere'
+      fsl:
+        suffixes:
+          'cuda_arch=60'   : 'pascal'
+          'cuda_arch=70'   : 'volta'
+          'cuda_arch=80'   : 'ampere'
       geant4:
         suffixes:
           'cxxstd=17'      : 'cxx17'
