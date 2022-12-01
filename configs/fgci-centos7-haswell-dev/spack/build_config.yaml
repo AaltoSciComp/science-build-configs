@@ -494,23 +494,30 @@ packages:
     version: '3.4.2'
   - name: 'fsl'
     version: '6.0.5'
+    dependencies:
+      - '^mesa-glu'
+      - '^mesa'
   - name: 'fsl'
     version: '6.0.5'
     variants:
       - '+cuda'
       - 'cuda_arch=60'
-  - name: 'fsl'
-    version: '6.0.5'
-    variants:
-      - '+cuda'
-      - 'cuda_arch=60'
+    dependencies:
+      - '^mesa-glu'
+      - '^mesa'
   - name: 'fsl'
     version: '6.0.5'
     variants:
       - '+cuda'
       - 'cuda_arch=70'
+    dependencies:
+      - '^mesa-glu'
+      - '^mesa'
   - name: 'fsl'
     version: '6.0.5'
     variants:
       - '+cuda'
       - 'cuda_arch=80'
+    dependencies:
+      - '^mesa-glu'
+      - '^mesa'
