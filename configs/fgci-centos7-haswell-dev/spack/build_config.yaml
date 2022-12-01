@@ -498,7 +498,7 @@ packages:
       - '^mesa-glu'
       - '^mesa'
       - '^vtk'
-      - '^hdf@1.10.5'
+      - '^hdf5@1.10.5'
   - name: 'fsl'
     version: '6.0.5'
     variants:
@@ -508,7 +508,7 @@ packages:
       - '^mesa-glu'
       - '^mesa'
       - '^vtk'
-      - '^hdf@1.10.5'
+      - '^hdf5@1.10.5'
   - name: 'fsl'
     version: '6.0.5'
     variants:
@@ -518,7 +518,7 @@ packages:
       - '^mesa-glu'
       - '^mesa'
       - '^vtk'
-      - '^hdf@1.10.5'
+      - '^hdf5@1.10.5'
   - name: 'fsl'
     version: '6.0.5'
     variants:
@@ -528,4 +528,4 @@ packages:
       - '^mesa-glu'
       - '^mesa'
       - '^vtk'
-      - '^hdf@1.10.5'
+      - '^hdf5@1.10.5'
