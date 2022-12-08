@@ -492,3 +492,5 @@ packages:
     version: '2.49.0'
   - name: 'mpich'
     version: '3.4.2'
+  - name: 'gurobi'
+    version: '9.1.2'
