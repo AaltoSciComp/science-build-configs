@@ -425,3 +425,7 @@ packages:
     version: '9.1.2'
     licenses:
       - 'gurobi.lic'
+  - name: 'gurobi'
+    version: '9.5.2'
+    licenses:
+      - 'gurobi.lic'
