@@ -459,6 +459,7 @@ collections:
       - black
       - boto
       - bottleneck
+      - cartopy
       - clyent
       - conda-tree
       - configargparse
@@ -474,14 +475,19 @@ collections:
       - flake8
       - glob2
       - gpy
+      - graph-tool
       - greenlet
+      - h5py
+      - h5netcdf
       - html5lib
+      - hydra-core
       - importnb
       - iniconfig
       - ipdb
       - ipympl    # jupyter + matplotlib interactive
       - jbig
       - joblib
+      - jsonlines
       - jupyter
       - jupyter_contrib_nbextensions
       - jupyterlab
@@ -499,6 +505,9 @@ collections:
       - nitime
       - nltk
       - nose
+      - networkx
+      - numba
+      - numexpr
       - numpy
       - openpyxl
       - pandera
@@ -526,13 +535,16 @@ collections:
       - pysoundfile
       - pytest
       - pytest-astropy
+      - python-igraph
       - python-libarchive-c
       - python-snappy
       - requests>=2.28
       - ripgrep
       - scalene
       - scikit-image
+      - seaborn
       - sh
+      - shapely
       - simplegeneric
       - singledispatch
       - sortedcollections
@@ -546,6 +558,7 @@ collections:
       - typer
       - unicodecsv
       - unixodbc
+      - xarray
       - xgboost
       - xlsxwriter
       - xlwt
