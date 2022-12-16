@@ -203,6 +203,7 @@ environments:
     condarc_install:
       channels:
         - pytorch
+        - nvidia
         - huggingface
         - conda-forge
         - pyg
