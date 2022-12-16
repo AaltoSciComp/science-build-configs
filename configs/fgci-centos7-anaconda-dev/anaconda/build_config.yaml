@@ -199,12 +199,13 @@ environments:
     mamba: True
     python_version: 3
     installer_version: '4.12.0-2'
-    conda_override_cuda: '11.3'
+    conda_override_cuda: '11.7'
     condarc_install:
       channels:
         - pytorch
         - huggingface
         - conda-forge
+        - pyg
         - gurobi
         - mosek
       channel_priority: flexible
