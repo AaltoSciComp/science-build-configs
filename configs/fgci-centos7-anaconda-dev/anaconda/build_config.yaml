@@ -172,6 +172,7 @@ environments:
     python_version: 3
     installer_version: '4.12.0-2'
     conda_override_cuda: '11.3'
+    freeze: True
     condarc_install:
       channels:
         - pytorch
@@ -185,6 +186,34 @@ environments:
       - pytorch
       - triton-generic
       - gurobi_pip
+      - mne
+      - cplex_pip
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+  - name: anaconda
+    version: '2022-04'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '4.12.0-2'
+    conda_override_cuda: '11.3'
+    condarc_install:
+      channels:
+        - pytorch
+        - huggingface
+        - conda-forge
+        - gurobi
+        - mosek
+      channel_priority: flexible
+    collections:
+      - deep_learning_extras
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - gurobi
       - mne
       - cplex_pip
       - mosek
@@ -358,9 +387,8 @@ collections:
       - rapids-blazing=21.10
   pytorch:
     conda_packages:
-      - cudatoolkit=11.*
       - cudnn>=8.3
-      - pytorch::pytorch=1.12.*=*cuda11*
+      - pytorch::pytorch-cuda=11.7
       - pytorch::torchaudio
       - pytorch::torchvision
       # torchvision dependencies
@@ -380,13 +408,26 @@ collections:
       - cudatoolkit>=11.3
       - cudnn>=8.3
       - datasets
+      - tianshou
       - transformers
+      - pyg
       - pytorch-lightning
+      - py-xgboost-gpu
     pip_packages:
-      - flax
       - deepspeed
       - dm-haiku
-      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"'
+      - flax
+      - gymnasium[all]
+      - '"jax[cuda11_cudnn82]" -f "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"'
+      - ogb
+      - pettingzoo[all]
+      - ray[default]
+      - ray[air]
+      - ray[tune]
+      - ray[rllib]
+      - ray[serve]
+      - reverb
+      - wandb
   mne:
     conda_packages:
       - mne
@@ -408,10 +449,12 @@ collections:
       - webdataset
     conda_packages:
       - astropy
+      - attrs
       # - bcolz # No longer maintained
       - beautifulsoup4
       - bitarray
       # - blaze # No python3.8 build
+      - black
       - boto
       - bottleneck
       - clyent
@@ -424,7 +467,9 @@ collections:
       - dill
       - docopt
       - easygui
+      - fastapi
       - filelock
+      - flake8
       - glob2
       - gpy
       - greenlet
@@ -454,6 +499,7 @@ collections:
       - nose
       - numpy
       - openpyxl
+      - pandera
       - pango
       - patchelf
       - path.py
@@ -465,20 +511,24 @@ collections:
       - pkginfo
       - plotly
       - ply
+      - poetry
       - py
       - py-lief
       - pyarrow
       - pybind11
       - pycrypto
       - pycurl
+      - pydantic
       - pympler
       - pyqtwebengine
       - pysoundfile
+      - pytest
       - pytest-astropy
       - python-libarchive-c
       - python-snappy
       - requests>=2.28
       - ripgrep
+      - scalene
       - scikit-image
       - sh
       - simplegeneric
@@ -491,6 +541,7 @@ collections:
       - sympy
       - twisted
       - typing
+      - typer
       - unicodecsv
       - unixodbc
       - xgboost
