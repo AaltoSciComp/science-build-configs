@@ -410,26 +410,22 @@ collections:
       - cudatoolkit>=11.3
       - cudnn>=8.3
       - datasets
-      - tianshou
-      - transformers
+      - dm-haiku
+      - dm-sonnet
+      - flax
+      - gymnasium
+      - jax
+      - ogb
       - pyg
       - pytorch-lightning
       - py-xgboost-gpu
+      - ray-all
+      - tianshou
+      - transformers
+      - wandb
     pip_packages:
       - deepspeed
-      - dm-haiku
-      - flax
-      - gymnasium[all]
-      - '"jax[cuda11_cudnn82]" -f "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"'
-      - ogb
-      - pettingzoo[all]
-      - ray[default]
-      - ray[air]
-      - ray[tune]
-      - ray[rllib]
-      - ray[serve]
       - reverb
-      - wandb
   mne:
     conda_packages:
       - mne
@@ -437,16 +433,11 @@ collections:
     pip_packages:
       - bash-kernel
       - forthon
-      - jupyterlab-git
       - matlab-kernel
       - mppl
       - nbscript
-      - nbval
       - nbzip
-      - opencv-contrib-python
       - pymanopt
-      - python-igraph
-      - roboschool
       - snakemake
       - webdataset
     conda_packages:
@@ -481,6 +472,7 @@ collections:
       - h5netcdf
       - html5lib
       - hydra-core
+      - igraph
       - importnb
       - iniconfig
       - ipdb
@@ -491,6 +483,7 @@ collections:
       - jupyter
       - jupyter_contrib_nbextensions
       - jupyterlab
+      - jupyterlab-git
       - jupytext
       - libblas=*=*mkl*
       - librosa
@@ -510,6 +503,7 @@ collections:
       - numexpr
       - numpy
       - openpyxl
+      - opencv
       - pandera
       - pango
       - patchelf
@@ -527,6 +521,7 @@ collections:
       - py-lief
       - pyarrow
       - pybind11
+      - pybullet
       - pycrypto
       - pycurl
       - pydantic
