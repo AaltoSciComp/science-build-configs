@@ -110,7 +110,6 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
-        GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: anaconda
     version: '2022-01'
     miniconda: False
@@ -223,6 +222,7 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
+        GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: rapidsai
     version: '21.10'
     miniconda: True
