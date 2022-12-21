@@ -319,7 +319,7 @@ collections:
       - cplex
   gurobi:
     conda_packages:
-      - gurobi
+      - gurobi=9.5.2
   gurobi_pip:
     pip_packages:
       - gurobipy
