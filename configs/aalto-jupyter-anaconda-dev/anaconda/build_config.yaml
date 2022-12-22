@@ -98,11 +98,11 @@ collections:
     #   rasterio (conda-forge)
   scipy-notebook-upstream:
     # Synced from
-    # https://github.com/jupyter/docker-stacks/blob/master/scipy-notebook/Dockerfile
+    # https://github.com/jupyter/docker-stacks/blob/main/scipy-notebook/Dockerfile
     # Re-sync occassionally, copy-and-repasted the whole thing
     # But remove this line: 'conda-forge::blas=*=openblas'
     conda_packages:
-      #- 'altair'
+      - 'altair'
       - 'beautifulsoup4'
       - 'bokeh'
       - 'bottleneck'
@@ -116,9 +116,10 @@ collections:
       - 'matplotlib-base'
       - 'numba'
       - 'numexpr'
+      - 'openpyxl'
       - 'pandas'
-      #- 'patsy'
-      #- 'protobuf'
+      - 'patsy'
+      - 'protobuf'
       - 'pytables'
       - 'scikit-image'
       - 'scikit-learn'
@@ -168,4 +169,3 @@ collections:
       - pyodbc
       - tweepy
       - unixodbc
-      - openpyxl  # RT#20808
