@@ -90,6 +90,7 @@ collections:
       - xgboost      # dsfbi2022 RT#20284
       - spectrum     # ELEC-C5212: RT#21070
       - jsonpickle   # dlpython2022: RT#22328
+      - einops       # deeplearn2023: RT#21983
     pip_packages:
       - plotchecker  # plotchecker: for nbgrader, mlbp2018
       - gpflow       # special course Gaussian Processes, 2019 (pinned to 2.0.0rc1 to force tf2.0 compat)
