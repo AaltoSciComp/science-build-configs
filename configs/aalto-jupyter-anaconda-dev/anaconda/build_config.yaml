@@ -22,7 +22,7 @@ environments:
     collections:
       - compilers
       - mamba
-      - nbconvert_5_pin
+      # - nbconvert_5_pin
       - jupyter-generic
       - scipy-notebook-upstream
       - tensorflow
