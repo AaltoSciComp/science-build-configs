@@ -3,12 +3,15 @@ installer_checksums:
   Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
   Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
+  Miniconda3-py39_4.12.0-Linux-x86_64.sh: '78f39f9bae971ec1ae7969f0516017f2413f17796670f7040725dd83fcff5689'
 environments:
   - name: jupyter-generic
-    version: '2022-11-08'
+    version: '2022-12-22'
     miniconda: True
     python_version: 3
-    installer_version: 'py39_4.10.3'
+    # TODO: Upgrade to Python 3.10 when miniconda updates
+    # https://github.com/conda/conda/issues/11728
+    installer_version: 'py39_4.12.0'
     conda_pack: True
     condarc_install:
       channels:
