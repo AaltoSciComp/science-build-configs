@@ -5,7 +5,7 @@ installer_checksums:
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
 environments:
   - name: jupyter-generic
-    version: '2022-12-29-dev'
+    version: '2022-12-29-dev2'
     miniconda: True
     python_version: 3
     # TODO: Upgrade to Python 3.10 when miniconda updates
@@ -46,15 +46,11 @@ collections:
       - nbconvert<6
   jupyter-generic:
     conda_packages:
-      # The package is already pulled in as a dependency, forcing an update here
-      # Testing to see which version we get without pinning
-      # - 'ca-certificates>=2022.12.7'
       #- cma          # cma: ??
       - networkx     # networkx: complex networks (general)
       - nose         # nose: mlbp2018, snlp2022 (RT#20396)
       - pandas-datareader
-      # - plotly       # plotly: student request
-                       # 2022-12, plotly-5.11.0 requires ipywidgets < 8.0.0
+      - plotly       # plotly: student request
       - pydotplus    # pydotplus - dsfb2018 instructor request
       - arviz        # arviz: bayesian data analysis
       - folium       # folium: BE remote sensing course
@@ -121,7 +117,7 @@ collections:
       - 'matplotlib-base'
       - 'numba'
       - 'numexpr'
-      - 'openpyxl'
+      - 'openpyxl'  # Also RT#20808
       - 'pandas'
       # - 'patsy'
       # - 'protobuf'
