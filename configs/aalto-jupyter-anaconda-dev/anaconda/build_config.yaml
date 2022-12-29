@@ -107,7 +107,7 @@ collections:
     # Re-sync occassionally, copy-and-repasted the whole thing
     # But remove this line: 'conda-forge::blas=*=openblas'
     conda_packages:
-      - 'altair'
+      # - 'altair'
       - 'beautifulsoup4'
       - 'bokeh'
       - 'bottleneck'
@@ -123,8 +123,8 @@ collections:
       - 'numexpr'
       - 'openpyxl'
       - 'pandas'
-      - 'patsy'
-      - 'protobuf'
+      # - 'patsy'
+      # - 'protobuf'
       - 'pytables'
       - 'scikit-image'
       - 'scikit-learn'
