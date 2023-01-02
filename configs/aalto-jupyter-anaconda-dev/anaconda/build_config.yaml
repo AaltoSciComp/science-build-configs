@@ -86,12 +86,14 @@ collections:
       - spectrum     # ELEC-C5212: RT#21070
       - jsonpickle   # dlpython2022: RT#22328
       - einops       # deeplearn2023: RT#21983
+      - vaderSentiment  # dhhb2022: RT#22440
     pip_packages:
       - plotchecker  # plotchecker: for nbgrader, mlbp2018
       - gpflow       # special course Gaussian Processes, 2019 RT#14430
                      # 2021-11, c-f has old version
       - calysto      # 2021-11, c-f missing
       - qiskit       # Introduction to Quantum Technologies, RT#14866
+      - liwc         # dhhb2022: RT#22440
       #- pysurvival (Supported for Python<=3.7 https://github.com/berleon/pysurvival#what-is-pysurvival)
       #- https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
     # Currently non-funectional packages:
