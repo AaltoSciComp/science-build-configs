@@ -44,7 +44,7 @@ command_collections:
   isaac-sim:
     post_commands:
       - 'apt-get update'
-      - 'apt-get -y install -q libcurl'
+      - 'apt-get -y install -q curl'
       - 'rm -rf /var/lib/apt/lists/*'
       - 'chmod a+rx /isaac-sim/*.sh'
     environment_commands:
