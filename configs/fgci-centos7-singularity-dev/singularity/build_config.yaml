@@ -274,3 +274,16 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'nvidia-isaac-sim'
+    docker_user: 'nvidia'
+    docker_image: 'isaac-sim'
+    registry: 'nvcr.io'
+    module_namespace: 'common'
+    tags:
+      - '2022.2.0'
+    command_collections:
+      - 'common'
+      - 'compilers'
+    flag_collections:
+      - 'common'
+      - 'nvidia'
