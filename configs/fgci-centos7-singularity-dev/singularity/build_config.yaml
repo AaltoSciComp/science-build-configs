@@ -91,6 +91,10 @@ flag_collections:
     - '-B /share:/share'
   openpose:
     - '--workdir /opt/openpose'
+  isaac-sim:
+    - '-B /etc/vulkan/icd.d/nvidia_icd.json'
+    - '-B /etc/vulkan/implicit_layer.d/nvidia_layers.json'
+    - '-B /usr/share/glvnd/egl_vendor.d/10_nvidia.json'
   dpabi:
     - '-B /share/apps/licenses/freesurfer/6.0.0/license.txt:/opt/freesurfer/license.txt'
   freesurfer_license:
