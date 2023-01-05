@@ -299,4 +299,5 @@ definitions:
       - 'compilers'
     flag_collections:
       - 'common'
+      - 'isaac-sim'
       - 'nvidia'
