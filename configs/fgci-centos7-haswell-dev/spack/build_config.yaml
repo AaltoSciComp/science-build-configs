@@ -500,3 +500,5 @@ packages:
     version: '9.5.2'
     licenses:
       - 'gurobi.lic'
+  - name: 'petsc'
+    version: '3.16.1'
