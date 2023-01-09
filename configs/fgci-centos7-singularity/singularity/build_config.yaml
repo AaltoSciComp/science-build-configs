@@ -37,6 +37,14 @@ command_collections:
       - 'apt-get update'
       - 'apt-get -y install -q build-essential g++'
       - 'rm -rf /var/lib/apt/lists/*'
+  isaac-sim:
+    post_commands:
+      - 'apt-get update'
+      - 'apt-get -y install -q curl'
+      - 'rm -rf /var/lib/apt/lists/*'
+      - 'chmod a+rx /isaac-sim/*.sh'
+    environment_commands:
+      - 'export PATH=$PATH:/isaac-sim'
   dpabi:
     post_commands:
       - "echo '#!/bin/bash' > /usr/local/bin/DPABI"
@@ -70,6 +78,10 @@ flag_collections:
     - '-B /share:/share'
   openpose:
     - '--workdir /opt/openpose'
+  isaac-sim:
+    - '-B /etc/vulkan/icd.d/nvidia_icd.json'
+    - '-B /etc/vulkan/implicit_layer.d/nvidia_layers.json'
+    - '-B /usr/share/glvnd/egl_vendor.d/10_nvidia.json'
   dpabi:
     - '-B /share/apps/licenses/freesurfer/6.0.0/license.txt:/opt/freesurfer/license.txt'
 definitions:
@@ -144,3 +156,18 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'nvidia-isaac-sim'
+    docker_user: 'nvidia'
+    docker_image: 'isaac-sim'
+    registry: 'nvcr.io'
+    module_namespace: 'common'
+    tags:
+      - '2022.2.0'
+    command_collections:
+      - 'common'
+      - 'isaac-sim'
+      - 'compilers'
+    flag_collections:
+      - 'common'
+      - 'isaac-sim'
+      - 'nvidia'
