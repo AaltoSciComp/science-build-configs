@@ -502,3 +502,5 @@ packages:
       - 'gurobi.lic'
   - name: 'petsc'
     version: '3.16.1'
+  - name: 'xcb-util-wm'
+    version: '0.4.1'
