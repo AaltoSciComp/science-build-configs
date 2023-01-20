@@ -429,3 +429,7 @@ packages:
     version: '9.5.2'
     licenses:
       - 'gurobi.lic'
+  - name: 'voropp'
+    version: '0.4.6'
+    variants:
+      - '+pic'
