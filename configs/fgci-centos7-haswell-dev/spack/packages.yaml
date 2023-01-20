@@ -9,6 +9,8 @@ packages:
     variants: +libssh2 ~nghttp
   cuda:
     version: [11.5.0]
+  ffmpeg:
+    variants: +avresample +bzlib +gpl +libaom +libmp3lame +libopenjpeg +libopus +libsnappy +libspeex +libvorbis +libvpx +libzmq +shared +version3
   fftw:
     variants: +openmp
   flex:
