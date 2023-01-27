@@ -376,6 +376,6 @@ collections:
       - sphinx-fontawesome
       - sphinx-gallery
       - statsmodels
-    pip:
+    pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - filename-templates
