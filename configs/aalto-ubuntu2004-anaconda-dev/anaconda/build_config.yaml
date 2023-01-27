@@ -355,9 +355,10 @@ collections:
       - mne-rsa
       - nibabel
       - nilearn
-      - nipy
       - nipype
       - nitime
+      - numba
+      - psychopy
       - pydocstyle
       - pymatreader
       - pyosf
@@ -366,12 +367,14 @@ collections:
       - python-bidi
       - python-picard
       - python-picard
+      - pyvista>=0.30
+      - pyvistaqt>=0.4
       - qdarkstyle
       - scikit-learn
-      - sphinx-bootstrap-theme
-      - sphinx-fontawesome
       - sphinx-gallery
       - statsmodels
     pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - filename-templates
+      - sphinx-bootstrap-theme
+      - sphinx-fontawesome
