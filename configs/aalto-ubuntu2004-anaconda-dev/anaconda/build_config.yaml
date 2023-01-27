@@ -358,8 +358,6 @@ collections:
       - nipy
       - nipype
       - nitime
-      - numba
-      - psychopy
       - pydocstyle
       - pymatreader
       - pyosf
@@ -368,8 +366,6 @@ collections:
       - python-bidi
       - python-picard
       - python-picard
-      - pyvista>=0.30
-      - pyvistaqt>=0.4
       - qdarkstyle
       - scikit-learn
       - sphinx-bootstrap-theme
