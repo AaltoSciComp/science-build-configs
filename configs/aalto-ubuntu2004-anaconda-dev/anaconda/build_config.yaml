@@ -378,3 +378,4 @@ collections:
       - filename-templates
       - sphinx-bootstrap-theme
       - sphinx-fontawesome
+      - conpy
