@@ -375,7 +375,7 @@ collections:
       - statsmodels
     pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
+      - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
       - filename-templates
       - sphinx-bootstrap-theme
       - sphinx-fontawesome
-      - conpy
