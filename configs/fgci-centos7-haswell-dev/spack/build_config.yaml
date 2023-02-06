@@ -510,3 +510,5 @@ packages:
       - '+pic'
   - name: 'ffmpeg'
     version: '4.3.2'
+  - name: 'gzip'
+    version: '1.11'
