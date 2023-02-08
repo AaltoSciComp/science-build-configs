@@ -515,4 +515,4 @@ packages:
   - name: 'orca'
     version: '4.2.1'
     dependencies:
-      '^zstd+programs'
+      - '^zstd+programs'
