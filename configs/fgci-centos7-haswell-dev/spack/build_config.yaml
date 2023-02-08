@@ -514,3 +514,5 @@ packages:
     version: '1.11'
   - name: 'orca'
     version: '4.2.1'
+    dependencies:
+      '^zstd+programs'
