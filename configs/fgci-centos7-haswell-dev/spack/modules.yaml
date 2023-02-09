@@ -166,3 +166,6 @@ modules:
       xerces-c:
         suffixes:
           'cxxstd=17'      : 'cxx17'
+      zstd:
+        suffixes:
+          '+programs'      : 'programs'
