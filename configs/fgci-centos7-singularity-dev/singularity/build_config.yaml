@@ -315,3 +315,15 @@ definitions:
       - 'lc_all_c'
     flag_collections:
       - 'common'
+  - name: 'singularity-simmobility-prod'
+    docker_user: 'aaltoscienceit'
+    docker_image: 'simmobility-prod'
+    registry: 'registry.cs.aalto.fi'
+    module_namespace: 'common'
+    tags:
+      - '2023-02'
+    command_collections:
+      - 'common'
+      - 'lc_all_c'
+    flag_collections:
+      - 'common'
