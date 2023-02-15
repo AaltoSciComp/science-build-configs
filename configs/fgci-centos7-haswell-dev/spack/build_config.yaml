@@ -516,5 +516,3 @@ packages:
     version: '4.2.1'
     dependencies:
       - '^zstd+programs'
-  - name: 'py-ase'
-    version: '3.21.1'
