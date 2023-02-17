@@ -408,7 +408,7 @@ collections:
       - pyarrow
       - pybind11
       - pybullet
-      - pycrypto
+      #- pycrypto # No longer maintained
       - pycurl
       - pydantic
       - pympler
