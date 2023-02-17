@@ -27,91 +27,6 @@ environments:
       channels:
         - conda-forge
   - name: anaconda
-    version: '2021-01-tf2'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.9.2'
-    freeze: True
-    condarc:
-      channels:
-        - pytorch
-        - rapidsai
-        - defaults
-        - conda-forge
-        - nvidia
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-    collections:
-      - tensorflow-v2
-      - triton-generic
-  - name: anaconda
-    version: '2021-02-tf2'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.9.2'
-    freeze: True
-    condarc:
-      channels:
-        - pytorch
-        - rapidsai
-        - defaults
-        - conda-forge
-        - nvidia
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-    collections:
-      - tensorflow-v2
-      - triton-generic
-  - name: anaconda
-    version: '2021-03-tf2'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.9.2'
-    freeze: True
-    condarc:
-      channels:
-        - pytorch
-        - rapidsai
-        - defaults
-        - conda-forge
-        - nvidia
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-    collections:
-      - tensorflow-v2
-      - triton-generic
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
-  - name: anaconda
-    version: '2021-04-tf2'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.10.3'
-    freeze: True
-    condarc_install:
-      channels:
-        - pytorch
-        - conda-forge
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-      channel_priority: flexible
-    collections:
-      - tensorflow-v2-conda-forge
-      - pytorch
-      - triton-generic
-      - mne
-      - gurobi
-      - cplex
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
-  - name: anaconda
     version: '2022-01'
     miniconda: False
     miniforge: True
@@ -355,58 +270,13 @@ collections:
       - cplex
   gurobi:
     conda_packages:
-      - gurobi=9.5.2
+      - gurobi=10.0.1
   gurobi_pip:
     pip_packages:
       - gurobipy
   mosek:
     conda_packages:
       - mosek
-  tensorflow-v1:
-    conda_packages:
-      - tensorboard
-      - tensorboard-plugin-wit
-      - tensorflow=1.15.0
-      - tensorflow-base
-      - tensorflow-estimator
-      - tensorflow-gpu
-  tensorflow-v2:
-    conda_packages:
-      - cudatoolkit
-      - tensorboard
-      - tensorboard-plugin-wit
-      - tensorflow=2.4.1=gpu_*
-      - tensorflow-base
-      - tensorflow-estimator
-      - tensorflow-gpu
-  tensorflow-v2-pip:
-    # Check this page for compatible versions of tensorflow, cudatoolkit and cudnn.
-    # https://www.tensorflow.org/install/source#gpu
-    conda_packages:
-      - absl-py
-      - astunparse
-      - cudatoolkit=11.2.*
-      - cudatoolkit-dev=11.2.*
-      - cudnn=8.1.*
-      - gast
-      - google-pasta
-      - grpcio
-      - h5py
-      - keras-preprocessing
-      - libgcc-ng
-      - libstdcxx-ng
-      - numpy
-      - opt_einsum
-      - protobuf
-      - python-flatbuffers
-      - scipy
-      - six
-      - sqlite
-      - termcolor
-      - wrapt
-      - zlib
-    pip_packages:
-      - tensorflow==2.6.0
   tensorflow-v2-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
@@ -422,18 +292,6 @@ collections:
       - pytorch::pytorch-cuda=11.7
       - pytorch::torchaudio
       - pytorch::torchvision
-      # torchvision dependencies
-      #- ffmpeg
-      #- jpeg
-      #- libpng
-      #- pillow
-      #pip_packages:
-      #- torchvision==0.11.3 # Specific version due to pytorch version: https://github.com/pytorch/vision
-  pytorch-conda-forge:
-    conda_packages:
-      - cudatoolkit=11.*
-      - pytorch=1.9.1=cuda11*
-      - torchvision
   deep_learning_extras:
     conda_packages:
       - cudatoolkit>=11.3
