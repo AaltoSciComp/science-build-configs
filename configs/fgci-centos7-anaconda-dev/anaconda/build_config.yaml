@@ -289,7 +289,7 @@ collections:
   pytorch:
     conda_packages:
       - cudnn>=8.3
-      - pytorch::pytorch-cuda=11.7
+      - pytorch::pytorch-cuda=11.6
       - pytorch::torchaudio
       - pytorch::torchvision
   deep_learning_extras:
