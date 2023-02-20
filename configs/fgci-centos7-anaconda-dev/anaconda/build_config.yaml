@@ -313,6 +313,7 @@ collections:
       - reverb
       - "ray[default]"
       - "ray[air]"
+      - "ray[data]"
       - "ray[tune]"
       - "ray[rllib]"
   mne:
