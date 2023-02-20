@@ -292,6 +292,7 @@ collections:
       - pytorch::pytorch-cuda=11.7
       - pytorch::torchaudio
       - pytorch::torchvision
+      - pytorch::pytorch-mutex=*=cuda
   deep_learning_extras:
     conda_packages:
       - cudatoolkit>=11.3
