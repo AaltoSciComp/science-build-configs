@@ -153,7 +153,6 @@ environments:
     condarc_install:
       channels:
         - pytorch
-        - rapidsai
         - nvidia
         - huggingface
         - conda-forge
@@ -165,7 +164,6 @@ environments:
       - deep_learning_extras
       - tensorflow-v2-conda-forge
       - pytorch
-      - rapidsai
       - triton-generic
       - gurobi
       - mne
@@ -307,7 +305,7 @@ collections:
       - ogb
       - pyg
       - pytorch-lightning
-      - py-xgboost-gpu
+      - py-xgboost
       - ray-all
       - transformers
       - wandb
