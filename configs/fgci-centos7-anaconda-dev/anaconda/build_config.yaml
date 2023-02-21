@@ -282,7 +282,7 @@ collections:
       - cudatoolkit=11.*
       - cudnn>=8.2
       - tensorboard
-      - tensorflow=2.11.0*=cuda11*
+      - tensorflow=2.10=cuda11*
   rapidsai:
     conda_packages:
       - rapids=23.02
@@ -299,6 +299,7 @@ collections:
       - cudatoolkit>=11.3
       - cudnn>=8.3
       - datasets
+      - deepspeed
       - dm-haiku
       - dm-sonnet
       - flax
@@ -309,15 +310,11 @@ collections:
       - pytorch-lightning
       - py-xgboost
       - transformers
+      - tensorboardx
       - wandb
+      - ray-all=2.2.0
     pip_packages:
-      - deepspeed
       - reverb
-      - "ray[default]"
-      - "ray[air]"
-      - "ray[data]"
-      - "ray[tune]"
-      - "ray[rllib]"
   mne:
     conda_packages:
       - mne
@@ -331,7 +328,7 @@ collections:
       - nbzip
       - pymanopt
       - snakemake
-      - webdataset
+      - scalene
     conda_packages:
       - astropy
       - attrs
@@ -347,6 +344,7 @@ collections:
       - conda-tree
       - configargparse
       - contextlib2
+      - crc32c
       - cython
       - dask
       - datalad
@@ -427,7 +425,6 @@ collections:
       - python-snappy
       - requests>=2.28
       - ripgrep
-      - scalene
       - scikit-image
       - seaborn
       - sh
@@ -445,6 +442,7 @@ collections:
       - typer
       - unicodecsv
       - unixodbc
+      - webdataset
       - xarray
       - xgboost
       - xlsxwriter
