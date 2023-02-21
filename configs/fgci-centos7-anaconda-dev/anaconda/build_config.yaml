@@ -413,7 +413,7 @@ collections:
       - poetry
       - py
       - py-lief
-      - pyarrow=>7,<8=*cuda
+      - pyarrow>=7,<8=*cuda
       - pybind11
       - pybullet
       #- pycrypto # No longer maintained
