@@ -409,7 +409,7 @@ collections:
       - poetry
       - py
       - py-lief
-      - pyarrow
+      - pyarrow=*=*cuda
       - pybind11
       - pybullet
       #- pycrypto # No longer maintained
