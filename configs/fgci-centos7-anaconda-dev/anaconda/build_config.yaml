@@ -362,7 +362,7 @@ collections:
       - gpy
       - graph-tool
       - greenlet
-      - h5py
+      - h5py=*=mpi_openmpi*
       - h5netcdf
       - hdf5=*=mpi_openmpi*
       - html5lib
