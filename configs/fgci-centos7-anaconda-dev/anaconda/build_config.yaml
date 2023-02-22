@@ -299,7 +299,7 @@ collections:
       - cudatoolkit>=11.3
       - cudnn>=8.3
       - datasets
-      - deepspeed
+      - deepspeed=*=cuda11*
       - dm-haiku
       - dm-sonnet
       - flax
@@ -364,6 +364,7 @@ collections:
       - greenlet
       - h5py
       - h5netcdf
+      - hdf5=*=mpi_openmpi*
       - html5lib
       - hydra-core
       - igraph
@@ -411,6 +412,7 @@ collections:
       - plotly
       - ply
       - poetry
+      - prometheus-client<0.14 # Limit prometheus-client version for ray
       - py
       - py-lief
       - pyarrow>=7,<8=*cuda
@@ -445,6 +447,7 @@ collections:
       - twisted
       - typing
       - typer
+      - ucx
       - unicodecsv
       - unixodbc
       - webdataset
