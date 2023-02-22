@@ -270,7 +270,7 @@ collections:
       - cplex
   gurobi:
     conda_packages:
-      - gurobi=10.0.1
+      - gurobi=9.5.2
   gurobi_pip:
     pip_packages:
       - gurobipy
