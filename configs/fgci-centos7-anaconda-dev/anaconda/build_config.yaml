@@ -412,7 +412,6 @@ collections:
       - plotly
       - ply
       - poetry
-      - prometheus_client<0.14 # Limit prometheus-client version for ray
       - py
       - py-lief
       - pyarrow>=7,<8=*cuda
