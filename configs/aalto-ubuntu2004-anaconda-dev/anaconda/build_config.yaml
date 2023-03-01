@@ -100,6 +100,8 @@ environments:
       - mosek
     extra_module_variables:
       setenv:
+        GUROBI_HOME: '$prefix'
+        GRB_LICENSE_FILE: '/m/scicomp/software/manual_installations/software/gurobi/license/gurobi.lic'
   - name: rapidsai
     version: '21.10'
     miniconda: True
