@@ -3,6 +3,10 @@ installer_checksums:
   Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
   Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
+  Mambaforge-4.11.0-0-Linux-x86_64.sh: '49268ee30d4418be4de852dda3aa4387f8c95b55a76f43fb1af68dcbf8b205c3'
+  Mambaforge-22.11.1-4-Linux-x86_64.sh: '16c7d256de783ceeb39970e675efa4a8eb830dcbb83187f1197abfea0bf07d30'
+  Miniforge3-4.12.0-2-Linux-x86_64.sh: 'e8bd60572d1bdcd9fc16114f423653c95e02f0be1393383f77fba17cf8acb10e'
+  Miniforge3-22.11.1-4-Linux-x86_64.sh: '737d1b2666528416706a916b355c43ff58deeaebf5ca906bc1a551e96c73ab8e'
 environments:
   - name: miniconda
     version: '4.9.2'
