@@ -343,6 +343,7 @@ collections:
       - autoreject
       - bids-validator
       - cupy
+      - fooof
       - h5io
       - h5py
       - mne
@@ -359,6 +360,7 @@ collections:
       - nitime
       - numba
       - psychopy
+      - pydata-sphinx-theme
       - pydocstyle
       - pymatreader
       - pyosf
@@ -379,3 +381,7 @@ collections:
       - filename-templates
       - sphinx-bootstrap-theme
       - sphinx-fontawesome
+      - sphinx-copybutton
+      - sphinx-design
+      - sphinxcontrib-bibtex
+      - sphinxcontrib-youtuve
