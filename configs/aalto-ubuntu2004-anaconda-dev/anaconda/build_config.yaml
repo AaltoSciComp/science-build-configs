@@ -149,8 +149,10 @@ environments:
     condarc_install:
       channels:
         - pytorch
+        - nvidia
         - huggingface
         - conda-forge
+        - pyg
       channel_priority: flexible
     collections:
       - triton-generic
