@@ -3,6 +3,10 @@ installer_checksums:
   Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
   Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
+  Mambaforge-4.11.0-0-Linux-x86_64.sh: '49268ee30d4418be4de852dda3aa4387f8c95b55a76f43fb1af68dcbf8b205c3'
+  Mambaforge-22.11.1-4-Linux-x86_64.sh: '16c7d256de783ceeb39970e675efa4a8eb830dcbb83187f1197abfea0bf07d30'
+  Miniforge3-4.12.0-2-Linux-x86_64.sh: 'e8bd60572d1bdcd9fc16114f423653c95e02f0be1393383f77fba17cf8acb10e'
+  Miniforge3-22.11.1-4-Linux-x86_64.sh: '737d1b2666528416706a916b355c43ff58deeaebf5ca906bc1a551e96c73ab8e'
 environments:
   - name: miniconda
     version: '4.9.2'
@@ -46,6 +50,7 @@ environments:
     python_version: 3
     installer_version: '4.12.0-2'
     conda_override_cuda: '11.3'
+    freeze: True
     condarc_install:
       channels:
         - pytorch
@@ -65,6 +70,38 @@ environments:
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
+  - name: anaconda
+    version: '2023-01'
+    miniconda: False
+    miniforge: False
+    mambaforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '22.11.1-4'
+    conda_override_cuda: '11.7'
+    condarc_install:
+      channels:
+        - pytorch
+        - nvidia
+        - huggingface
+        - conda-forge
+        - pyg
+        - gurobi
+        - mosek
+      channel_priority: flexible
+    collections:
+      - deep_learning_extras
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - gurobi
+      - mne
+      - cplex_pip
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+        GRB_LICENSE_FILE: '/m/scicomp/software/manual_installations/software/gurobi/license/gurobi.lic'
   - name: rapidsai
     version: '21.10'
     miniconda: True
@@ -122,7 +159,7 @@ collections:
       - cplex
   gurobi:
     conda_packages:
-      - gurobi
+      - gurobi=9.5.2
   gurobi_pip:
     pip_packages:
       - gurobipy
@@ -179,7 +216,7 @@ collections:
       - cudatoolkit=11.*
       - cudnn>=8.2
       - tensorboard
-      - tensorflow=2.10.0*=cuda11*
+      - tensorflow=2.10=cuda11*
   rapidsai:
     conda_packages:
       - cudatoolkit=11.4
@@ -192,35 +229,38 @@ collections:
       - rapids-blazing=21.10
   pytorch:
     conda_packages:
-      - cudatoolkit=11.*
       - cudnn>=8.3
-      - pytorch::pytorch=1.12.*=*cuda11*
+      - pytorch::pytorch
+      - pytorch::pytorch-cuda=11.7
       - pytorch::torchaudio
       - pytorch::torchvision
-      # torchvision dependencies
-      #- ffmpeg
-      #- jpeg
-      #- libpng
-      #- pillow
-      #pip_packages:
-      #- torchvision==0.11.3 # Specific version due to pytorch version: https://github.com/pytorch/vision
-  pytorch-conda-forge:
-    conda_packages:
-      - cudatoolkit=11.*
-      - pytorch=1.9.1=cuda11*
-      - torchvision
+      - pytorch::pytorch-mutex=*=cuda
   deep_learning_extras:
     conda_packages:
       - cudatoolkit>=11.3
       - cudnn>=8.3
       - datasets
-      - transformers
-      - pytorch-lightning
-    pip_packages:
-      - flax
-      - deepspeed
       - dm-haiku
-      - '"jax[cuda]" -f "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"'
+      - dm-sonnet
+      - flax
+      - gymnasium
+      - jax
+      - ogb
+      - pyg
+      - pytorch-lightning
+      - py-xgboost
+      - transformers
+      - tensorboardx
+      - wandb
+    pip_packages:
+      - deepspeed
+      - reverb
+      # Ray's conda package depends on nvidia-ml-py, which conflicts with scalene
+      - ray[default]
+      - ray[air]
+      - ray[data]
+      - ray[tune]
+      - ray[rllib]
   mne:
     conda_packages:
       - mne
@@ -228,50 +268,58 @@ collections:
     pip_packages:
       - bash-kernel
       - forthon
-      - jupyterlab-git
       - matlab-kernel
       - mppl
       - nbscript
-      - nbval
       - nbzip
-      - opencv-contrib-python
       - pymanopt
-      - python-igraph
-      - roboschool
       - snakemake
-      - webdataset
     conda_packages:
       - astropy
+      - attrs
       # - bcolz # No longer maintained
       - beautifulsoup4
       - bitarray
       # - blaze # No python3.8 build
+      - black
       - boto
       - bottleneck
-      - clyent
+      - cartopy
+      #- clyent # Deprecated package
       - conda-tree
       - configargparse
       - contextlib2
+      - crc32c
       - cython
       - dask
       - datalad
       - dill
       - docopt
       - easygui
+      - fastapi
       - filelock
+      - flake8
       - glob2
       - gpy
+      - graph-tool
       - greenlet
+      - h5py=*=mpi_openmpi*
+      - h5netcdf
+      - hdf5=*=mpi_openmpi*
       - html5lib
+      - hydra-core
+      - igraph
       - importnb
       - iniconfig
       - ipdb
       - ipympl    # jupyter + matplotlib interactive
       - jbig
       - joblib
+      - jsonlines
       - jupyter
       - jupyter_contrib_nbextensions
       - jupyterlab
+      - jupyterlab-git
       - jupytext
       - libblas=*=*mkl*
       - librosa
@@ -286,8 +334,13 @@ collections:
       - nitime
       - nltk
       - nose
+      - networkx
+      - numba
+      - numexpr
       - numpy
       - openpyxl
+      - opencv
+      - pandera
       - pango
       - patchelf
       - path.py
@@ -299,22 +352,31 @@ collections:
       - pkginfo
       - plotly
       - ply
+      - poetry
+      - prometheus_client<0.14 # Limit prometheus-client version for ray
       - py
       - py-lief
-      - pyarrow
+      - pyarrow>=7,<8=*cuda
       - pybind11
-      - pycrypto
+      - pybullet
+      #- pycrypto # No longer maintained
       - pycurl
+      - pydantic
       - pympler
       - pyqtwebengine
       - pysoundfile
+      - pytest
       - pytest-astropy
+      - python-igraph
       - python-libarchive-c
       - python-snappy
       - requests>=2.28
       - ripgrep
+      - scalene
       - scikit-image
+      - seaborn
       - sh
+      - shapely
       - simplegeneric
       - singledispatch
       - sortedcollections
@@ -325,8 +387,12 @@ collections:
       - sympy
       - twisted
       - typing
+      - typer
+      - ucx
       - unicodecsv
       - unixodbc
+      - webdataset
+      - xarray
       - xgboost
       - xlsxwriter
       - xlwt
