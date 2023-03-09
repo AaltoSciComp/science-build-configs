@@ -253,6 +253,7 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py39_4.10.3'
+    freeze: True
     condarc_install:
       channels:
         - defaults
@@ -260,6 +261,27 @@ environments:
         - pytorch
         - nvidia
     collections:
+      - neuroimaging
+  - name: neuroimaging
+    version: '2023-02'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '4.12.0-2'
+    conda_override_cuda: '11.7'
+    condarc_install:
+      channels:
+        - pytorch
+        - nvidia
+        - huggingface
+        - conda-forge
+        - pyg
+      channel_priority: flexible
+    collections:
+      - triton-generic
+      - deep_learning_extras
+      - pytorch
       - neuroimaging
 collections:
   cplex:
@@ -463,82 +485,48 @@ collections:
       - "'blas * mkl'"
   neuroimaging:
     conda_packages:
-      - python==3.9
-      - cudatoolkit=11.6
+      - autoreject
+      - bids-validator
       - cupy
-      - cython
-      - darkdetect
-      - datalad
-      - dipy
-      - doit
+      - fooof
+      - h5io
       - h5py
-      - imageio
-      - imageio-ffmpeg>=0.4.1
-      - importlib_resources
-      - ipympl
-      - ipyvtklink
-      - ipywidgets
-      - joblib
-      - jupyter
-      - jupyter_client!=6.1.5
-      - libblas=*=*mkl*
-      - mamba
-      - matplotlib
-      - mffpy>=0.5.7
       - mne
+      - mne-bids
+      - mne-connectivity
+      - mne-faster
+      - mne-microstates
+      - mne-nirs
+      - mne-qt-browser
+      - mne-rsa
       - nibabel
       - nilearn
-      - numba
-      - numexpr
-      - numpy
-      - pandas
-      - pillow
-      - pip
-      - psutil
-      - pyface
-      - pyqt!=5.15.3
-      - PySurfer
-      - python-picard
-      - pyvista>=0.30
-      - pyvistaqt>=0.4
-      - qdarkstyle
-      - scikit-learn
-      - scipy
-      - spyder
-      - spyder-kernels>=1.10.0
-      - spyder-line-profiler
-      - statsmodels
-      - torchaudio
-      - torchvision
-      - tqdm
-      - traits
-      - traitsui
-      - vtk>=9.0.1
-      - xlrd
-    pip_packages:
-      - autoreject
-      - bids_validator
-      - codespell
-      - filename-templates
-      - imageio-ffmpeg>=0.4.1
-      - json-tricks
-      - jupyter_contrib_nbextensions
-      - mne-bids
-      - mne-rsa
-      - mne-nirs
-      - mne-connectivity
-      - moviepy
-      - nipy
       - nipype
       - nitime
+      - numba
+      - psychopy
+      - pydata-sphinx-theme
+      - pydocstyle
+      - pymatreader
       - pyosf
       - pytest-faulthandler
       - pytest-sugar
       - python-bidi
       - python-picard
-      - sphinx_bootstrap_theme
-      - sphinx_fontawesome
+      - python-picard
+      - pyvista>=0.30
+      - pyvistaqt>=0.4
+      - qdarkstyle
+      - scikit-learn
       - sphinx-gallery
-      - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
+      - statsmodels
+    pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
-      - "https://github.com/wmvanvliet/mne_microstates/archive/master.zip"
+      - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
+      - filename-templates
+      - sphinx-bootstrap-theme
+      - sphinx-fontawesome
+      - sphinx-copybutton
+      - sphinx-design
+      - sphinxcontrib-bibtex
+      - sphinxcontrib-youtube
