@@ -412,6 +412,7 @@ collections:
       - bids-validator
       - cupy
       - fooof
+      - gensim
       - h5io
       - h5py
       - mne
@@ -447,9 +448,14 @@ collections:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
       - filename-templates
+      - psychtoolbox
+      - pygame
+      - pyo
+      - pyparallel
       - sphinx-bootstrap-theme
-      - sphinx-fontawesome
-      - sphinx-copybutton
-      - sphinx-design
       - sphinxcontrib-bibtex
       - sphinxcontrib-youtube
+      - sphinx-copybutton
+      - sphinx-design
+      - sphinx-fontawesome
+      - websocket_client
