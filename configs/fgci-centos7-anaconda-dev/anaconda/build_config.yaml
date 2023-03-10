@@ -463,7 +463,7 @@ collections:
       - sortedcollections
       - sphinx_rtd_theme
       - sphinxcontrib-websupport
-      - spyder>=5.4.2
+      - spyder
       - spyder-line-profiler
       - sympy
       - twisted
