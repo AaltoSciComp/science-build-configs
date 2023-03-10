@@ -184,6 +184,8 @@ packages:
     version: 1.10.7
     variants:
       - '~mpi'
+  - name: 'hpl'
+    version: '2.3'
   - name: 'gromacs'
     version: '2020.4'
     variants:
