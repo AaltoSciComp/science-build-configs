@@ -13,9 +13,20 @@ environments:
     miniconda: True
     python_version: 3
     installer_version: 'py38_4.9.2'
+    freeze: True
     condarc:
       channels:
         - defaults
+  - name: miniconda
+    version: '4.12.0-2'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '4.12.0-2'
+    condarc_install:
+      channels:
+        - conda-forge
   - name: anaconda
     version: '2021-01-tf2'
     miniconda: True
