@@ -221,8 +221,6 @@ packages:
       - 'cxxstd=17'
       - '+ipo'
       - '+python'
-  - name: 'gsl'
-    version: '2.6'
   - name: 'libsvm'
     version: '323'
   - name: 'libxscrnsaver'
@@ -233,10 +231,20 @@ packages:
     version: '6.1.1'
   - name: 'emacs'
     version: '27.1'
+  - name: 'namd'
+    version: '2.14'
+    dependencies:
+      - '^charmpp@6.10.2'
+    variants:
+      - 'interface=tcl'
   - name: 'bazel'
     version: '3.7.1'
     dependencies:
       - '^openjdk@11.0.8_10'
+  - name: 'gsl'
+    version: '2.6'
+  - name: 'gsl'
+    version: '2.7'
   - name: 'mpifileutils'
     version: '0.11'
     variants:
@@ -285,8 +293,6 @@ packages:
 #    version: '1.4.1717'
   - name: 'cuda-memtest'
     version: 'master'
-  - name: 'gsl'
-    version: '2.7'
   - name: 'openfoam-org'
     version: '9'
     variants:
@@ -381,12 +387,6 @@ packages:
       - '^mesa'
   - name: 'extrae'
     version: '4.0.0'
-  - name: 'namd'
-    version: '2.14'
-    dependencies:
-      - '^charmpp@6.10.2'
-    variants:
-      - 'interface=tcl'
 #  - name: 'virtualgl'
 #    version: '3.0.1'
 #    dependencies:
