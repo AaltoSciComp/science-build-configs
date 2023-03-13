@@ -463,7 +463,7 @@ collections:
       - sortedcollections
       - sphinx_rtd_theme
       - sphinxcontrib-websupport
-      - spyder
+      - spyder>=5.4.2 # Fixes OOD bug
       - spyder-line-profiler
       - sympy
       - twisted
