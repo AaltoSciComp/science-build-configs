@@ -516,3 +516,7 @@ packages:
     version: '4.2.1'
     dependencies:
       - '^zstd+programs'
+  - name: 'postgresql'
+    version: '12.2'
+    variants:
+      - '+threadsafe'
