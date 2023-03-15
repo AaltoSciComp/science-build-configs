@@ -389,6 +389,10 @@ packages:
     version: '4.13.1'
   - name: 'feh'
     version: '3.9'
+  - name: 'nvhpc'
+    version: '21.9'
+    variants:
+      - 'install_type=network'
   - name: 'tmux'
     version: '3.2a'
   - name: 'paraview'
