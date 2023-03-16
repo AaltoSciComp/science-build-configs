@@ -520,6 +520,10 @@ packages:
     version: '3.0.2'
     variants:
       - '+readline'
+  - name: 'ruby'
+    version: '2.5.3'
+    variants:
+      - '+readline'
   - name: 'postgresql'
     version: '12.2'
     variants:
