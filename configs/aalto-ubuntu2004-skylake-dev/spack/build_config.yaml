@@ -186,7 +186,7 @@ packages:
     version: '21.5'
   - name: 'openblas'
     version: '0.3.17'
- name: 'openbabel'
+  - name: 'openbabel'
     version: '3.1.1'
   - name: 'rclone'
     version: '1.56.0'
