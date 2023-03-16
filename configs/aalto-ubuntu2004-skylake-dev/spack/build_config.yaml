@@ -2,6 +2,8 @@ target_architecture:
   platform: linux
   os: ubuntu20.04
   arch: skylake
+build_options:
+  reuse_packages: false
 compilers:
   - name: 'gcc'
     version: 9.3.0
@@ -188,6 +190,8 @@ packages:
     version: '0.3.17'
   - name: 'openbabel'
     version: '3.1.1'
+    extra_flags:
+      - '-j 1'
   - name: 'rclone'
     version: '1.56.0'
   - name: 'py-virtualenv'
