@@ -147,3 +147,9 @@ modules:
             MUJOCO_PY_MUJOCO_PATH: '${PREFIX}'
             MJLIB_PATH: '${PREFIX}/bin/libmujoco200.so'
             MJKEY_PATH: '${PREFIX}/bin/mjkey.txt'
+      xerces-c:
+        suffixes:
+          'cxxstd=17'      : 'cxx17'
+      zstd:
+        suffixes:
+          '+programs'      : 'programs'
