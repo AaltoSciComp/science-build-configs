@@ -6,7 +6,7 @@ build_options:
   reuse_packages: false
 compilers:
   - name: 'gcc'
-    version: 9.3.0
+    version: 9.4.0
     system_compiler: true
     flags:
       cflags: -O2 -g
@@ -17,7 +17,7 @@ compilers:
     variants:
       - '+piclibs'
     dependencies:
-      - '%gcc@9.3.0'
+      - '%gcc@9.4.0'
     flags:
       cflags: -O2 -g -march=skylake -ftree-vectorize
       cxxflags: -O2 -g -march=skylake -ftree-vectorize
@@ -29,7 +29,7 @@ compilers:
   - name: 'intel-oneapi-compilers'
     version: '2021.2.0'
     dependencies:
-      - '%gcc@9.3.0'
+      - '%gcc@9.4.0'
     flags:
       cflags: -O2 -g -march=skylake
       cxxflags: -O2 -g -march=skylake
@@ -41,7 +41,7 @@ compilers:
   - name: 'intel-oneapi-compilers'
     version: '2021.3.0'
     dependencies:
-      - '%gcc@9.3.0'
+      - '%gcc@9.4.0'
     flags:
       cflags: -O2 -g -march=skylake
       cxxflags: -O2 -g -march=skylake
@@ -53,7 +53,7 @@ compilers:
   - name: 'intel-oneapi-compilers'
     version: '2021.4.0'
     dependencies:
-      - '%gcc@9.3.0'
+      - '%gcc@9.4.0'
     flags:
       cflags: -O2 -g -march=skylake
       cxxflags: -O2 -g -march=skylake
