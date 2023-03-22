@@ -111,6 +111,11 @@ modules:
       fftw:
         suffixes:
           '+openmp'        : 'openmp'
+      intel-oneapi-compilers:
+        # https://github.com/spack/spack/issues/27668
+        environment:
+          prepend_path:
+            CPATH: '/usr/include/x86_64-linux-gnu'
       intel-parallel-studio:
         suffixes:
           '+mpi'           : 'intelmpi'
