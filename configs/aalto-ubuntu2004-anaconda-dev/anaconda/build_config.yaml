@@ -79,6 +79,7 @@ environments:
     python_version: 3
     installer_version: '22.11.1-4'
     conda_override_cuda: '11.7'
+    freeze: True
     condarc_install:
       channels:
         - pytorch
