@@ -423,6 +423,7 @@ collections:
       - mne-nirs
       - mne-qt-browser
       - mne-rsa
+      - neurokit2
       - nibabel
       - nilearn
       - nipype
@@ -452,6 +453,7 @@ collections:
       - pygame
       - pyo
       - pyparallel
+      - rapidtide
       - sphinx-bootstrap-theme
       - sphinxcontrib-bibtex
       - sphinxcontrib-youtube
