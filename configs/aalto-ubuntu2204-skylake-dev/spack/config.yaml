@@ -1,0 +1,15 @@
+config:
+  install_tree:
+    projections:
+      all: ${PACKAGE}/${VERSION}/${HASH:7}
+    root: /m/scicomp/software/spack/aalto-ubuntu2204-skylake-dev/software
+  module_roots:
+    tcl: /m/scicomp/software/spack/aalto-ubuntu2204-skylake-dev/modules
+    lmod: /m/scicomp/software/spack/aalto-ubuntu2204-skylake-dev/lmod
+  source_cache: /cache/spack
+  misc_cache: /tmp/spack_misc_cache
+  build_stage:
+    - $spack/var/spack/stage
+  locks: false
+  build_language: 'en_US.utf8'
+  concretizer: original
