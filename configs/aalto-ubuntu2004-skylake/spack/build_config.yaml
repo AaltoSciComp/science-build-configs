@@ -355,3 +355,7 @@ packages:
     version: '12.2'
     variants:
       - '+threadsafe'
+  - name: 'lammps'
+    version: '20210310'
+    variants:
+      - '+manybody'
