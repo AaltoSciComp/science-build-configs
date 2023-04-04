@@ -123,7 +123,7 @@ modules:
           'threads=openmp' : 'openmp'
       openmpi:
         suffixes:
-          '^cuda@11.7.0'   : 'cuda-11.7.0'
+          '^cuda@11.7.0'   : '11.7.0'
         environment:
           set:
             SLURM_MPI_TYPE: 'pmix_v2'
