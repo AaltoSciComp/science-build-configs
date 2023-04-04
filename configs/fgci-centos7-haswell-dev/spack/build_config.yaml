@@ -528,3 +528,9 @@ packages:
     version: '12.2'
     variants:
       - '+threadsafe'
+  - name: 'openmpi'
+    version: '4.0.5'
+    variants:
+      - '+cuda'
+    dependencies:
+      - '^cuda@11.7.0'
