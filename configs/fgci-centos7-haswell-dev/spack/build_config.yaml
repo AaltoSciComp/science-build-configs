@@ -534,3 +534,4 @@ packages:
       - '+cuda'
     dependencies:
       - '^cuda@11.7.0'
+      - '^libevent@2.1.8'
