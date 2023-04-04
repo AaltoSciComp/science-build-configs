@@ -79,6 +79,7 @@ environments:
     python_version: 3
     installer_version: '22.11.1-4'
     conda_override_cuda: '11.7'
+    freeze: True
     condarc_install:
       channels:
         - pytorch
@@ -132,24 +133,33 @@ environments:
     python_version: 3
     installer_version: 'py39_4.10.3'
     freeze: True
-    condarc_install:
+    condarc:
       channels:
         - defaults
         - conda-forge
     collections:
       - neuroimaging
-#  - name: neuroimaging
-#    version: '2022-01'
-#    miniconda: True
-#    python_version: 3
-#    installer_version: 'py39_4.10.3'
-#    freeze: True
-#    condarc_install:
-#      channels:
-#        - defaults
-#        - conda-forge
-#    collections:
-#      - neuroimaging
+  - name: neuroimaging
+    version: '2023-02'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '4.12.0-2'
+    conda_override_cuda: '11.7'
+    condarc_install:
+      channels:
+        - pytorch
+        - nvidia
+        - huggingface
+        - conda-forge
+        - pyg
+      channel_priority: flexible
+    collections:
+      - triton-generic
+      - deep_learning_extras
+      - pytorch
+      - neuroimaging
 collections:
   cplex:
     conda_packages:
@@ -382,7 +392,7 @@ collections:
       - sortedcollections
       - sphinx_rtd_theme
       - sphinxcontrib-websupport
-      - spyder
+      - spyder>=5.4.2 # Fixes OOD bug
       - spyder-line-profiler
       - sympy
       - twisted
@@ -399,65 +409,56 @@ collections:
       - xmltodict
   neuroimaging:
     conda_packages:
-      - python>=3.8
-      - darkdetect
-      - datalad
-      - dipy
-      - doit
+      - autoreject
+      - bids-validator
+      - cupy
+      - fooof
+      - gensim
+      - h5io
       - h5py
-      - imageio
-      - imageio-ffmpeg>=0.4.1
-      - importlib_resources
-      - ipympl
-      - ipyvtklink
-      - ipywidgets
-      - joblib
-      - jupyter
-      - jupyter_client!=6.1.5
-      - libblas=*=*mkl*
-      - matplotlib
-      - mayavi
-      - mffpy>=0.5.7
       - mne
+      - mne-bids
+      - mne-connectivity
+      - mne-faster
+      - mne-microstates
+      - mne-nirs
+      - mne-qt-browser
+      - mne-rsa
+      - neurokit2
       - nibabel
       - nilearn
+      - nipype
+      - nitime
       - numba
-      - numexpr
-      - numpy
-      - pandas
-      - pillow
-      - pip
-      - psutil
-      - pyface
-      - pyqt!=5.15.3
-      - PySurfer
+      - psychopy
+      - pydata-sphinx-theme
+      - pydocstyle
+      - pymatreader
+      - pyosf
+      - pytest-faulthandler
+      - pytest-sugar
+      - python-bidi
+      - python-picard
       - python-picard
       - pyvista>=0.30
       - pyvistaqt>=0.4
       - qdarkstyle
       - scikit-learn
-      - scipy
-      - spyder
-      - spyder-kernels>=1.10.0
-      - spyder-line-profiler
-      - statsmodels
-      - tqdm
-      - traits
-      - traitsui
-      - vtk>=9.0.1
-      - xlrd
-    pip_packages:
-      - autoreject
-      - bids_validator
-      - codespell
-      - filename-templates
-      - nipy
-      - nipype
-      - nitime
-      - sphinx_bootstrap_theme
-      - sphinx_fontawesome
       - sphinx-gallery
-      - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
+      - statsmodels
+    pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
-      - "https://github.com/wmvanvliet/mne_microstates/archive/master.zip"
-      - "https://github.com/wmvanvliet/mne-rsa/archive/master.zip"
+      - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
+      - filename-templates
+      - psychtoolbox
+      - pygame
+      - pyo
+      - pyparallel
+      - rapidtide
+      - sphinx-bootstrap-theme
+      - sphinxcontrib-bibtex
+      - sphinxcontrib-youtube
+      - sphinx-copybutton
+      - sphinx-design
+      - sphinx-fontawesome
+      - websocket_client
