@@ -538,5 +538,3 @@ packages:
       - '^ucx@1.9.0+cuda'
   - name: 'gatk'
     version: '4.1.0.0'
-  - name: 'gatk'
-    version: '4.3.0.0'
