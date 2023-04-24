@@ -156,6 +156,29 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+  - name: 'singularity-freesurfer'
+    docker_user: 'freesurfer'
+    docker_image: 'freesurfer'
+    tags:
+      - '7.2.0'
+    module_namespace: 'common'
+    command_collections:
+      - 'common'
+      - 'freesurfer_mesa'
+    flag_collections:
+      - 'common'
+      - 'freesurfer_license'
+  - name: 'singularity-sinergym'
+    docker_user: 'sailugr'
+    docker_image: 'sinergym'
+    tags:
+      - 'v2.0.0'
+      - 'v2.1.3'
+    module_namespace: 'common'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
   - name: 'nvidia-isaac-sim'
     docker_user: 'nvidia'
     docker_image: 'isaac-sim'
@@ -171,3 +194,26 @@ definitions:
       - 'common'
       - 'isaac-sim'
       - 'nvidia'
+  - name: 'singularity-postgres'
+    docker_user: 'library'
+    docker_image: 'postgres'
+    module_namespace: 'common'
+    tags:
+      - '12.13'
+    command_collections:
+      - 'common'
+      - 'lc_all_c'
+    flag_collections:
+      - 'common'
+  - name: 'singularity-simmobility-prod'
+    docker_user: 'aaltoscienceit'
+    docker_image: 'simmobility-prod'
+    registry: 'registry.cs.aalto.fi'
+    module_namespace: 'common'
+    tags:
+      - '2023-02'
+    command_collections:
+      - 'common'
+      - 'lc_all_c'
+    flag_collections:
+      - 'common'
