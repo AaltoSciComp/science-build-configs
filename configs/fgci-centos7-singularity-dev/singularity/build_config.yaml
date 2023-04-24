@@ -327,3 +327,14 @@ definitions:
       - 'lc_all_c'
     flag_collections:
       - 'common'
+  - name: 'singularity-gatk'
+    docker_user: 'broadinstitute'
+    docker_image: 'gatk'
+    registry: 'docker.io'
+    module_namespace: 'common'
+    tags:
+      - '4.4.0.0'
+    command_collections:
+      - 'common'
+    flag_collections:
+      - 'common'
