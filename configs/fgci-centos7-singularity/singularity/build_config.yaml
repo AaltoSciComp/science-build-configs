@@ -16,6 +16,10 @@ command_collections:
   detectron:
     environment_commands:
       - 'export PYTHONPATH=$PYTHONPATH:/detectron/lib'
+  freesurfer_mesa:
+    post_commands:
+      - 'yum update -y'
+      - 'yum install -y mesa-dri-drivers mesa-libGLU qt5-qtbase strace'
   openfoam:
     post_commands:
       - 'cat /opt/OpenFOAM/setImage_v1712.sh >> /environment'
