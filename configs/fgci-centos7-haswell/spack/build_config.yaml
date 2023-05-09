@@ -153,6 +153,8 @@ packages:
     version: '11.6.2'
   - name: 'cuda'
     version: '11.7.0'
+  - name: 'cuda'
+    version: '12.0.0'
   - name: 'julia'
     version: '1.5.3'
     extra_flags:
