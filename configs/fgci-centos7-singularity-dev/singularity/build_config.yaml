@@ -77,7 +77,6 @@ command_collections:
   lc_all_c:
     environment_commands:
       - 'export LC_ALL=C'
-      - 'rm CoppeliaSim_Edu_V4_1_0_Ubuntu20_04.tar.xz'
 flag_collections:
   common:
     - '-B /m:/m'
