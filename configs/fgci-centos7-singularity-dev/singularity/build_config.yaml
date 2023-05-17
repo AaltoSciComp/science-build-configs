@@ -102,6 +102,8 @@ flag_collections:
     - '-B /share/apps/licenses/freesurfer/6.0.0/license.txt:/opt/freesurfer/license.txt'
   freesurfer_license:
     - '--env FS_LICENSE=/share/apps/licenses/freesurfer/6.0.0/license.txt'
+  run_mount:
+    - '-B /run:/run'
 definitions:
   - name: 'nvidia-pytorch'
     docker_user: 'nvidia'
@@ -349,3 +351,4 @@ definitions:
       - 'common'
     flag_collections:
       - 'common'
+      - 'run_mount'
