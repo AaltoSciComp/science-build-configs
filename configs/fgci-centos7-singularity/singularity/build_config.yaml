@@ -65,6 +65,9 @@ command_collections:
       - 'find /home/openface-build/build/bin/ -maxdepth 1 -type f -exec chmod a+rx {} \;'
     environment_commands:
       - 'export LC_ALL=C'
+  lc_all_c:
+    environment_commands:
+      - 'export LC_ALL=C'
 flag_collections:
   common:
     - '-B /m:/m'
@@ -88,6 +91,10 @@ flag_collections:
     - '-B /usr/share/glvnd/egl_vendor.d/10_nvidia.json'
   dpabi:
     - '-B /share/apps/licenses/freesurfer/6.0.0/license.txt:/opt/freesurfer/license.txt'
+  freesurfer_license:
+    - '--env FS_LICENSE=/share/apps/licenses/freesurfer/6.0.0/license.txt'
+  run_mount:
+    - '-B /run:/run'
 definitions:
   - name: 'nvidia-pytorch'
     docker_user: 'nvidia'
