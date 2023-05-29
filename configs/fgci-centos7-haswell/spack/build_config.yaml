@@ -465,3 +465,5 @@ packages:
     version: '12.2'
     variants:
       - '+threadsafe'
+  - name: 'gatk'
+    version: '4.1.0.0'
