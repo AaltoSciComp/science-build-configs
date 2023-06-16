@@ -346,7 +346,8 @@ definitions:
     registry: 'registry.cs.aalto.fi'
     module_namespace: 'common'
     tags:
-      - 'latest'
+      - '2023-05'
+      - '2023-06'
     command_collections:
       - 'common'
     flag_collections:
