@@ -363,7 +363,6 @@ collections:
       - cudatoolkit>=11.8
       - cudnn>=8.6
       - datasets
-      - dm-sonnet
       - gymnasium
       - ogb
       - pyg
@@ -377,6 +376,7 @@ collections:
       - "-f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
       - flax
       - dm-haiku
+      - dm-sonnet
       - deepspeed
       - reverb
       # Ray's conda package depends on nvidia-ml-py, which conflicts with scalene
