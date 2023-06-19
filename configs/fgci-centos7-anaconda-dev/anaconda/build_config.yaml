@@ -323,9 +323,9 @@ collections:
   compilers:
     conda_packages:
       - compilers
-      - gcc<12
-      - gxx<12
-      - gfortran<12
+      - gcc=11.*
+      - gxx=11.*
+      - gfortran=11.*
   cplex:
     conda_packages:
       - cplex
@@ -367,7 +367,7 @@ collections:
       - dm-sonnet
       - flax
       - gymnasium
-      - jax>0.4
+      - jax>=0.4
       - ogb
       - pyg
       - pytorch-lightning
