@@ -373,10 +373,10 @@ collections:
       - tensorboardx
       - wandb
     pip_packages:
-      - flax
-      - dm-haiku
       - jax[cuda11_pip]
       - "-f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+      - flax
+      - dm-haiku
       - deepspeed
       - reverb
       # Ray's conda package depends on nvidia-ml-py, which conflicts with scalene
