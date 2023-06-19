@@ -323,9 +323,9 @@ collections:
   compilers:
     conda_packages:
       - compilers
-      - gcc=11.*
-      - gxx=11.*
-      - gfortran=11.*
+      - gcc>=11,<12
+      - gxx>=11,<12
+      - gfortran>=11,<12
   cplex:
     conda_packages:
       - cplex
