@@ -195,6 +195,7 @@ environments:
         - mosek
       channel_priority: flexible
     collections:
+      - compilers
       - deep_learning_extras
       - tensorflow-v2-conda-forge
       - pytorch
@@ -319,6 +320,12 @@ environments:
       - pytorch
       - neuroimaging
 collections:
+  compilers:
+    conda_packages:
+      - compilers
+      - gcc<12
+      - gxx<12
+      - gfortran<12
   cplex:
     conda_packages:
       - cplex
@@ -407,6 +414,7 @@ collections:
       - configargparse
       - contextlib2
       - crc32c
+      - cryptography
       - cython
       - dask
       - datalad
@@ -470,13 +478,12 @@ collections:
       - plotly
       - ply
       - poetry
-      - prometheus_client<0.14 # Limit prometheus-client version for ray
+      - prometheus_client
       - py
       - py-lief
-      - pyarrow>=7,<8=*cuda
+      - pyarrow=*=*cuda
       - pybind11
       - pybullet
-      #- pycrypto # No longer maintained
       - pycurl
       - pydantic
       - pympler
