@@ -413,7 +413,6 @@ collections:
       - configargparse
       - contextlib2
       - crc32c
-      - cryptography
       - cython
       - dask
       - datalad
