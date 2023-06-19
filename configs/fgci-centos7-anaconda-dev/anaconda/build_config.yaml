@@ -195,7 +195,6 @@ environments:
         - mosek
       channel_priority: flexible
     collections:
-      - compilers
       - deep_learning_extras
       - tensorflow-v2-conda-forge
       - pytorch
