@@ -360,7 +360,7 @@ collections:
       - dm-sonnet
       - flax
       - gymnasium
-      - jax
+      - jax>0.4
       - ogb
       - pyg
       - pytorch-lightning
