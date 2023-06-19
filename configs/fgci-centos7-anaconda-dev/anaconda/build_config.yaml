@@ -195,6 +195,7 @@ environments:
         - mosek
       channel_priority: flexible
     collections:
+      - compilers
       - deep_learning_extras
       - tensorflow-v2-conda-forge
       - pytorch
@@ -362,9 +363,7 @@ collections:
       - cudatoolkit>=11.8
       - cudnn>=8.6
       - datasets
-      - dm-haiku
       - dm-sonnet
-      - flax
       - gymnasium
       - ogb
       - pyg
@@ -374,6 +373,8 @@ collections:
       - tensorboardx
       - wandb
     pip_packages:
+      - flax
+      - dm-haiku
       - jax[cuda11_pip]
       - "-f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
       - deepspeed
@@ -414,6 +415,7 @@ collections:
       - configargparse
       - contextlib2
       - crc32c
+      - cryptography
       - cython
       - dask
       - datalad
