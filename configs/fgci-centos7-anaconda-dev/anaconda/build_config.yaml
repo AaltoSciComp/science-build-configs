@@ -363,7 +363,10 @@ collections:
       - cudatoolkit>=11.8
       - cudnn>=8.6
       - datasets
+      - dm-haiku
+      - flax
       - gymnasium
+      - jax>=0.4
       - ogb
       - pyg
       - pytorch-lightning
@@ -372,12 +375,8 @@ collections:
       - tensorboardx
       - wandb
     pip_packages:
-      - jax[cuda11_pip]
-      - "-f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
-      - flax
-      - dm-haiku
-      - dm-sonnet
       - deepspeed
+      - dm-sonnet
       - reverb
       # Ray's conda package depends on nvidia-ml-py, which conflicts with scalene
       - ray[default]
