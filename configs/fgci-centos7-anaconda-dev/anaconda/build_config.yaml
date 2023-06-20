@@ -183,7 +183,7 @@ environments:
     mamba: True
     python_version: 3
     installer_version: '23.1.0-1'
-    conda_override_cuda: '11.7'
+    conda_override_cuda: '11.8'
     condarc_install:
       channels:
         - pytorch
@@ -351,7 +351,7 @@ collections:
       - tensorflow=2.10=cuda11*
   rapidsai:
     conda_packages:
-      - rapids=23.04
+      - rapids=23.*
   pytorch:
     conda_packages:
       - cudnn>=8.3
