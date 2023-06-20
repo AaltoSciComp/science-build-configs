@@ -193,6 +193,7 @@ environments:
         - pyg
         - gurobi
         - mosek
+        - rapidsai
       channel_priority: flexible
     collections:
       - compilers
