@@ -204,6 +204,7 @@ environments:
       - mne
       - cplex_pip
       - mosek
+      - rapidsai
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
@@ -349,7 +350,7 @@ collections:
       - tensorflow=2.10=cuda11*
   rapidsai:
     conda_packages:
-      - rapids=23.02
+      - rapids=23.04
   pytorch:
     conda_packages:
       - cudnn>=8.3
@@ -406,6 +407,7 @@ collections:
       - bitarray
       # - blaze # No python3.8 build
       - black
+      - bokeh
       - boto
       - bottleneck
       - cartopy
@@ -418,6 +420,7 @@ collections:
       - cython
       - dask
       - datalad
+      - datashader
       - dill
       - docopt
       - easygui
@@ -508,6 +511,7 @@ collections:
       - sphinxcontrib-websupport
       - spyder>=5.4.2 # Fixes OOD bug
       - spyder-line-profiler
+      - streamlit
       - sympy
       - twisted
       - typing
