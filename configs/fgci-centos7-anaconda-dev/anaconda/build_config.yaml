@@ -490,7 +490,7 @@ collections:
       - prometheus_client
       - py
       - py-lief
-      - pyarrow=*=*cuda
+      - pyarrow>=11=*cuda
       - pybind11
       - pybullet
       - pycurl
