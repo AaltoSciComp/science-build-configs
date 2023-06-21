@@ -352,6 +352,7 @@ collections:
     # NVCC from nvidia channel
     conda_packages:
       - cuda-compiler
+      - cuda-libraries-dev=11.8
   rapidsai:
     conda_packages:
       - rapids=23.*
@@ -365,7 +366,7 @@ collections:
       - pytorch::pytorch-mutex=*=cuda
   deep_learning_extras:
     conda_packages:
-      - cudatoolkit>=11.8
+      - cudatoolkit=11.8
       - cudnn>=8.6
       - datasets
       - dm-haiku
