@@ -351,7 +351,7 @@ collections:
   cuda-compiler:
     # NVCC from nvidia channel
     conda_packages:
-      - cuda-compiler
+      - cuda-compiler=11.8
       - cuda-libraries-dev=11.8
   rapidsai:
     conda_packages:
