@@ -373,7 +373,7 @@ collections:
       - flax
       - gymnasium
       - jax>=0.4
-      - jaxlib>0.4
+      - jaxlib>=0.4
       - ogb
       - pyg
       - pytorch-lightning
