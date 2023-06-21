@@ -196,6 +196,7 @@ environments:
       channel_priority: flexible
     collections:
       - compilers
+      - cuda-compiler
       - deep_learning_extras
       - tensorflow-v2-conda-forge
       - pytorch
@@ -347,6 +348,10 @@ collections:
       - cudnn>=8.2
       - tensorboard
       - tensorflow=2.10=cuda11*
+  cuda-compiler:
+    # NVCC from nvidia channel
+    conda_packages:
+      - cuda-compiler
   rapidsai:
     conda_packages:
       - rapids=23.*
