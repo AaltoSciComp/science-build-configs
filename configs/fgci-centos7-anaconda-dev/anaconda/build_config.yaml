@@ -345,6 +345,10 @@ collections:
   tensorflow-pip:
     pip_packages:
       - tensorflow==2.12.*
+    conda_packages:
+      - numpy=1.23.4
+      - tensorboard<2.13,>=2.12
+      - grpcio=1.51.3
   tensorflow-v2-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
@@ -373,7 +377,7 @@ collections:
       - datasets
       - dm-haiku
       - flax
-      - gymnasium
+      - gymnasium=0.26.3 # Version lock due to ray
       - jax>=0.4
       - jaxlib>=0.4=cuda*
       - ogb
