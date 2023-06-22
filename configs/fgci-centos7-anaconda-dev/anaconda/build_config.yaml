@@ -198,7 +198,7 @@ environments:
       - compilers
       - cuda-compiler
       - deep_learning_extras
-      - tensorflow-v2-conda-forge
+      - tensorflow-pip
       - pytorch
       - triton-generic
       - gurobi
@@ -342,11 +342,13 @@ collections:
   mosek:
     conda_packages:
       - mosek
+  tensorflow-pip:
+    pip_packages:
+      - tensorflow==2.12.*
   tensorflow-v2-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.2
-      - tensorboard
       - tensorflow=2.10=cuda11*
   cuda-compiler:
     # NVCC from nvidia channel
@@ -379,6 +381,7 @@ collections:
       - pytorch-lightning
       - py-xgboost
       - transformers
+      - tensorboard
       - tensorboardx
       - wandb
     pip_packages:
