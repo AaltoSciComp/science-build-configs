@@ -348,6 +348,8 @@ collections:
     conda_packages:
       - numpy=1.23.4
       - tensorboard<2.13,>=2.12
+      - grpcio=1.51.1
+      - wrapt<1.15
   tensorflow-v2-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
