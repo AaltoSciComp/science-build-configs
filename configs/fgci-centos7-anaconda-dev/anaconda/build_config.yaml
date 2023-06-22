@@ -198,7 +198,7 @@ environments:
       - compilers
       - cuda-compiler
       - deep_learning_extras
-      - tensorflow-pip
+      - tensorflow-v2-conda-forge
       - pytorch
       - triton-generic
       - gurobi
@@ -376,11 +376,11 @@ collections:
       - cudatoolkit=11.8
       - cudnn>=8.6
       - datasets
-      - dm-haiku
-      - flax
+      #- dm-haiku
+      #- flax
       - gymnasium=0.26.3 # Version lock due to ray
-      - jax>=0.4
-      - jaxlib>=0.4=cuda*
+      #- jax>=0.4
+      #- jaxlib>=0.4=cuda*
       - ogb
       - pyg
       - pytorch-lightning
@@ -390,6 +390,9 @@ collections:
       - tensorboardx
       - wandb
     pip_packages:
+      - "jax[cuda11_pip] -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+      - flax
+      - dm-haiku
       - deepspeed
       - dm-sonnet
       - reverb
