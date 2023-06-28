@@ -5,6 +5,7 @@ installer_checksums:
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
   Mambaforge-4.11.0-0-Linux-x86_64.sh: '49268ee30d4418be4de852dda3aa4387f8c95b55a76f43fb1af68dcbf8b205c3'
   Mambaforge-22.11.1-4-Linux-x86_64.sh: '16c7d256de783ceeb39970e675efa4a8eb830dcbb83187f1197abfea0bf07d30'
+  Mambaforge-23.1.0-1-Linux-x86_64.sh: 'cfb16c47dc2d115c8b114280aa605e322173f029fdb847a45348bf4bd23c62ab'
   Miniforge3-4.12.0-2-Linux-x86_64.sh: 'e8bd60572d1bdcd9fc16114f423653c95e02f0be1393383f77fba17cf8acb10e'
   Miniforge3-22.11.1-4-Linux-x86_64.sh: '737d1b2666528416706a916b355c43ff58deeaebf5ca906bc1a551e96c73ab8e'
 environments:
@@ -24,6 +25,7 @@ environments:
     mamba: True
     python_version: 3
     installer_version: '4.12.0-2'
+    freeze: True
     condarc_install:
       channels:
         - conda-forge
@@ -259,6 +261,40 @@ environments:
       setenv:
         GUROBI_HOME: '$prefix'
         GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
+  - name: anaconda
+    version: '2023-02'
+    miniconda: False
+    miniforge: False
+    mambaforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '23.1.0-1'
+    conda_override_cuda: '11.8'
+    condarc_install:
+      channels:
+        - pytorch
+        - nvidia
+        - huggingface
+        - conda-forge
+        - pyg
+        - gurobi
+        - mosek
+      channel_priority: flexible
+    collections:
+      - compilers
+      - cuda-compiler
+      - deep_learning_extras
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - gurobi
+      - mne
+      - cplex_pip
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+        GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: pytorch
     version: '1.9.1'
     miniconda: True
@@ -363,6 +399,7 @@ environments:
     python_version: 3
     installer_version: '4.12.0-2'
     conda_override_cuda: '11.7'
+    freeze: True
     condarc_install:
       channels:
         - pytorch
@@ -377,6 +414,12 @@ environments:
       - pytorch
       - neuroimaging
 collections:
+  compilers:
+    conda_packages:
+      - compilers
+      - gcc>=11,<12
+      - gxx>=11,<12
+      - gfortran>=11,<12
   cplex:
     conda_packages:
       - cplex
@@ -441,45 +484,47 @@ collections:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.2
-      - tensorboard
       - tensorflow=2.10=cuda11*
+  cuda-compiler:
+    # NVCC from nvidia channel
+    conda_packages:
+      - cuda-compiler=11.8
+      - cuda-libraries-dev=11.8
   rapidsai:
     conda_packages:
-      - cudatoolkit=11.4
-      - cudf
-      - cuml
-      - cugraph
-      - cusignal
-      - cuspatial
-      - cuxfilter
-      - rapids-blazing=21.10
+      - rapids=23.*
   pytorch:
     conda_packages:
       - cudnn>=8.3
       - pytorch::pytorch
-      - pytorch::pytorch-cuda=11.7
+      - pytorch::pytorch-cuda=11.8
       - pytorch::torchaudio
       - pytorch::torchvision
       - pytorch::pytorch-mutex=*=cuda
   deep_learning_extras:
     conda_packages:
-      - cudatoolkit>=11.3
-      - cudnn>=8.3
+      - cudatoolkit=11.8
+      - cudnn>=8.6
       - datasets
-      - dm-haiku
-      - dm-sonnet
-      - flax
-      - gymnasium
-      - jax
+      #- dm-haiku
+      #- flax
+      - gymnasium=0.26.3 # Version lock due to ray
+      #- jax>=0.4
+      #- jaxlib>=0.4=cuda*
       - ogb
       - pyg
       - pytorch-lightning
       - py-xgboost
       - transformers
+      - tensorboard
       - tensorboardx
       - wandb
     pip_packages:
+      - "jax[cuda11_pip] -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+      - flax
+      - dm-haiku
       - deepspeed
+      - dm-sonnet
       - reverb
       # Ray's conda package depends on nvidia-ml-py, which conflicts with scalene
       - ray[default]
@@ -500,6 +545,7 @@ collections:
       - nbzip
       - pymanopt
       - snakemake
+      - python-hostlist
     conda_packages:
       - astropy
       - attrs
@@ -508,6 +554,7 @@ collections:
       - bitarray
       # - blaze # No python3.8 build
       - black
+      - bokeh
       - boto
       - bottleneck
       - cartopy
@@ -516,9 +563,11 @@ collections:
       - configargparse
       - contextlib2
       - crc32c
+      - cryptography
       - cython
       - dask
       - datalad
+      - datashader
       - dill
       - docopt
       - easygui
@@ -579,13 +628,12 @@ collections:
       - plotly
       - ply
       - poetry
-      - prometheus_client<0.14 # Limit prometheus-client version for ray
+      - prometheus_client
       - py
       - py-lief
-      - pyarrow>=7,<8=*cuda
+      - pyarrow=*=*cuda
       - pybind11
       - pybullet
-      #- pycrypto # No longer maintained
       - pycurl
       - pydantic
       - pympler
@@ -610,6 +658,7 @@ collections:
       - sphinxcontrib-websupport
       - spyder>=5.4.2 # Fixes OOD bug
       - spyder-line-profiler
+      - streamlit
       - sympy
       - twisted
       - typing
