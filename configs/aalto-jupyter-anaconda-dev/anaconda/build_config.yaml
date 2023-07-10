@@ -6,7 +6,7 @@ installer_checksums:
   Mambaforge3-23.1.0-3-Linux-x86_64.sh: 'b7038f4f4d972fa2589dd9edd014940b94600589f924cc6d35a9b11d37506c25'
 environments:
   - name: jupyter-generic
-    version: '2023-07-10-dev1'
+    version: '2023-07-10-dev2'
     miniconda: False
     miniforge: False
     mambaforge: True
