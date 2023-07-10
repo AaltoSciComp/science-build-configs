@@ -8,6 +8,7 @@ environments:
   - name: jupyter-generic
     version: '2023-07-10-dev1'
     mambaforge: True
+    mamba: True
     python_version: 3
     installer_version: '23.1.0-3'
     conda_pack: True
@@ -22,7 +23,7 @@ environments:
       ssl_verify: /etc/ssl/certs/ca-certificates.crt
     collections:
       - compilers
-      - mamba
+      # - mamba
       # - nbconvert_5_pin
       - jupyter-generic
       - scipy-notebook-upstream
