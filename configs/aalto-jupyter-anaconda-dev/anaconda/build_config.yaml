@@ -3,12 +3,11 @@ installer_checksums:
   Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
   Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
-  Miniforge3-23.1.0-3-Linux-x86_64.sh: 'b7038f4f4d972fa2589dd9edd014940b94600589f924cc6d35a9b11d37506c25'
+  Mambaforge3-23.1.0-3-Linux-x86_64.sh: 'b7038f4f4d972fa2589dd9edd014940b94600589f924cc6d35a9b11d37506c25'
 environments:
   - name: jupyter-generic
     version: '2023-07-10-dev1'
-    miniconda: False
-    miniforge: True
+    mambaforge: True
     python_version: 3
     installer_version: '23.1.0-3'
     conda_pack: True
