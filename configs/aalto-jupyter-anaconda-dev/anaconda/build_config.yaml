@@ -3,14 +3,14 @@ installer_checksums:
   Miniconda3-py38_4.9.2-Linux-x86_64.sh: '1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7'
   Miniconda3-py38_4.10.3-Linux-x86_64.sh: '935d72deb16e42739d69644977290395561b7a6db059b316958d97939e9bdf3d'
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
+  Miniforge3-23.1.0-3-Linux-x86_64.sh: 'b7038f4f4d972fa2589dd9edd014940b94600589f924cc6d35a9b11d37506c25'
 environments:
   - name: jupyter-generic
-    version: '2022-12-29-dev3'
-    miniconda: True
+    version: '2023-07-10-dev1'
+    miniconda: False
+    miniforge: True
     python_version: 3
-    # TODO: Upgrade to Python 3.10 when miniconda updates
-    # https://github.com/conda/conda/issues/11728
-    installer_version: 'py39_4.10.3'
+    installer_version: '23.1.0-3'
     conda_pack: True
     condarc_install:
       channels:
@@ -65,7 +65,6 @@ collections:
       #- lapack       # lapack       - dependency for cvxpy
       - nltk         # nltk         -  datasci2019  (use conda  when upgrading)
       - owslib       # owslib: mlpython
-      - beautifulsoup4
       - lifelines
       #- rpy2
       #- shap
@@ -78,7 +77,6 @@ collections:
       - cvxopt       # cvxopt       - mlkern2019
       - cvxpy        # cvxpy        - mlkern2019
       - geoplotlib
-      - ipympl
       - configargparse # configargparse: deeplearn2020, also generally useful
       - metakernel
       - ortools-python      # ortools:   ai2020
@@ -87,16 +85,21 @@ collections:
       - jsonpickle   # dlpython2022: RT#22328
       - einops       # deeplearn2023: RT#21983
       - vaderSentiment  # dhhb2022: RT#22440
+      - nilearn      # hona2023-brain, RT#22805
+      - nibabel      # hona2023-brain, RT#22805
+      - statsforecast   # bdaaccounting2023
+      - transformers # css2023, RT#23019
     pip_packages:
       - plotchecker  # plotchecker: for nbgrader, mlbp2018
       - gpflow       # special course Gaussian Processes, 2019 RT#14430
-                     # 2021-11, c-f has old version
+                     # 2023-07, c-f has old version (feedstock is unmaintained: https://github.com/conda-forge/gpflow-feedstock)
       - calysto      # 2021-11, c-f missing
       - qiskit       # Introduction to Quantum Technologies, RT#14866
       - liwc         # dhhb2022: RT#22440
+      - Wikipedia-API         # css2023, RT#23260
       #- pysurvival (Supported for Python<=3.7 https://github.com/berleon/pysurvival#what-is-pysurvival)
       #- https://github.com/AntoinePassemiers/Lexicon-Based-Sentiment-Analysis/archive/283a2c819016e9a90d408bc82c6edbcd4104be9c.zip
-    # Currently non-funectional packages:
+    # Currently non-functional packages:
     #   geopandas (conda-forge)
     #   rasterio (conda-forge)
   scipy-notebook-upstream:
@@ -116,6 +119,7 @@ collections:
       - 'h5py'
       - 'ipympl'
       - 'ipywidgets'
+      - 'jupyterlab-git'
       - 'matplotlib-base'
       - 'numba'
       - 'numexpr'
@@ -125,7 +129,7 @@ collections:
       # - 'protobuf'
       - 'pytables'
       - 'scikit-image'
-      - 'scikit-learn'
+      - 'scikit-learn'  # Also in the scikit_learn collection
       - 'scipy'
       - 'seaborn'
       - 'sqlalchemy'
