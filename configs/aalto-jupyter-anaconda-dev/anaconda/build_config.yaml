@@ -7,6 +7,8 @@ installer_checksums:
 environments:
   - name: jupyter-generic
     version: '2023-07-10-dev1'
+    miniconda: False
+    miniforge: False
     mambaforge: True
     mamba: True
     python_version: 3
