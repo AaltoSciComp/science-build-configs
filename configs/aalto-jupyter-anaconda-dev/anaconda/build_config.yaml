@@ -95,6 +95,7 @@ collections:
       - qiskit-terra # Introduction to Quantum Technologies, RT#14866
       - Wikipedia-API   # css2023, RT#23260
       - sage         # RT#23949
+      - bash_kernel
 
     pip_packages: []
       # - plotchecker  # plotchecker: for nbgrader, mlbp2018
