@@ -379,6 +379,7 @@ collections:
       #- dm-haiku
       #- flax
       - gymnasium=0.26.3 # Version lock due to ray
+      - lightning
       #- jax>=0.4
       #- jaxlib>=0.4=cuda*
       - ogb
