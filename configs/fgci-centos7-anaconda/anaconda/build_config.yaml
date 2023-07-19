@@ -270,6 +270,41 @@ environments:
     python_version: 3
     installer_version: '23.1.0-1'
     conda_override_cuda: '11.8'
+    freeze: True
+    condarc_install:
+      channels:
+        - pytorch
+        - nvidia
+        - huggingface
+        - conda-forge
+        - pyg
+        - gurobi
+        - mosek
+      channel_priority: flexible
+    collections:
+      - compilers
+      - cuda-compiler
+      - deep_learning_extras
+      - tensorflow-v2-conda-forge
+      - pytorch
+      - triton-generic
+      - gurobi
+      - mne
+      - cplex_pip
+      - mosek
+    extra_module_variables:
+      setenv:
+        GUROBI_HOME: '$prefix'
+        GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
+  - name: anaconda
+    version: '2023-03'
+    miniconda: False
+    miniforge: False
+    mambaforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '23.1.0-1'
+    conda_override_cuda: '11.8'
     condarc_install:
       channels:
         - pytorch
@@ -509,6 +544,7 @@ collections:
       #- dm-haiku
       #- flax
       - gymnasium=0.26.3 # Version lock due to ray
+      - lightning
       #- jax>=0.4
       #- jaxlib>=0.4=cuda*
       - ogb
