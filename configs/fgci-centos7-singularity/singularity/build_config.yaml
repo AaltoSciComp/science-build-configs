@@ -197,6 +197,7 @@ definitions:
     module_namespace: 'common'
     tags:
       - '2022.2.0'
+      - '2022.2.1'
     command_collections:
       - 'common'
       - 'isaac-sim'
