@@ -349,7 +349,7 @@ collections:
       - joblib
       - jsonlines
       - jupyter
-      - jupyter_contrib_nbextensions
+      # - jupyter_contrib_nbextensions   # currently does not support notebook>7
       - jupyterlab
       - jupyterlab-git
       - jupytext
