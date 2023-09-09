@@ -146,6 +146,28 @@ environments:
     mamba: True
     python_version: 3
     installer_version: '4.12.0-2'
+    freeze: True
+    conda_override_cuda: '11.7'
+    condarc_install:
+      channels:
+        - pytorch
+        - nvidia
+        - huggingface
+        - conda-forge
+        - pyg
+      channel_priority: flexible
+    collections:
+      - triton-generic
+      - deep_learning_extras
+      - pytorch
+      - neuroimaging
+  - name: neuroimaging
+    version: '2023-03'
+    miniconda: False
+    miniforge: True
+    mamba: True
+    python_version: 3
+    installer_version: '22.11.1-4'
     conda_override_cuda: '11.7'
     condarc_install:
       channels:
@@ -414,8 +436,6 @@ collections:
       - cupy
       - fooof
       - gensim
-      - h5io
-      - h5py
       - mne
       - mne-bids
       - mne-connectivity
@@ -425,20 +445,16 @@ collections:
       - mne-qt-browser
       - mne-rsa
       - neurokit2
-      - nibabel
-      - nilearn
       - nipype
       - nitime
       - numba
       - psychopy
       - pydata-sphinx-theme
       - pydocstyle
-      - pymatreader
       - pyosf
       - pytest-faulthandler
       - pytest-sugar
       - python-bidi
-      - python-picard
       - python-picard
       - pyvista>=0.30
       - pyvistaqt>=0.4
