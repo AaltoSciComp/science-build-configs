@@ -445,6 +445,7 @@ collections:
       - mne-qt-browser
       - mne-rsa
       - neurokit2
+      - nodejs
       - nipype
       - nitime
       - numba
