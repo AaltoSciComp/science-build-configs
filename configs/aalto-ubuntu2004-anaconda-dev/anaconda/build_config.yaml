@@ -358,7 +358,6 @@ collections:
       - libxscrnsaver-cos6-x86_64
       - line_profiler
       - metakernel
-      - mkl
       - more-itertools
       - mpi4py
       - nbdime
