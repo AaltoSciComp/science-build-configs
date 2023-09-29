@@ -483,7 +483,7 @@ collections:
       - mne
   triton-generic:
     pip_packages:
-      - bash-kernel
+      - bash_kernel
       - forthon
       - matlab-kernel
       - mppl
