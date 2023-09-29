@@ -558,6 +558,7 @@ collections:
       - nitime
       - nltk
       - nose
+      - notebook<7
       - networkx
       - numba
       - numexpr
