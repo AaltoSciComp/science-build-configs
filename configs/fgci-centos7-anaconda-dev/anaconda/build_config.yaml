@@ -424,7 +424,7 @@ collections:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.2
-      - tensorflow=2.10=cuda11*
+      - tensorflow=2.12*=cuda11*
   cuda-compiler:
     # NVCC from nvidia channel
     conda_packages:
@@ -439,8 +439,9 @@ collections:
       - pytorch::pytorch
       - pytorch::pytorch-cuda=11.8
       - pytorch::torchaudio
-      - pytorch::torchvision
       - pytorch::pytorch-mutex=*=cuda
+    pip_packages:
+      - "torchvision --index-url https://download.pytorch.org/whl/cu118"
   deep_learning_extras:
     conda_packages:
       - cudatoolkit=11.8
@@ -538,8 +539,10 @@ collections:
       - jupyterlab-git
       - jupytext
       - libblas=*=*mkl*
+      # pytorch libjpeg-turbo is too old for tensorflow
+      - conda-forge::libjpeg-turbo
       - librosa
-      - libwebp>=1.3.2
+      - libwebp>=1.3.2 # CVE-2023-4863
       - libxscrnsaver-cos6-x86_64
       - line_profiler
       - metakernel
