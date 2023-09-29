@@ -275,6 +275,7 @@ environments:
       - mne
       - cplex_pip
       - mosek
+      - opencv-pip
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
@@ -474,6 +475,9 @@ collections:
       - ray[data]
       - ray[tune]
       - ray[rllib]
+  opencv-pip:
+    pip_packages:
+      - opencv-contrib-python
   mne:
     conda_packages:
       - mne
@@ -559,7 +563,7 @@ collections:
       - numexpr
       - numpy
       - openpyxl
-      - opencv
+      #- opencv # Disabling opencv due to different harfbuzz as tensorflow
       - pandera
       - pango
       - patchelf
