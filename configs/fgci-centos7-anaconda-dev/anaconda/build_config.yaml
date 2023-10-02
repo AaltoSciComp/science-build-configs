@@ -442,7 +442,7 @@ collections:
       - pytorch::torchaudio
       - pytorch::pytorch-mutex=*=cuda
     pip_packages:
-      - "torchvision --index-url https://download.pytorch.org/whl/cu118"
+      - "torchvision -f https://download.pytorch.org/whl/cu118"
   deep_learning_extras:
     conda_packages:
       - cudatoolkit=11.8
