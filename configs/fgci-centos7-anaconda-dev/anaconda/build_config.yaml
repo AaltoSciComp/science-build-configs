@@ -442,7 +442,7 @@ collections:
       - pytorch::torchaudio
       - pytorch::pytorch-mutex=*=cuda
     pip_packages:
-      - "torchvision -f https://download.pytorch.org/whl/cu118"
+      - "torchvision==0.15.2+cu118 -f https://download.pytorch.org/whl/cu118"
   deep_learning_extras:
     conda_packages:
       - cudatoolkit=11.8
@@ -622,6 +622,7 @@ collections:
       - xlsxwriter
       - xlwt
       - xmltodict
+      - zstandard
   triton-r-generic:
     conda_packages:
       - r-essentials
