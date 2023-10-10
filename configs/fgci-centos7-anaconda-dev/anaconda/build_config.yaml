@@ -121,7 +121,8 @@ collections:
   pytorch:
     conda_packages:
       - cudnn>=8.3
-      - pytorch::pytorch
+     # pyg currently only supports pytorch 2.0
+      - pytorch::pytorch=2.0.*
       - pytorch::pytorch-cuda=11.8
       - pytorch::torchaudio
       - pytorch::torchvision
