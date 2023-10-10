@@ -124,9 +124,8 @@ collections:
       - pytorch::pytorch
       - pytorch::pytorch-cuda=11.8
       - pytorch::torchaudio
+      - pytorch::torchvision
       - pytorch::pytorch-mutex=*=cuda
-    pip_packages:
-      - "torchvision==0.15.2+cu118 -f https://download.pytorch.org/whl/cu118"
   deep_learning_extras:
     conda_packages:
       - cudatoolkit=11.8
