@@ -34,7 +34,6 @@ environments:
         - nvidia
         - huggingface
         - conda-forge
-        - pyg
         - gurobi
         - mosek
       channel_priority: flexible
@@ -50,6 +49,7 @@ environments:
       - cplex_pip
       - mosek
       - opencv-pip
+      - pyg-pip
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
@@ -68,13 +68,13 @@ environments:
         - nvidia
         - huggingface
         - conda-forge
-        - pyg
       channel_priority: flexible
     collections:
       - triton-generic
       - deep_learning_extras
       - pytorch
       - neuroimaging
+      - pyg-pip
 collections:
   compilers:
     conda_packages:
@@ -121,12 +121,20 @@ collections:
   pytorch:
     conda_packages:
       - cudnn>=8.3
-     # pyg currently only supports pytorch 2.0
-      - pytorch::pytorch=2.0.*
+      - pytorch::pytorch=2.1.*
       - pytorch::pytorch-cuda=11.8
       - pytorch::torchaudio
       - pytorch::torchvision
       - pytorch::pytorch-mutex=*=cuda
+  pyg-pip:
+    pip_packages:
+      # conda installed pyg currently only supports pytorch 2.0
+      - torch_geometric
+      - "pyg_lib -f https://data.pyg.org/whl/torch-2.1.0+cu118.html"
+      - torch_scatter
+      - torch_sparse
+      - torch_cluster
+      - torch_spline_conv
   deep_learning_extras:
     conda_packages:
       - cudatoolkit=11.8
@@ -139,7 +147,6 @@ collections:
       #- jax>=0.4
       #- jaxlib>=0.4=cuda*
       - ogb
-      - pyg
       - pytorch-lightning
       - py-xgboost
       - transformers
