@@ -145,8 +145,8 @@ collections:
       #- flax
       - gymnasium # =0.26.3 # Version lock due to ray
       - lightning
-      #- jax>=0.4
-      #- jaxlib>=0.4=cuda*
+      - jax>=0.4
+      - jaxlib>=0.4=cuda*
       - ogb
       - pytorch-lightning
       - py-xgboost
@@ -155,7 +155,7 @@ collections:
       - tensorboardx
       - wandb
     pip_packages:
-      - "jax[cuda11_pip] -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+      #- "jax[cuda11_pip] -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
       - flax
       - dm-haiku
       - deepspeed
