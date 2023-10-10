@@ -129,8 +129,9 @@ collections:
   pyg-pip:
     pip_packages:
       # conda installed pyg currently only supports pytorch 2.0
-      - torch_geometric
-      - "pyg_lib -f https://data.pyg.org/whl/torch-2.1.0+cu118.html"
+      - "torch_geometric -f https://data.pyg.org/whl/torch-2.1.0+cu118.html"
+      # pyg_lib missing from pytorch 2.1 pip file index
+      # - pyg_lib 
       - torch_scatter
       - torch_sparse
       - torch_cluster
