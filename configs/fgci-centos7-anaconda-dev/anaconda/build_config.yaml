@@ -75,6 +75,7 @@ environments:
       - pytorch
       - neuroimaging
       - pyg-pip
+      - opencv-pip
 collections:
   compilers:
     conda_packages:
@@ -343,7 +344,6 @@ collections:
       - nipype
       - nitime
       - numba
-      - psychopy
       - pydata-sphinx-theme
       - pydocstyle
       - pymatreader
@@ -367,6 +367,8 @@ collections:
       - pygame
       - pyo
       - pyparallel
+      # psychopy needs opencv, which is currently broken in conda-forge
+      - psychopy
       - rapidtide
       - sphinx-bootstrap-theme
       - sphinxcontrib-bibtex
