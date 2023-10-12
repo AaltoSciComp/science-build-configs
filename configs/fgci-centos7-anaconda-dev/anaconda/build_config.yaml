@@ -182,7 +182,7 @@ collections:
       - mppl
       - nbscript
       - nbzip
-      - pymanopt
+      #- pymanopt # forces scipy < 1.10
       - snakemake
       - python-hostlist
     conda_packages:
