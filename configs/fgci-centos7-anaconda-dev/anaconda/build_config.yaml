@@ -368,7 +368,6 @@ collections:
       - pygame
       - pyo
       - pyparallel
-      - psychopy
       - rapidtide
       - sphinx-bootstrap-theme
       - sphinxcontrib-bibtex
