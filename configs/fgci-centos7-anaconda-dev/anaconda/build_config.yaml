@@ -60,7 +60,7 @@ environments:
     miniforge: True
     mamba: True
     python_version: 3
-    installer_version: '4.12.0-2'
+    installer_version: '23.1.0-1'
     conda_override_cuda: '11.8'
     condarc_install:
       channels:
