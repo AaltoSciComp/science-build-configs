@@ -315,7 +315,7 @@ collections:
       - xlsxwriter
       - xlwt
       - xmltodict
-      - zstandard
+      - zstandard>=0.21
   triton-r-generic:
     conda_packages:
       - r-essentials
