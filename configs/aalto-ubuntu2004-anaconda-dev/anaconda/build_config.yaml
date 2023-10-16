@@ -5,92 +5,41 @@ installer_checksums:
   Miniconda3-py39_4.10.3-Linux-x86_64.sh: '1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f'
   Mambaforge-4.11.0-0-Linux-x86_64.sh: '49268ee30d4418be4de852dda3aa4387f8c95b55a76f43fb1af68dcbf8b205c3'
   Mambaforge-22.11.1-4-Linux-x86_64.sh: '16c7d256de783ceeb39970e675efa4a8eb830dcbb83187f1197abfea0bf07d30'
+  Mambaforge-23.1.0-1-Linux-x86_64.sh: 'cfb16c47dc2d115c8b114280aa605e322173f029fdb847a45348bf4bd23c62ab'
   Miniforge3-4.12.0-2-Linux-x86_64.sh: 'e8bd60572d1bdcd9fc16114f423653c95e02f0be1393383f77fba17cf8acb10e'
   Miniforge3-22.11.1-4-Linux-x86_64.sh: '737d1b2666528416706a916b355c43ff58deeaebf5ca906bc1a551e96c73ab8e'
 environments:
   - name: miniconda
-    version: '4.9.2'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.9.2'
-    freeze: True
-    condarc_install:
-      channels:
-        - defaults
-  - name: anaconda
-    version: '2021-04-tf2'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.10.3'
-    freeze: True
-    condarc_install:
-      channels:
-        - pytorch
-        - conda-forge
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-      channel_priority: flexible
-    collections:
-      - tensorflow-v2-conda-forge
-      - pytorch
-      - triton-generic
-      - mne
-      - gurobi
-      - cplex
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
-  - name: anaconda
-    version: '2022-03'
+    version: '4.12.0-2'
     miniconda: False
     miniforge: True
     mamba: True
     python_version: 3
     installer_version: '4.12.0-2'
-    conda_override_cuda: '11.3'
-    freeze: True
     condarc_install:
       channels:
-        - pytorch
-        - huggingface
         - conda-forge
-        - mosek
-      channel_priority: flexible
-    collections:
-      - deep_learning_extras
-      - tensorflow-v2-conda-forge
-      - pytorch
-      - triton-generic
-      - gurobi_pip
-      - mne
-      - cplex_pip
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
   - name: anaconda
-    version: '2023-01'
+    version: '2023-04'
     miniconda: False
     miniforge: False
     mambaforge: True
     mamba: True
     python_version: 3
-    installer_version: '22.11.1-4'
-    conda_override_cuda: '11.7'
-    freeze: True
+    installer_version: '23.1.0-1'
+    conda_override_cuda: '11.8'
     condarc_install:
       channels:
         - pytorch
         - nvidia
         - huggingface
         - conda-forge
-        - pyg
         - gurobi
         - mosek
       channel_priority: flexible
     collections:
+      - compilers
+      - cuda-compiler
       - deep_learning_extras
       - tensorflow-v2-conda-forge
       - pytorch
@@ -99,90 +48,42 @@ environments:
       - mne
       - cplex_pip
       - mosek
+      - opencv-pip
+      - pyg-pip
     extra_module_variables:
       setenv:
         GUROBI_HOME: '$prefix'
-        GRB_LICENSE_FILE: '/m/scicomp/software/manual_installations/software/gurobi/license/gurobi.lic'
-  - name: rapidsai
-    version: '21.10'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py38_4.10.3'
-    freeze: True
-    condarc_install:
-      channels:
-        - rapidsai
-        - nvidia
-        - conda-forge
-        - gurobi
-        - IBMDecisionOptimization
-        - mosek
-      channel_priority: flexible
-    collections:
-      - rapidsai
-      - triton-generic
-      - gurobi
-      - cplex
-      - mosek
-    extra_module_variables:
-      setenv:
-        GUROBI_HOME: '$prefix'
-  - name: neuroimaging
-    version: '2021-02'
-    miniconda: True
-    python_version: 3
-    installer_version: 'py39_4.10.3'
-    freeze: True
-    condarc:
-      channels:
-        - defaults
-        - conda-forge
-    collections:
-      - neuroimaging
-  - name: neuroimaging
-    version: '2023-02'
-    miniconda: False
-    miniforge: True
-    mamba: True
-    python_version: 3
-    installer_version: '4.12.0-2'
-    freeze: True
-    conda_override_cuda: '11.7'
-    condarc_install:
-      channels:
-        - pytorch
-        - nvidia
-        - huggingface
-        - conda-forge
-        - pyg
-      channel_priority: flexible
-    collections:
-      - triton-generic
-      - deep_learning_extras
-      - pytorch
-      - neuroimaging
+        GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: neuroimaging
     version: '2023-03'
     miniconda: False
-    miniforge: True
+    miniforge: False
+    mambaforge: True
     mamba: True
     python_version: 3
-    installer_version: '22.11.1-4'
-    conda_override_cuda: '11.7'
+    installer_version: '23.1.0-1'
+    conda_override_cuda: '11.8'
     condarc_install:
       channels:
         - pytorch
         - nvidia
         - huggingface
         - conda-forge
-        - pyg
       channel_priority: flexible
     collections:
       - triton-generic
       - deep_learning_extras
       - pytorch
       - neuroimaging
+      - pyg-pip
+      - opencv-pip
 collections:
+  compilers:
+    conda_packages:
+      - compilers
+      - gcc>=11,<12
+      - gxx>=11,<12
+      - gfortran>=11,<12
   cplex:
     conda_packages:
       - cplex
@@ -198,94 +99,68 @@ collections:
   mosek:
     conda_packages:
       - mosek
-  tensorflow-v1:
-    conda_packages:
-      - tensorboard
-      - tensorboard-plugin-wit
-      - tensorflow=1.15.0
-      - tensorflow-base
-      - tensorflow-estimator
-      - tensorflow-gpu
-  tensorflow-v2:
-    conda_packages:
-      - cudatoolkit
-      - tensorboard
-      - tensorboard-plugin-wit
-      - tensorflow=2.4.1=gpu_*
-      - tensorflow-base
-      - tensorflow-estimator
-      - tensorflow-gpu
-  tensorflow-v2-pip:
-    # Check this page for compatible versions of tensorflow, cudatoolkit and cudnn.
-    # https://www.tensorflow.org/install/source#gpu
-    conda_packages:
-      - absl-py
-      - astunparse
-      - cudatoolkit=11.2.*
-      - cudatoolkit-dev=11.2.*
-      - cudnn=8.1.*
-      - gast
-      - google-pasta
-      - grpcio
-      - h5py
-      - keras-preprocessing
-      - libgcc-ng
-      - libstdcxx-ng
-      - numpy
-      - opt_einsum
-      - protobuf
-      - python-flatbuffers
-      - scipy
-      - six
-      - sqlite
-      - termcolor
-      - wrapt
-      - zlib
+  tensorflow-pip:
     pip_packages:
-      - tensorflow==2.6.0
+      - tensorflow==2.12.*
+    conda_packages:
+      - numpy=1.23.4
+      - tensorboard<2.13,>=2.12
+      - grpcio=1.51.1
+      - wrapt<1.15
   tensorflow-v2-conda-forge:
     conda_packages:
       - cudatoolkit=11.*
       - cudnn>=8.2
-      - tensorboard
-      - tensorflow=2.10=cuda11*
+      - tensorflow=2.12*=cuda11*
+  cuda-compiler:
+    # NVCC from nvidia channel
+    conda_packages:
+      - cuda-compiler=11.8
+      - cuda-libraries-dev=11.8
   rapidsai:
     conda_packages:
-      - cudatoolkit=11.4
-      - cudf
-      - cuml
-      - cugraph
-      - cusignal
-      - cuspatial
-      - cuxfilter
-      - rapids-blazing=21.10
+      - rapids=23.*
   pytorch:
     conda_packages:
       - cudnn>=8.3
-      - pytorch::pytorch
-      - pytorch::pytorch-cuda=11.7
+      - pytorch::pytorch=2.1.*
+      - pytorch::pytorch-cuda=11.8
       - pytorch::torchaudio
       - pytorch::torchvision
       - pytorch::pytorch-mutex=*=cuda
+  pyg-pip:
+    pip_packages:
+      # conda installed pyg currently only supports pytorch 2.0
+      - "torch_geometric -f https://data.pyg.org/whl/torch-2.1.0+cu118.html"
+      - pyg_lib
+      - torch_scatter
+      - torch_sparse
+      - torch_cluster
+      - torch_spline_conv
   deep_learning_extras:
     conda_packages:
-      - cudatoolkit>=11.3
-      - cudnn>=8.3
+      - cudatoolkit=11.8
+      - cudnn>=8.6
       - datasets
-      - dm-haiku
-      - dm-sonnet
-      - flax
-      - gymnasium
-      - jax
+      #- dm-haiku
+      #- flax
+      - gymnasium # =0.26.3 # Version lock due to ray
+      - lightning
+        #- jax>=0.4
+        #- jaxlib>=0.4=cuda*
       - ogb
-      - pyg
       - pytorch-lightning
       - py-xgboost
       - transformers
+      - tensorboard
       - tensorboardx
       - wandb
     pip_packages:
+      - "jax[cuda11_pip] -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+      - flax
+      - dm-haiku
       - deepspeed
+      - dm-sonnet
       - reverb
       # Ray's conda package depends on nvidia-ml-py, which conflicts with scalene
       - ray[default]
@@ -293,19 +168,23 @@ collections:
       - ray[data]
       - ray[tune]
       - ray[rllib]
+  opencv-pip:
+    pip_packages:
+      - opencv-contrib-python
   mne:
     conda_packages:
       - mne
   triton-generic:
     pip_packages:
-      - bash-kernel
+      - bash_kernel
       - forthon
       - matlab-kernel
       - mppl
       - nbscript
       - nbzip
-      - pymanopt
+      #- pymanopt # forces scipy < 1.10
       - snakemake
+      - python-hostlist
     conda_packages:
       - astropy
       - attrs
@@ -314,6 +193,7 @@ collections:
       - bitarray
       # - blaze # No python3.8 build
       - black
+      - bokeh
       - boto
       - bottleneck
       - cartopy
@@ -322,9 +202,11 @@ collections:
       - configargparse
       - contextlib2
       - crc32c
+      - cryptography
       - cython
       - dask
       - datalad
+      - datashader
       - dill
       - docopt
       - easygui
@@ -349,12 +231,15 @@ collections:
       - joblib
       - jsonlines
       - jupyter
-      # - jupyter_contrib_nbextensions   # currently does not support notebook>7
+      - jupyter_contrib_nbextensions
       - jupyterlab
       - jupyterlab-git
       - jupytext
       - libblas=*=*mkl*
+      # pytorch libjpeg-turbo is too old for tensorflow
+      - conda-forge::libjpeg-turbo
       - librosa
+      - libwebp>=1.3.2 # CVE-2023-4863
       - libxscrnsaver-cos6-x86_64
       - line_profiler
       - metakernel
@@ -366,12 +251,13 @@ collections:
       - nitime
       - nltk
       - nose
+      - notebook<7
       - networkx
       - numba
       - numexpr
       - numpy
       - openpyxl
-      - opencv
+      #- opencv # Disabling opencv due to different harfbuzz as tensorflow
       - pandera
       - pango
       - patchelf
@@ -385,13 +271,12 @@ collections:
       - plotly
       - ply
       - poetry
-      - prometheus_client<0.14 # Limit prometheus-client version for ray
+      - prometheus_client
       - py
       - py-lief
-      - pyarrow>=7,<8=*cuda
+      - pyarrow=*=*cuda
       - pybind11
       - pybullet
-      #- pycrypto # No longer maintained
       - pycurl
       - pydantic
       - pympler
@@ -416,6 +301,7 @@ collections:
       - sphinxcontrib-websupport
       - spyder>=5.4.2 # Fixes OOD bug
       - spyder-line-profiler
+      - streamlit
       - sympy
       - twisted
       - typing
@@ -429,6 +315,12 @@ collections:
       - xlsxwriter
       - xlwt
       - xmltodict
+      - zstandard>=0.21
+  triton-r-generic:
+    conda_packages:
+      - r-essentials
+      - rstudio
+      - "'blas * mkl'"
   neuroimaging:
     conda_packages:
       - autoreject
@@ -436,6 +328,8 @@ collections:
       - cupy
       - fooof
       - gensim
+      - h5io
+      - h5py
       - mne
       - mne-bids
       - mne-connectivity
@@ -445,16 +339,20 @@ collections:
       - mne-qt-browser
       - mne-rsa
       - neurokit2
+      - nibabel
+      - nilearn
       - nipype
       - nitime
       - numba
-      - psychopy
+      # psychopy needs wxpython and opencv, which are currently broken in conda-forge
       - pydata-sphinx-theme
       - pydocstyle
+      - pymatreader
       - pyosf
       - pytest-faulthandler
       - pytest-sugar
       - python-bidi
+      - python-picard
       - python-picard
       - pyvista>=0.30
       - pyvistaqt>=0.4
