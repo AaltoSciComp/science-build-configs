@@ -363,7 +363,6 @@ collections:
     pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
-      - "https://github.com/mne-tools/mne-python/archive/main.zip"
       - "git+https://github.com/mne-tools/mne-python.git#egg=mne"
       - filename-templates
       - psychtoolbox
