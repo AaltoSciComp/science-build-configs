@@ -55,7 +55,7 @@ environments:
         GUROBI_HOME: '$prefix'
         GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: neuroimaging
-    version: '2023-03'
+    version: '2023-04'
     miniconda: False
     miniforge: False
     mambaforge: True
@@ -330,7 +330,7 @@ collections:
       - gensim
       - h5io
       - h5py
-      - mne
+      # mne is currently broken, install latest main branch instead
       - mne-bids
       - mne-connectivity
       - mne-faster
@@ -363,6 +363,7 @@ collections:
     pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
+      - "https://github.com/mne-tools/mne-python/archive/main.zip"
       - filename-templates
       - psychtoolbox
       - pygame
