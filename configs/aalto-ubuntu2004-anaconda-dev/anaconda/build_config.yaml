@@ -330,7 +330,7 @@ collections:
       - gensim
       - h5io
       - h5py
-      - mne
+      # mne is currently broken, will use latest main branch
       - mne-bids
       - mne-connectivity
       - mne-faster
@@ -363,6 +363,7 @@ collections:
     pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
+      - "https://github.com/mne-tools/mne-python/archive/main.zip"
       - filename-templates
       - psychtoolbox
       - pygame
