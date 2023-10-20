@@ -465,5 +465,13 @@ packages:
     version: '12.2'
     variants:
       - '+threadsafe'
+  - name: 'openmpi'
+    version: '4.0.5'
+    variants:
+      - '+cuda'
+    dependencies:
+      - '^cuda@11.7.0'
+      - '^libevent@2.1.8'
+      - '^ucx@1.9.0+cuda'
   - name: 'gatk'
     version: '4.1.0.0'
