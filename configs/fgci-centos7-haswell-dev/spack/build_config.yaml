@@ -537,5 +537,6 @@ packages:
     dependencies:
       - '^libevent@2.1.8'
       - '^cuda@11.7.0'
+      - '^ucx@1.8.0 +pic +rc +dc +ud +dm +rdmacm +mlx5-dv +cuda +gdrcopy +knem +xpmem'
   - name: 'gatk'
     version: '4.1.0.0'
