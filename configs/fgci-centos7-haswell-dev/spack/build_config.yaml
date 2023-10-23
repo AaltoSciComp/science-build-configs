@@ -536,7 +536,5 @@ packages:
       - '+cuda'
     dependencies:
       - '^cuda@11.7.0'
-      - '^libevent@2.1.8'
-      - '^ucx@1.9.0 +cuda +thread_multiple +pic +rc +dc +dm +optimizations'
   - name: 'gatk'
     version: '4.1.0.0'
