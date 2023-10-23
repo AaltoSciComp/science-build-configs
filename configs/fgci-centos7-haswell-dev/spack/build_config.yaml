@@ -535,6 +535,7 @@ packages:
     variants:
       - '+cuda'
     dependencies:
+      - '^libevent@2.1.8'
       - '^cuda@11.7.0'
   - name: 'gatk'
     version: '4.1.0.0'
