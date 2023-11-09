@@ -540,3 +540,5 @@ packages:
       - '^ucx@1.8.1 +pic +dc +dm +mlx5-dv +cuda +gdrcopy +knem +xpmem'
   - name: 'gatk'
     version: '4.1.0.0'
+  - name: 'ncl'
+    version: '6.6.2'
