@@ -540,6 +540,8 @@ packages:
       - '^ucx@1.8.1 +pic +dc +dm +mlx5-dv +cuda +gdrcopy +knem +xpmem'
   - name: 'gatk'
     version: '4.1.0.0'
+  - name: 'google-cloud-cli'
+    version: '426.0.0'
 # https://version.aalto.fi/gitlab/AaltoScienceIT/triton/-/issues/1523
 # did not deploy properly
 #  - name: 'ncl'       
