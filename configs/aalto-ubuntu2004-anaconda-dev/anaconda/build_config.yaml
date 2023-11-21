@@ -55,7 +55,7 @@ environments:
         GUROBI_HOME: '$prefix'
         GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: neuroimaging
-    version: '2023-04'
+    version: '2023-05'
     miniconda: False
     miniforge: False
     mambaforge: True
@@ -217,7 +217,6 @@ collections:
       - gpy
       - graph-tool
       - greenlet
-      - h5py=*=mpi_openmpi*
       - h5netcdf
       - hdf5=*=mpi_openmpi*
       - html5lib
