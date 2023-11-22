@@ -18,7 +18,6 @@ environments:
       channels:
         - pytorch
         - conda-forge
-        - defaults
     condarc_postinstall:
       pkgs_dirs:
         - '~/.conda/pkgs'
