@@ -20,7 +20,7 @@ environments:
       channels:
         - conda-forge
   - name: anaconda
-    version: '2023-04'
+    version: '2024-01'
     miniconda: False
     miniforge: False
     mambaforge: True
