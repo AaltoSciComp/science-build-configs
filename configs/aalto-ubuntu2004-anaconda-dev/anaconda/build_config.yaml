@@ -337,6 +337,7 @@ collections:
       - mne-nirs
       - mne-qt-browser
       - mne-rsa
+      - mne-icalabel
       - neurokit2
       - nibabel
       - nilearn
