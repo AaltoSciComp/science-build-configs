@@ -325,7 +325,7 @@ collections:
       - autoreject
       - bids-validator
       - cupy
-      - fooof
+      - fooof>=1.1.0
       - gensim
       - h5io
       - h5py
