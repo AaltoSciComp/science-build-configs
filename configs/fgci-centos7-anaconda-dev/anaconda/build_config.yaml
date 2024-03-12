@@ -55,7 +55,7 @@ environments:
         GUROBI_HOME: '$prefix'
         GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: neuroimaging
-    version: '2023-03'
+    version: '2024-01'
     miniconda: False
     miniforge: False
     mambaforge: True
@@ -326,7 +326,6 @@ collections:
       - autoreject
       - bids-validator
       - cupy
-      - fooof
       - gensim
       - h5io
       - h5py
@@ -334,6 +333,7 @@ collections:
       - mne-bids
       - mne-connectivity
       - mne-faster
+      - mne-icalabel
       - mne-microstates
       - mne-nirs
       - mne-qt-browser
@@ -364,6 +364,7 @@ collections:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
       - filename-templates
+      - fooof>=1.1.0
       - psychtoolbox
       - pygame
       - pyo
