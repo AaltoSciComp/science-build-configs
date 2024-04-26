@@ -114,6 +114,7 @@ definitions:
     docker_image: 'fmriprep'
     module_namespace: 'common'
     tags:
+      - '23.2.1'
       - '23.1.4'
       - '22.1.0'
       - '22.0.2'
