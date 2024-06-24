@@ -358,6 +358,7 @@ collections:
       - scikit-learn
       - sphinx-gallery
       - statsmodels
+      - wxPython
     pip_packages:
       - "https://github.com/wmvanvliet/posthoc/archive/master.zip"
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
