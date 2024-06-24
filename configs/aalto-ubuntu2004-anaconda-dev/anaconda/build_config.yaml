@@ -55,7 +55,7 @@ environments:
         GUROBI_HOME: '$prefix'
         GRB_LICENSE_FILE: '/share/apps/manual_installations/gurobi/license/gurobi.lic'
   - name: neuroimaging
-    version: '2024-02'
+    version: '2024-03'
     miniconda: False
     miniforge: False
     mambaforge: True
@@ -343,7 +343,6 @@ collections:
       - nipype
       - nitime
       - numba
-      # psychopy needs wxpython and opencv, which are currently broken in conda-forge
       - pydata-sphinx-theme
       - pydocstyle
       - pymatreader
@@ -364,6 +363,7 @@ collections:
       - "https://github.com/AaltoImagingLanguage/conpy/archive/master.zip"
       - fooof>=1.1.0
       - filename-templates
+      - psychopy
       - psychtoolbox
       - pygame
       - pyo
